@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d5a70c75b18c74ab1d80c732524689, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 0e65d415667a6d4aab86be3da2b9543a
+    m_lastTime: -8586606789605679930
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: f9a470c7d6a9e34b98d5de8ec59b22a6
+    m_lastTime: -8586606789606607452
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: b65a7d667dabe1419dea0073196041a1
+    m_lastTime: -8586606787403696017
+    List:
+    - name: GameSounds
+      guid: b543a3e0e70af743b1576ff032c806a3
+      id: 2841340823
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GameSounds
+        ObjectType: 7
+      Path: Default Work Unit\GameSounds
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 8119b29db91540468c7bdc1a7e521c73
+    m_lastTime: -8586606789606389211
+    List: []
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: e1d6f233b7f992469cd74b15230bc22b
+    m_lastTime: -8586606789606309854
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: d74f1a538c60de44bdf67b2ffda7b4e7
+    m_lastTime: -8586606789606547934
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 1c361a616fce1047a0ea742e093906ad
+    m_lastTime: -8586606789606691774
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 4a16e99d8c6a1241bbb1a1a1c6ed324e
+    m_lastTime: -8586606789605615453
+    List: []
+  ExpandedItems:
+  - /GitHubGameOff2018_Wwise
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
