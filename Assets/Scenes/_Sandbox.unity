@@ -224,8 +224,8 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 35
-  m_Range: 6.147174
+  m_Intensity: 5
+  m_Range: 6
   m_SpotAngle: 46.1
   m_CookieSize: 10
   m_Shadows:
@@ -290,8 +290,8 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 0.9935299, b: 0, a: 1}
-  m_Intensity: 35
-  m_Range: 6.1667185
+  m_Intensity: 5
+  m_Range: 6
   m_SpotAngle: 46.1
   m_CookieSize: 10
   m_Shadows:
@@ -870,8 +870,8 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0, g: 0.3316517, b: 1, a: 1}
-  m_Intensity: 35
-  m_Range: 6.147174
+  m_Intensity: 5
+  m_Range: 6
   m_SpotAngle: 46.1
   m_CookieSize: 10
   m_Shadows:
@@ -1162,8 +1162,8 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0, g: 1, b: 0.62097406, a: 1}
-  m_Intensity: 35
-  m_Range: 6.147174
+  m_Intensity: 5
+  m_Range: 6
   m_SpotAngle: 46.1
   m_CookieSize: 10
   m_Shadows:
@@ -1642,8 +1642,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 20a705aea2d80e0478fb89b6f43d8530, type: 2}
-  m_AmplitudeGain: 1
-  m_FrequencyGain: 1
+  m_AmplitudeGain: 0.5
+  m_FrequencyGain: 0.5
 --- !u!1 &1392364848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,8 +1755,8 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 0.9935299, b: 0, a: 1}
-  m_Intensity: 35
-  m_Range: 6.1667185
+  m_Intensity: 5
+  m_Range: 6
   m_SpotAngle: 46.1
   m_CookieSize: 10
   m_Shadows:
@@ -1821,8 +1821,8 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0, g: 1, b: 0.62097406, a: 1}
-  m_Intensity: 35
-  m_Range: 6.147174
+  m_Intensity: 5
+  m_Range: 6
   m_SpotAngle: 46.1
   m_CookieSize: 10
   m_Shadows:
@@ -1958,6 +1958,7 @@ GameObject:
   - component: {fileID: 1522568661}
   - component: {fileID: 1522568660}
   - component: {fileID: 1522568657}
+  - component: {fileID: 1522568662}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2042,7 +2043,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1522568656}
   m_LocalRotation: {x: 0.15738246, y: 0, z: 0, w: 0.98753774}
-  m_LocalPosition: {x: -26.44, y: 2.096001, z: -4.54}
+  m_LocalPosition: {x: -31.27, y: 2.0960007, z: -4.561}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2082,6 +2083,18 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &1522568662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522568656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8428703e416dc4496b421974a5e77d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectMaterial: {fileID: 2100000, guid: 7ddc33a8c4f37d944ac8468f7a106bcd, type: 2}
 --- !u!1 &1536196187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,7 +2313,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1574973862}
   m_LocalRotation: {x: 0.15738246, y: 0, z: 0, w: 0.98753774}
-  m_LocalPosition: {x: -26.44, y: 2.096001, z: -4.54}
+  m_LocalPosition: {x: -31.27, y: 2.0960007, z: -4.561}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1224642868}
@@ -2541,7 +2554,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 5cb0ce0ef19adf348b1dced7c2615a18, type: 2}
+  - {fileID: 2100000, guid: 9014c308b8f8e3a4682ec7c2db7e879d, type: 2}
+  - {fileID: 2100000, guid: f41e2ec7e663bd84ca7fec3e0ec80b3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2575,7 +2589,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1788889146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.44, y: -1.294, z: 4.35}
+  m_LocalPosition: {x: -31.27, y: -1.294, z: 4.329}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2694,8 +2708,8 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0, g: 0.3316517, b: 1, a: 1}
-  m_Intensity: 35
-  m_Range: 6.147174
+  m_Intensity: 5
+  m_Range: 6
   m_SpotAngle: 46.1
   m_CookieSize: 10
   m_Shadows:
@@ -2760,8 +2774,8 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 35
-  m_Range: 6.147174
+  m_Intensity: 5
+  m_Range: 6
   m_SpotAngle: 46.1
   m_CookieSize: 10
   m_Shadows:
