@@ -30,7 +30,7 @@ public class KeyboardMover : MonoBehaviour
 
     private void Update()
     {
-        // VERTICAL HAPPENS IN THE Z AXIS!!!!
+        // "VERTICAL" HAPPENS IN THE Z AXIS!!!!
         Vector3 moveNormal = new Vector3(Horizontal, 0.0f, Vertical).normalized;
 
         transform.position += moveNormal * Time.deltaTime * MoveRate.Value;
