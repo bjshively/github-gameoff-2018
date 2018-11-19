@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour {
     public IntVariable health;
     public IntVariable maxHealth;
     public FloatVariable moveSpeed;
+    public TransformVariable playerTransform;
+
 
     // Use this for initialization
     void Start () {
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        playerTransform.Value.position = transform.position;
 
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");

@@ -1822,6 +1822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e40b94a6162ce41a91d7f1c0fe31e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCollider: {fileID: 1936278586743980}
+  playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
 --- !u!114 &114729200856648646
 MonoBehaviour:
   m_ObjectHideFlags: 1
