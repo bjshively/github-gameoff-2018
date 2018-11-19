@@ -6,12 +6,12 @@ public class PlayerController : MonoBehaviour {
 
     private Rigidbody body;
     private Animator anim;
-
+    public GameObject attackCollider;
 
     private float horizontal;
     private float vertical;
-    private int targetRotation = 90;
-
+    private int targetRotation = -90;
+    private int facing = 1;
 
     public IntVariable health;
     public IntVariable maxHealth;
@@ -34,8 +34,6 @@ public class PlayerController : MonoBehaviour {
       
         if (Input.GetButtonDown("Fire1"))
         {
-           
-
             Punch();
         }
 
@@ -69,6 +67,19 @@ public class PlayerController : MonoBehaviour {
         //    v = moveSpeed.Value * -1f;
         //}
 
+        // Trying to do some facing rotation code here, not working yet..
+        //if(facing == 1 && h < 0)
+        //{
+        //    facing = -1;
+        //    StartCoroutine(Rotate(facing));
+
+        //}
+        //else if(facing == -1 && h > 0)
+        //{
+        //    facing = 1;
+        //    StartCoroutine(Rotate(facing));
+        //}
+
         body.velocity = new Vector3(h, 0.0f, v).normalized;
         
         //body.velocity = new Vector2(moveSpeed * Mathf.Sign(h), body.velocity.y);
@@ -77,28 +88,26 @@ public class PlayerController : MonoBehaviour {
 
     private void Punch()
     {
-        Turn();
         anim.SetTrigger("Punch");
+        attackCollider.SetActive(true);
         Debug.Log("Punch");
     }
 
     private void Turn()
     {
-        {
-            StartCoroutine(Rotate());
-        }
+   
     }
 
-    IEnumerator Rotate()
+    IEnumerator Rotate(int facing)
     {
-        float moveSpeed = 10f;
+        float moveSpeed = 20f;
+        targetRotation *= facing;
         while (transform.rotation.y != targetRotation)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, targetRotation, 0), moveSpeed * Time.deltaTime);
             yield return null;
         }
         transform.rotation = Quaternion.Euler(0, targetRotation, 0);
-        targetRotation *= -1;
         yield return null;
     }
 
