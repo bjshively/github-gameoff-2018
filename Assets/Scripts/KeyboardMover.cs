@@ -28,7 +28,7 @@ public class KeyboardMover : MonoBehaviour
     public MoveAxis Horizontal = new MoveAxis(KeyCode.D, KeyCode.A);
     public MoveAxis Vertical = new MoveAxis(KeyCode.W, KeyCode.S);
 
-    private void Update()
+    private void FixedUpdate()
     {
         // "VERTICAL" HAPPENS IN THE Z AXIS!!!!
         Vector3 moveNormal = new Vector3(Horizontal, 0.0f, Vertical).normalized;
