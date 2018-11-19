@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour {
 
     private float horizontal;
     private float vertical;
+    private int targetRotation = 90;
+
+
     public IntVariable health;
     public IntVariable maxHealth;
     public FloatVariable moveSpeed;
@@ -28,10 +31,11 @@ public class PlayerController : MonoBehaviour {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
         Move(horizontal, vertical);
-
-
-        if(Input.GetButtonDown("Fire1"))
+      
+        if (Input.GetButtonDown("Fire1"))
         {
+           
+
             Punch();
         }
 
@@ -73,8 +77,29 @@ public class PlayerController : MonoBehaviour {
 
     private void Punch()
     {
+        Turn();
         anim.SetTrigger("Punch");
         Debug.Log("Punch");
+    }
+
+    private void Turn()
+    {
+        {
+            StartCoroutine(Rotate());
+        }
+    }
+
+    IEnumerator Rotate()
+    {
+        float moveSpeed = 10f;
+        while (transform.rotation.y != targetRotation)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, targetRotation, 0), moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+        transform.rotation = Quaternion.Euler(0, targetRotation, 0);
+        targetRotation *= -1;
+        yield return null;
     }
 
     private void Die()
