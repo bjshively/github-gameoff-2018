@@ -115,4 +115,13 @@ public class PlayerController : MonoBehaviour {
     {
         // Debug.Log("Dead");
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.name == "AttackCollider")
+        {
+            health.ApplyChange(-10);
+            Debug.Log(health.Value);
+        }
+    }
 }
