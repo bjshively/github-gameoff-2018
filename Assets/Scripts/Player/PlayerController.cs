@@ -9,26 +9,34 @@ public class PlayerController : MonoBehaviour {
 
     private float horizontal;
     private float vertical;
+    public IntVariable health;
+    public IntVariable maxHealth;
 
     // Use this for initialization
     void Start () {
+        health.Value = maxHealth.Value;
         body = GetComponent<Rigidbody>();
-		
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
-        Debug.Log(horizontal);
-        Debug.Log(vertical);
         Move(horizontal, vertical);
-	}
+        Debug.Log(health.Value);
+
+
+        if (health.Value <= 0)
+        {
+            Die();
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("ouch");
+        health.ApplyChange(-10);
     }
 
     private void Move(float h, float v)
@@ -37,5 +45,10 @@ public class PlayerController : MonoBehaviour {
         
         //body.velocity = new Vector2(moveSpeed * Mathf.Sign(h), body.velocity.y);
         //transform.position += moveNormal * Time.deltaTime * MoveRate.Value;
+    }
+
+    private void Die()
+    {
+        Debug.Log("Dead");
     }
 }
