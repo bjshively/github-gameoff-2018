@@ -13,6 +13,9 @@ TagManager:
   - UI
   - 
   - 
+  - Player
+  - Enemy
+  - Ground
   - 
   - 
   - 
@@ -32,11 +35,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - HideInEditor
+  - Lanes
   m_SortingLayers:
   - name: Default
     uniqueID: 0
