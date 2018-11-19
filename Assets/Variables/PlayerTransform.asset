@@ -8,8 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f53bf0d6342f40c9886b0bf57d780d3, type: 3}
-  m_Name: PlayerMaxHealth
+  m_Script: {fileID: 11500000, guid: 9733d44eb0392f64bb69ac13f3b9c241, type: 3}
+  m_Name: PlayerTransform
   m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Value: 100
+  Value: {fileID: 4307267360198702, guid: ca8d22ffd6a204f4cb38436e0b8817e9, type: 2}
