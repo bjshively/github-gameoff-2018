@@ -84,7 +84,30 @@ public class PlayerController : MonoBehaviour {
         //}
 
         body.velocity = new Vector3(h, 0.0f, v).normalized;
-        
+
+        if (Mathf.Abs(h) > 0 || Mathf.Abs(v) > 0)
+        {
+            anim.SetFloat("MoveSpeed", 1);
+
+            Vector3 scale = transform.localScale;
+
+            if (body.velocity.x > 0)
+            {
+                scale.z = Mathf.Abs(scale.z);
+                transform.localScale = scale;
+            }
+            else if (body.velocity.x < 0)
+            {
+                scale.z = Mathf.Abs(scale.z) * -1;
+                transform.localScale = scale;
+            }
+        }
+        else
+        {
+            anim.SetFloat("MoveSpeed", 0);
+        }
+
+
         //body.velocity = new Vector2(moveSpeed * Mathf.Sign(h), body.velocity.y);
         //transform.position += moveNormal * Time.deltaTime * MoveRate.Value;
     }
