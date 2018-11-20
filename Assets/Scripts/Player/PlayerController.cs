@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
       
         if (Input.GetButtonDown("Fire1"))
         {
-            Punch();
+            anim.SetTrigger("Punch");
         }
 
         if (health.Value <= 0)
@@ -110,13 +110,6 @@ public class PlayerController : MonoBehaviour {
 
         //body.velocity = new Vector2(moveSpeed * Mathf.Sign(h), body.velocity.y);
         //transform.position += moveNormal * Time.deltaTime * MoveRate.Value;
-    }
-
-    private void Punch()
-    {
-        anim.SetTrigger("Punch");
-        attackCollider.SetActive(true);
-        Debug.Log("Punch");
     }
 
     private void Turn()

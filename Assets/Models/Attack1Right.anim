@@ -42044,15 +42044,16 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.13333334
-    functionName: 
+    functionName: AnimEnableAnObject
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 1606946142010664, guid: 6e55859a0a8f84b4bafde1f7edcd3881,
+      type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.15833333
-    functionName: 
-    data: 
+    functionName: AnimDisableAnObject
+    data: Player/AttackCollider
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
