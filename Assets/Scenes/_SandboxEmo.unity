@@ -268,22 +268,6 @@ Mesh:
   m_MeshMetrics[0]: 1
   m_MeshMetrics[1]: 1
   m_MeshOptimized: 0
---- !u!1 &103495692 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1606946142010664, guid: 6e55859a0a8f84b4bafde1f7edcd3881,
-    type: 2}
-  m_PrefabInternal: {fileID: 368801780}
---- !u!114 &103495699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 103495692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b268240996973e4ca315d7d43c66474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &105978837
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +863,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1606946142010664, guid: 6e55859a0a8f84b4bafde1f7edcd3881, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65824984982981526, guid: 6e55859a0a8f84b4bafde1f7edcd3881,
+        type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
