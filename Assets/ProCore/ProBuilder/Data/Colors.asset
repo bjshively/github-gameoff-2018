@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -770389242, guid: 4df21bd079886d84699ca7be1316c7a7, type: 3}
+  m_Name: Colors
+  m_EditorClassIdentifier: 
+  array:
+  - {fileID: 2100000, guid: 33f2200eed67f4cbb8e45207b1bfd159, type: 2}
+  - {fileID: 2100000, guid: 4914a36c05c5a9246a46ed566213beb5, type: 2}
+  - {fileID: 2100000, guid: a689d31a0143bc34ab2892fe814609ee, type: 2}
+  - {fileID: 2100000, guid: 026c1196a8f1a744e952ee7abeb5e65b, type: 2}
+  - {fileID: 2100000, guid: d3f6b2a324f1aec4994afd3ed70019b4, type: 2}
+  - {fileID: 2100000, guid: 026574a08e949fb4681434afdd521dca, type: 2}
+  - {fileID: 2100000, guid: 15b64172ae56d714fa25b3a069350322, type: 2}
+  - {fileID: 2100000, guid: 4f5884830e6b37a438f9f7a6d215fe89, type: 2}
+  - {fileID: 2100000, guid: 6ce7f23e304de64468268815db7c71f6, type: 2}
+  - {fileID: 2100000, guid: 5cb0ce0ef19adf348b1dced7c2615a18, type: 2}
+  - {fileID: 2100000, guid: 35f74a4be9744ba43b27ffdff9b86d0a, type: 2}
+  - {fileID: 2100000, guid: 5e759c8a6050f3b42969b5f63bb79533, type: 2}
+  - {fileID: 2100000, guid: 222cd6b4dea363b4ba8499a193beb118, type: 2}
+  - {fileID: 2100000, guid: 9d5d550adb9699645b6f1dbe6bf9e314, type: 2}
+  - {fileID: 2100000, guid: c979621e6f5245e439610301b061c92a, type: 2}
+  - {fileID: 2100000, guid: 8bf9bb9fc0f7be242b519ebdfc313b70, type: 2}
+  - {fileID: 2100000, guid: 51c3e8b794d06d24c96e5b922e45b976, type: 2}
+  - {fileID: 2100000, guid: 07a923d653680c54aa6c189c3d022c02, type: 2}
+  - {fileID: 2100000, guid: 569fd5f3ce1d0fd438d52103133027d5, type: 2}
+  - {fileID: 2100000, guid: 14edc327d85b4a2408f992b0fe443283, type: 2}
+  - {fileID: 2100000, guid: 44d7a3824dc8d4947a90709b8d4e7926, type: 2}
+  - {fileID: 2100000, guid: 8f0a54fff6c62c44c94bf41a7d8fe638, type: 2}
+  - {fileID: 2100000, guid: 2251d1e1372879c43acfafd09f2ed8d8, type: 2}
