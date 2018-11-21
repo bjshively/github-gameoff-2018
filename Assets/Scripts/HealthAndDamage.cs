@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthAndDamage : MonoBehaviour {
 
-    public int health;
+    public int health = 100;
 
 	// Use this for initialization
 	void Start () {
