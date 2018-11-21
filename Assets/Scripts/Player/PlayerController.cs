@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour {
     private float vertical;
     private int targetRotation = -90;
     private int facing = 1;
+    bool canMove = true;
 
     public IntVariable health;
     public IntVariable maxHealth;
@@ -54,25 +56,30 @@ public class PlayerController : MonoBehaviour {
 
     private void Move(float h, float v)
     {
-        //body.velocity = new Vector3(h * moveSpeed.Value, 0.0f, v * moveSpeed.Value).normalized;
-        
-        if (Mathf.Abs(h) > 0 || Mathf.Abs(v) > 0)
+        // If you can't move or player isn't pushing wasd, set velocity to 0
+        if (!canMove || (h == 0 & v == 0))
         {
-            anim.SetFloat("MoveSpeed", 1);
-
-            Vector3 movement = new Vector3(h, 0.0f, v);
-            transform.rotation = Quaternion.LookRotation(movement);
-            transform.Translate(movement * moveSpeed.Value * Time.deltaTime, Space.World);
+            body.velocity = Vector3.zero;
+            anim.SetFloat("MoveSpeed", 0);
         }
+
+        // Otherwise, move 
         else
         {
-            anim.SetFloat("MoveSpeed", 0);
+            body.velocity = new Vector3(h * moveSpeed.Value, 0.0f, v * moveSpeed.Value);
+            anim.SetFloat("MoveSpeed", 1);
+
+            //Vector3 movement = new Vector3(h, 0.0f, v);
+            //transform.rotation = Quaternion.LookRotation(movement);
+            //transform.Translate(movement * moveSpeed.Value * Time.deltaTime, Space.World);
         }
     }
 
     private void Die()
     {
         // Debug.Log("Dead");
+        // Reload current scene on death
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void OnTriggerEnter(Collider other)
