@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9733d44eb0392f64bb69ac13f3b9c241, type: 3}
   m_Name: PlayerTransform
   m_EditorClassIdentifier: 
-  Value: {fileID: 4307267360198702, guid: ca8d22ffd6a204f4cb38436e0b8817e9, type: 2}
+  Value: {fileID: 4974850543771216, guid: 6e55859a0a8f84b4bafde1f7edcd3881, type: 2}
