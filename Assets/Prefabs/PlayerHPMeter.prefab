@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 114998236769056288}
   - component: {fileID: 114464918557873704}
   m_Layer: 5
-  m_Name: HPMeter 1
+  m_Name: PlayerHPMeter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
