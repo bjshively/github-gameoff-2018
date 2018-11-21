@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetButtonDown("Fire1"))
         {
-            anim.SetTrigger("Punch");
+            anim.SetTrigger("Combo1");
         }
 
         if (health.Value <= 0)
@@ -114,6 +114,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (!isInvincible)
         {
+            anim.SetTrigger("Knockback1");
             health.ApplyChange(-10);
         }
     }
