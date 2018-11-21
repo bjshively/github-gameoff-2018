@@ -46,7 +46,6 @@ public class Enemy : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("I'm triggered");
         if(other.name == "PlayerAttackCollider")
         {
             Destroy(gameObject);
