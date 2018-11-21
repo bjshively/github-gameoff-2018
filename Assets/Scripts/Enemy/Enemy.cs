@@ -24,14 +24,13 @@ public class Enemy : MonoBehaviour {
 	void FixedUpdate () {
         playerDistance = Mathf.Abs(Vector3.Distance(playerTransform.Value.position, transform.position));
         Move();
-        anim.SetTrigger("Combo1");
     }
 
     private void Move()
     {
+        Attack();
         if (playerDistance < playerActivationDistance && playerDistance >= 3 && canMove)
         {
-            Attack();
             anim.SetFloat("MoveSpeed", 1);
             // The step size is equal to speed times frame time.
             float step = 5 * Time.deltaTime;
@@ -50,11 +49,10 @@ public class Enemy : MonoBehaviour {
 
     private void Attack()
     {
-        if (Random.Range(0, 5) == 5)
+        if (Random.Range(0, 50) == 5)
         {
             anim.SetTrigger("Combo1");
         }
-        
     }
 
     private void SetCanMove(int v)
