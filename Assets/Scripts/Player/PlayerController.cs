@@ -53,63 +53,20 @@ public class PlayerController : MonoBehaviour {
 
     private void Move(float h, float v)
     {
-        //if (h > 0)
-        //{
-        //    h = moveSpeed.Value;
-        //} else if (h < 0)
-        //{
-        //    h = moveSpeed.Value * -1f;
-        //}
-
-        //if (v > 0)
-        //{
-        //    v = moveSpeed.Value;
-        //}
-        //else if (h < 0)
-        //{
-        //    v = moveSpeed.Value * -1f;
-        //}
-
-        // Trying to do some facing rotation code here, not working yet..
-        //if(facing == 1 && h < 0)
-        //{
-        //    facing = -1;
-        //    StartCoroutine(Rotate(facing));
-
-        //}
-        //else if(facing == -1 && h > 0)
-        //{
-        //    facing = 1;
-        //    StartCoroutine(Rotate(facing));
-        //}
-
-        body.velocity = new Vector3(h, 0.0f, v).normalized;
-
+        //body.velocity = new Vector3(h * moveSpeed.Value, 0.0f, v * moveSpeed.Value).normalized;
+        
         if (Mathf.Abs(h) > 0 || Mathf.Abs(v) > 0)
         {
             anim.SetFloat("MoveSpeed", 1);
 
-            Vector3 scale = transform.localScale;
-
-            if (body.velocity.x > 0)
-            {
-                scale.z = Mathf.Abs(scale.z);
-                transform.localScale = scale;
-            }
-            else if (body.velocity.x < 0)
-            {
-                scale.z = Mathf.Abs(scale.z) * -1;
-                transform.localScale = scale;
-            }
+            Vector3 movement = new Vector3(h, 0.0f, v);
+            transform.rotation = Quaternion.LookRotation(movement);
+            transform.Translate(movement * moveSpeed.Value * Time.deltaTime, Space.World);
         }
         else
         {
             anim.SetFloat("MoveSpeed", 0);
         }
-
-
-        //body.velocity = new Vector2(moveSpeed * Mathf.Sign(h), body.velocity.y);
-        //transform.position += moveNormal * Time.deltaTime * MoveRate.Value;
     }
 
     private void Turn()
