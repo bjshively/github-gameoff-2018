@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     private int targetRotation = -90;
     private int facing = 1;
     bool canMove = true;
+    bool isInvincible = false;
 
     public FloatVariable health;
     public FloatVariable maxHealth;
@@ -79,6 +80,11 @@ public class PlayerController : MonoBehaviour {
     public void SetCanMove(bool v)
     {
         canMove = v;
+    }
+
+    public void SetIsInvincible(bool v)
+    {
+        isInvincible = v;
     }
 
     private void Die()
