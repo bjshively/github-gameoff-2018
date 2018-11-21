@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour {
     public float playerActivationDistance = 20;
     float playerDistance;
     public float moveSpeed = 5;
+    private bool canMove = true;
+    private bool isInvincible = false;
 
 	// Use this for initialization
 	void Start () {
@@ -42,6 +44,33 @@ public class Enemy : MonoBehaviour {
         {
             anim.SetFloat("MoveSpeed", 0);
         }
+    }
+
+    private void SetCanMove(int v)
+    {
+        if (v == 1)
+        {
+            canMove = true;
+        }
+
+        if (v == 0)
+        {
+            canMove = false;
+        }
+    }
+
+    private void SetIsInvincible(int v)
+    {
+        if (v == 1)
+        {
+            isInvincible = true;
+        }
+
+        if (v == 0)
+        {
+            isInvincible = false;
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
