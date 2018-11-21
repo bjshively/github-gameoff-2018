@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour {
 
     private void Move()
     {
-        if (playerDistance < playerActivationDistance)
+        if (playerDistance < playerActivationDistance && playerDistance >= 3)
         {
             anim.SetFloat("MoveSpeed", 1);
             // The step size is equal to speed times frame time.
