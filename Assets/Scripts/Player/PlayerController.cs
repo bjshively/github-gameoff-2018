@@ -110,11 +110,19 @@ public class PlayerController : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    private void OnTriggerEnter(Collider other)
+    void TakeDamage()
+    {
+        if (!isInvincible)
+        {
+            health.ApplyChange(-10);
+        }
+    }
+
+private void OnTriggerEnter(Collider other)
     {
         if(other.name == "AttackCollider")
         {
-            health.ApplyChange(-10);
+            TakeDamage();
         }
     }
 }
