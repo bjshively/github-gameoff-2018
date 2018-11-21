@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         playerDistance = Mathf.Abs(Vector3.Distance(playerTransform.Value.position, transform.position));
-        Debug.Log(playerDistance);
         Move();
 	}
 
