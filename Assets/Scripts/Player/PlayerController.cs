@@ -118,7 +118,6 @@ private void OnTriggerEnter(Collider other)
     {
         if(other.name == "AttackCollider")
         {
-            Debug.Log(other.transform.parent.name);
             TakeDamage();
         }
     }
