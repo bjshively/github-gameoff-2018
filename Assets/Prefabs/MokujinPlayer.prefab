@@ -172,8 +172,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4499974476534854}
   - component: {fileID: 65556138187779186}
-  m_Layer: 8
-  m_Name: AttackCollider
+  m_Layer: 11
+  m_Name: PlayerAttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324,7 +324,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4307267360198702}
   - component: {fileID: 95204313541111970}
-  - component: {fileID: 114366460004250812}
   - component: {fileID: 114131524104452590}
   - component: {fileID: 54903733379981954}
   - component: {fileID: 114871362146451836}
@@ -364,13 +363,13 @@ GameObject:
   - component: {fileID: 33257960230143962}
   - component: {fileID: 23135634434675702}
   - component: {fileID: 135010678444555476}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1804392186002436
 GameObject:
   m_ObjectHideFlags: 1
@@ -560,7 +559,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789858413859726}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -27.899286, y: 0.9278083, z: -6.411067}
+  m_LocalPosition: {x: -32.887035, y: 0.92780834, z: -4.947249}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4305566904549470}
@@ -1856,24 +1855,6 @@ MonoBehaviour:
   animationName: Attack
   speed: 1
   fps: 8
---- !u!114 &114366460004250812
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1789858413859726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f07cf1b1041f514b83defc8a4fec771, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveRate: {fileID: 11400000, guid: 33d775391399f6d42963e68202876c57, type: 2}
-  Horizontal:
-    Positive: 100
-    Negative: 97
-  Vertical:
-    Positive: 119
-    Negative: 115
 --- !u!114 &114871362146451836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1889,7 +1870,7 @@ MonoBehaviour:
   health: {fileID: 11400000, guid: 401dc4455e100624eba25c0f035fdbd2, type: 2}
   maxHealth: {fileID: 11400000, guid: 6d8550cc3c1ec0846b6693bb4b0c2b4c, type: 2}
   moveSpeed: {fileID: 11400000, guid: 33d775391399f6d42963e68202876c57, type: 2}
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
 --- !u!135 &135010678444555476
 SphereCollider:
   m_ObjectHideFlags: 1

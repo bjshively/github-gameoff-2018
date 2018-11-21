@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
     private float vertical;
     private int targetRotation = -90;
     private int facing = 1;
+    bool canMove = true;
 
     public IntVariable health;
     public IntVariable maxHealth;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour {
 
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+        Debug.Log(horizontal);
         Move(horizontal, vertical);
         
 
@@ -54,8 +56,15 @@ public class PlayerController : MonoBehaviour {
 
     private void Move(float h, float v)
     {
-        //body.velocity = new Vector3(h * moveSpeed.Value, 0.0f, v * moveSpeed.Value).normalized;
-        
+        if (h == 0 & v == 0)
+        {
+            body.velocity = Vector3.zero;
+        }
+        else
+        {
+            body.velocity = new Vector3(h * moveSpeed.Value, 0.0f, v * moveSpeed.Value);
+
+        }
         if (Mathf.Abs(h) > 0 || Mathf.Abs(v) > 0)
         {
             anim.SetFloat("MoveSpeed", 1);
