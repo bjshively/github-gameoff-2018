@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour {
 
     public GameObject attackCollider;
     public TransformVariable playerTransform;
+    public float playerActivationDistance = 20;
+    float playerDistance;
 
 
 	// Use this for initialization
@@ -15,16 +17,21 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        playerDistance = Mathf.Abs(Vector3.Distance(playerTransform.Value.position, transform.position));
+        Debug.Log(playerDistance);
         Move();
 	}
 
     private void Move()
     {
-        // The step size is equal to speed times frame time.
-        float step = 5 * Time.deltaTime;
+        if (playerDistance < playerActivationDistance)
+        {
+            // The step size is equal to speed times frame time.
+            float step = 5 * Time.deltaTime;
 
-        // Move our position a step closer to the target.
-        transform.position = Vector3.MoveTowards(transform.position, playerTransform.Value.position, step);
+            // Move our position a step closer to the target.
+            transform.position = Vector3.MoveTowards(transform.position, playerTransform.Value.position, step);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
