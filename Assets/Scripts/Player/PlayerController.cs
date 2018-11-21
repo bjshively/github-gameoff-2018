@@ -116,7 +116,6 @@ public class PlayerController : MonoBehaviour {
         {
             anim.SetTrigger("Knockback1");
             health.ApplyChange(-10);
-            Debug.Log(health.Value);
         }
     }
 
