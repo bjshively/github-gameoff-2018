@@ -24,17 +24,18 @@ public class PlayerController : MonoBehaviour {
         health.Value = maxHealth.Value;
         body = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        // set the point for enemies to follow
         playerTransform.Value.position = transform.position;
 
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
         Move(horizontal, vertical);
-      
+        
+
         if (Input.GetButtonDown("Fire1"))
         {
             anim.SetTrigger("Punch");
@@ -67,24 +68,6 @@ public class PlayerController : MonoBehaviour {
         {
             anim.SetFloat("MoveSpeed", 0);
         }
-    }
-
-    private void Turn()
-    {
-   
-    }
-
-    IEnumerator Rotate(int facing)
-    {
-        float moveSpeed = 20f;
-        targetRotation *= facing;
-        while (transform.rotation.y != targetRotation)
-        {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, targetRotation, 0), moveSpeed * Time.deltaTime);
-            yield return null;
-        }
-        transform.rotation = Quaternion.Euler(0, targetRotation, 0);
-        yield return null;
     }
 
     private void Die()

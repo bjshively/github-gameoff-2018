@@ -42043,6 +42043,13 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
+  - time: 0
+    functionName: SetAFloatVariable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.13333334
     functionName: AnimEnableAnObject
     data: AttackCollider
@@ -42054,6 +42061,13 @@ AnimationClip:
   - time: 0.15833333
     functionName: AnimDisableAnObject
     data: AttackCollider
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.68333334
+    functionName: 
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

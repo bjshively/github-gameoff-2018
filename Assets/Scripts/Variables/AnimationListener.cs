@@ -18,4 +18,9 @@ public class AnimationListener : MonoBehaviour {
         t = gameObject.transform.Find(o);
         t.gameObject.SetActive(false);
     }
+
+    private void SetAFloatVariable(FloatVariable fv)
+    {
+        //
+    }
 }
