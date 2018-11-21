@@ -75,6 +75,12 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+
+    public void SetCanMove(bool v)
+    {
+        canMove = v;
+    }
+
     private void Die()
     {
         // Reload current scene on death
