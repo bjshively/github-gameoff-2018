@@ -77,7 +77,6 @@ public class PlayerController : MonoBehaviour {
 
     private void Die()
     {
-        // Debug.Log("Dead");
         // Reload current scene on death
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -87,7 +86,6 @@ public class PlayerController : MonoBehaviour {
         if(other.name == "AttackCollider")
         {
             health.ApplyChange(-10);
-            Debug.Log(health.Value);
         }
     }
 }
