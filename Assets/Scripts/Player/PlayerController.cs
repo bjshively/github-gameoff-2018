@@ -50,11 +50,6 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        health.ApplyChange(-10);
-    }
-
     private void Move(float h, float v)
     {
         // If you can't move or player isn't pushing wasd, set velocity to 0
@@ -123,6 +118,7 @@ private void OnTriggerEnter(Collider other)
     {
         if(other.name == "AttackCollider")
         {
+            Debug.Log(other.transform.parent.name);
             TakeDamage();
         }
     }

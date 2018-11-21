@@ -84,7 +84,7 @@ public class Enemy : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "PlayerAttackCollider")
+        if(other.name == "AttackCollider" && other.transform.parent.name == "Player")
         {
             Destroy(gameObject);
         }
