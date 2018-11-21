@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 4432079147059520}
   - component: {fileID: 65713149503355410}
   m_Layer: 8
-  m_Name: Enemy01AttackCollider
+  m_Name: AttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1533,7 +1533,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484048469611620}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.4, y: -1, z: -7.16}
+  m_LocalPosition: {x: -10.86, y: -1, z: -9.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4685059595528598}
