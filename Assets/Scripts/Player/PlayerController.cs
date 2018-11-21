@@ -77,14 +77,31 @@ public class PlayerController : MonoBehaviour {
     }
 
 
-    public void SetCanMove(bool v)
+    private void SetCanMove(int v)
     {
-        canMove = v;
+        if (v == 1)
+        {
+            canMove = true;
+        }
+
+        if (v == 0)
+        {
+            canMove = false;
+        }
     }
 
-    public void SetIsInvincible(bool v)
+    private void SetIsInvincible(int v)
     {
-        isInvincible = v;
+        if (v == 1)
+        {
+            isInvincible = true;
+        }
+
+        if (v == 0)
+        {
+            isInvincible = false;
+        }
+
     }
 
     private void Die()

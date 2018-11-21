@@ -19,8 +19,4 @@ public class AnimationListener : MonoBehaviour {
         t.gameObject.SetActive(false);
     }
 
-    private void SetAFloatVariable(FloatVariable fv)
-    {
-        //
-    }
 }
