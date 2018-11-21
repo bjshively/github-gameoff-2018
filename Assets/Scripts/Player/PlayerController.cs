@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour {
     private int facing = 1;
     bool canMove = true;
 
-    public IntVariable health;
-    public IntVariable maxHealth;
+    public FloatVariable health;
+    public FloatVariable maxHealth;
     public FloatVariable moveSpeed;
     public TransformVariable playerTransform;
 

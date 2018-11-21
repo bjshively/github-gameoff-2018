@@ -8,8 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f53bf0d6342f40c9886b0bf57d780d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fad5767a99402c44b1527408000e897, type: 3}
   m_Name: PlayerHealth
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  Value: 100
+  Value: 0
