@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviour {
 
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
-        Debug.Log(horizontal);
         Move(horizontal, vertical);
         
 
