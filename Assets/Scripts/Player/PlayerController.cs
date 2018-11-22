@@ -128,6 +128,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (!isInvincible)
         {
+            isInvincible = true;
             anim.SetTrigger("Knockback1");
             health.ApplyChange(-10);
         }

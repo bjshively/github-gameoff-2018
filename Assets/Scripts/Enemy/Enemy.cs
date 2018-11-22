@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour {
     public float moveSpeed = 5;
     private bool canMove = true;
     private bool isInvincible = false;
+    private float health = 150;
 
 	// Use this for initialization
 	void Start () {
@@ -88,13 +89,32 @@ public class Enemy : MonoBehaviour {
 
     }
 
+    void TakeDamage()
+    {
+        if (!isInvincible)
+        {
+            isInvincible = true;
+            anim.SetTrigger("Knockback1");
+            health -= 50;
+        }
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.name == "AttackCollider" && other.transform.parent.name == "Player")
         {
             enemyHitTime.Value = Time.time;
-            //other.transform.parent.GetComponent<PlayerController>().RegisterHit();
-            Destroy(gameObject);
+            TakeDamage();
+            
         }
     }
 }
