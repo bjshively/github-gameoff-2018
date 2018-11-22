@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour {
     private Rigidbody body;
     public GameObject attackCollider;
     public TransformVariable playerTransform;
+    public FloatVariable enemyHitTime;
     public float playerActivationDistance = 20;
     float playerDistance;
     public float moveSpeed = 5;
@@ -86,6 +87,8 @@ public class Enemy : MonoBehaviour {
     {
         if(other.name == "AttackCollider" && other.transform.parent.name == "Player")
         {
+            enemyHitTime.Value = Time.time;
+            //other.transform.parent.GetComponent<PlayerController>().RegisterHit();
             Destroy(gameObject);
         }
     }

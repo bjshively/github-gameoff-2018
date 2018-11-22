@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 4362126903866880}
   - component: {fileID: 65824984982981526}
   m_Layer: 8
-  m_Name: PlayerAttackCollider
+  m_Name: AttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1795,7 +1795,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606946142010664}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -26.35, y: -1.7999811, z: -7.159997}
+  m_LocalPosition: {x: -26.35, y: -1.74, z: -7.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512375598262740}
@@ -1909,7 +1909,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1879074065259076}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.85, y: 1, z: 1}
@@ -1933,7 +1933,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1641733820417894}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.85, y: 1, z: 1}
@@ -2020,6 +2020,7 @@ MonoBehaviour:
   health: {fileID: 11400000, guid: 29655ca8bcab1064ab6080fe56ed1469, type: 2}
   maxHealth: {fileID: 11400000, guid: 6d8550cc3c1ec0846b6693bb4b0c2b4c, type: 2}
   moveSpeed: {fileID: 11400000, guid: 33d775391399f6d42963e68202876c57, type: 2}
+  enemyHitTime: {fileID: 11400000, guid: 1400c6b899273c64f898bca69276dc8d, type: 2}
   playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
 --- !u!114 &114697016806240982
 MonoBehaviour:

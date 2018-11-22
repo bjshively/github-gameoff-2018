@@ -1951,6 +1951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCollider: {fileID: 1106495496847884}
   playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
+  enemyHitTime: {fileID: 11400000, guid: 1400c6b899273c64f898bca69276dc8d, type: 2}
   playerActivationDistance: 20
   moveSpeed: 5
 --- !u!114 &114757962202923716
