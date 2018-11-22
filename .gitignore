@@ -34,3 +34,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Cinemachine/CinemachineExamples.unitypackage.meta
+Assets/Cinemachine/Timeline/LegacyTimelineAPI.unitypackage.meta

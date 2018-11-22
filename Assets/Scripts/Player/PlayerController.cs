@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour {
     bool canMove = true;
     bool isInvincible = false;
     int landedHit = 0;
-    private float timeOfLastHit;
 
     public FloatVariable health;
     public FloatVariable maxHealth;
@@ -27,7 +26,7 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        timeOfLastHit = -10;
+        enemyHitTime.Value = -10;
         health.Value = maxHealth.Value;
         body = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
@@ -55,15 +54,19 @@ public class PlayerController : MonoBehaviour {
 
     private void Attack()
     {
-        if((Time.time - enemyHitTime.Value < 1) && landedHit < 2)
+        if (canMove)
         {
-            landedHit++;
-        } else
-        {
-            landedHit = 0;
+            if ((Time.time - enemyHitTime.Value < 1) && landedHit < 2)
+            {
+                landedHit++;
+            }
+            else
+            {
+                landedHit = 0;
+            }
+            string[] attacks = { "Combo1", "Combo2", "Combo3" };
+            anim.SetTrigger(attacks[landedHit]);
         }
-        string[] attacks = { "Combo1", "Combo2", "Combo3" };
-        anim.SetTrigger(attacks[landedHit]);
     }
 
     private void Move(float h, float v)
