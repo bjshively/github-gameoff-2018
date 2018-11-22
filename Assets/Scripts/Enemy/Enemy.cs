@@ -96,6 +96,7 @@ public class Enemy : MonoBehaviour {
         if (!isInvincible)
         {
             isInvincible = true;
+            canMove = false;
             anim.SetTrigger("Knockback1");
             health -= 50;
         }

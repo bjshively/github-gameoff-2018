@@ -16,14 +16,17 @@ public class PlayerController : MonoBehaviour {
     bool canMove = true;
     bool isInvincible = false;
     int landedHit = 0;
+    int tookHit = 0;
 
     public FloatVariable health;
     public FloatVariable maxHealth;
     public FloatVariable moveSpeed;
     public FloatVariable enemyHitTime;
+    public FloatVariable playerHitTime;
     public TransformVariable playerTransform;
 
     string[] attacks = { "Combo1", "Combo2", "Combo3" };
+    string[] knockbacks = { "Knockback1", "Knockback2", "Knockback3" };
 
     // Use this for initialization
     void Start () {
@@ -129,11 +132,26 @@ public class PlayerController : MonoBehaviour {
 
     void TakeDamage()
     {
+       
         if (!isInvincible)
         {
+            // Reset combo counter
             landedHit = 0;
             isInvincible = true;
-            anim.SetTrigger("Knockback1");
+
+            if ((Time.time - playerHitTime.Value < 5) && tookHit < 2)
+            {
+                tookHit++;
+            }
+            else
+            {
+                tookHit = 0; // Reset player hit counter
+            }
+   
+
+            playerHitTime.Value = Time.time;
+            // Trigger the knockback
+            anim.SetTrigger(knockbacks[tookHit]);
             health.ApplyChange(-10);
         }
     }
