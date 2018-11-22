@@ -117,7 +117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1106553544542604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,7 +1356,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1106495496847884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.012, y: 4.311, z: 2.492}
+  m_LocalPosition: {x: -0.00000023841858, y: 4, z: 2.5000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4608261034763698}
@@ -1533,7 +1533,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484048469611620}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -10.86, y: -1, z: -9.24}
+  m_LocalPosition: {x: 18, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4685059595528598}
@@ -1867,7 +1867,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1223113336354708}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.85, y: 1, z: 1}
@@ -1879,7 +1879,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1414169201519628}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7092035, y: 2.1559236, z: 0.80283016}
@@ -1891,7 +1891,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1546439347210012}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.85, y: 1, z: 1}
@@ -1906,8 +1906,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3, y: 2.5, z: 3.0525446}
+  m_Center: {x: -3.7335688e-16, y: 0, z: -1.0262724}
 --- !u!65 &65965040145674780
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1974,10 +1974,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.8973012
   m_Height: 5.3414717
   m_Direction: 1
-  m_Center: {x: 0, y: 2.654037, z: 0}
+  m_Center: {x: -0, y: 2.654037, z: 0}
 --- !u!137 &137237345501416078
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
