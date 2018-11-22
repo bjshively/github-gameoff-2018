@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
     public FloatVariable enemyHitTime;
     public TransformVariable playerTransform;
 
+    string[] attacks = { "Combo1", "Combo2", "Combo3" };
 
     // Use this for initialization
     void Start () {
@@ -56,15 +57,17 @@ public class PlayerController : MonoBehaviour {
     {
         if (canMove)
         {
+            // Increase the combo counter if the last hit was recent enough
             if ((Time.time - enemyHitTime.Value < 1) && landedHit < 2)
             {
                 landedHit++;
             }
             else
             {
-                landedHit = 0;
+                landedHit = 0; // Reset combo counter
             }
-            string[] attacks = { "Combo1", "Combo2", "Combo3" };
+
+            // Execute the current combo move
             anim.SetTrigger(attacks[landedHit]);
         }
     }
@@ -128,6 +131,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (!isInvincible)
         {
+            landedHit = 0;
             isInvincible = true;
             anim.SetTrigger("Knockback1");
             health.ApplyChange(-10);

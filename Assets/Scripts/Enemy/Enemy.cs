@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour {
 
     private void Attack()
     {
-        if (Random.Range(0, 50) == 5)
+        if (Random.Range(0, 100) == 1)
         {
             anim.SetTrigger("Combo1");
         }
