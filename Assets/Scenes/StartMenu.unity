@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 434414929}
   - component: {fileID: 434414928}
   - component: {fileID: 434414927}
-  - component: {fileID: 434414926}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -151,17 +150,6 @@ RectTransform:
   m_AnchoredPosition: {x: -4, y: -51.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &434414926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 434414924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f04dfac06b06f4b438ada724d83d74dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &434414927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +189,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434414926}
+      - m_Target: {fileID: 568225244}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -259,6 +247,7 @@ GameObject:
   - component: {fileID: 568225242}
   - component: {fileID: 568225241}
   - component: {fileID: 568225240}
+  - component: {fileID: 568225244}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -343,6 +332,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &568225244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568225239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04dfac06b06f4b438ada724d83d74dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &786990623
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,7 +727,6 @@ GameObject:
   - component: {fileID: 1886101405}
   - component: {fileID: 1886101404}
   - component: {fileID: 1886101403}
-  - component: {fileID: 1886101406}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -793,7 +792,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1886101406}
+      - m_Target: {fileID: 568225244}
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -840,14 +839,3 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1886101401}
   m_CullTransparentMesh: 0
---- !u!114 &1886101406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1886101401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f04dfac06b06f4b438ada724d83d74dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
