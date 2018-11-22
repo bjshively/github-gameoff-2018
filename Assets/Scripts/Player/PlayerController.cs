@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour {
         // If you can't move or player isn't pushing wasd, set velocity to 0
         if (!canMove || (h == 0 & v == 0))
         {
-            body.velocity = Vector3.zero;
+            body.velocity = new Vector3(0, body.velocity.y, 0);
             anim.SetFloat("MoveSpeed", 0);
         }
 
