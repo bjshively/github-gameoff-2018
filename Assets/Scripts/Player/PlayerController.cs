@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        timeOfLastHit = Time.time;
+        timeOfLastHit = -10;
         health.Value = maxHealth.Value;
         body = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Attack()
     {
-        if((Time.time - enemyHitTime.Value < 5) && landedHit < 2)
+        if((Time.time - enemyHitTime.Value < 1) && landedHit < 2)
         {
             landedHit++;
         } else
