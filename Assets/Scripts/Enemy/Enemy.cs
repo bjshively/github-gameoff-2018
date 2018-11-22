@@ -29,7 +29,6 @@ public class Enemy : MonoBehaviour {
 
     private void Move()
     {
-        Attack();
         if (playerDistance < playerActivationDistance && playerDistance >= 3 && canMove)
         {
             anim.SetFloat("MoveSpeed", 1);
@@ -45,6 +44,12 @@ public class Enemy : MonoBehaviour {
         } else
         {
             anim.SetFloat("MoveSpeed", 0);
+        }
+
+        // Only attack if the player is within striking distance
+        if (playerDistance < 5)
+        {
+            Attack();
         }
     }
 
