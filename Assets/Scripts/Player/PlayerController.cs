@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour {
             body.velocity = new Vector3(h * moveSpeed.Value, 0.0f, v * moveSpeed.Value);
             anim.SetFloat("MoveSpeed", 1);
 
-            Vector3 movement = new Vector3(h, 0.0f, v);
+            Vector3 movement = new Vector3(h, body.velocity.y, v);
             transform.rotation = Quaternion.LookRotation(movement);
             transform.Translate(movement * moveSpeed.Value * Time.deltaTime, Space.World);
         }
