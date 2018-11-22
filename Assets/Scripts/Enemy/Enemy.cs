@@ -36,11 +36,13 @@ public class Enemy : MonoBehaviour {
             // The step size is equal to speed times frame time.
             float step = 5 * Time.deltaTime;
 
+            Vector3 playerDirection = new Vector3(playerTransform.Value.position.x, transform.position.y, playerTransform.Value.position.z);
+
             // Move our position a step closer to the target.
-            transform.position = Vector3.MoveTowards(transform.position, playerTransform.Value.position, step);
+            transform.position = Vector3.MoveTowards(transform.position, playerDirection, step);
 
             // Rotate to face player
-            transform.LookAt(playerTransform.Value.position);
+            transform.LookAt(playerDirection);
 
         } else
         {
