@@ -18,11 +18,12 @@ MonoBehaviour:
   m_int_keys:
   - z_GIWorkflowMode
   - prefab_previewThumbSize
+  - pushpull_brush_dir
   m_float_keys: []
   m_string_keys: []
   m_Color_keys: []
   m_bool_values: 010000
-  m_int_values: 010000006a000000
+  m_int_values: 010000006a00000002000000
   m_float_values: []
   m_string_values: []
   m_Color_values: []
