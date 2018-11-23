@@ -16,36 +16,49 @@ public class Enemy : MonoBehaviour {
     private bool canMove = true;
     public bool isInvincible = false;
     public int health;
+    float time;
 
-	// Use this for initialization
-	void Start () {
+    // Pick a random number of seconds to wait between recalculating path to player
+    int movementRecalculation;
+    Vector3 playerDirection;
+
+    // Use this for initialization
+    void Start () {
         anim = GetComponent<Animator>();
         body = GetComponent<Rigidbody>();
         currentCombo = enemyHitTime.Value;
-	}
+        time = Time.time;
+        movementRecalculation = Random.Range(3, 6);
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        playerDistance = Mathf.Abs(Vector3.Distance(playerTransform.Value.position, transform.position));
+        time = Time.time;
         Move();
     }
 
     private void Move()
     {
-        Vector3 playerDirection = new Vector3(playerTransform.Value.position.x, transform.position.y, playerTransform.Value.position.z);
+        // Calculate the distance to the player
+        playerDistance = Mathf.Abs(Vector3.Distance(playerTransform.Value.position, transform.position));
 
+        // Recalculate trajectory when recalculation limit as lapsed, or when the target location has been reached (prevent walking in place)
+        if ((time % movementRecalculation == 0) || Vector3.Distance(transform.position, playerDirection) < 1)
+        {
+            // Set a new trajectory towards the player, but add some randomness to the trajectory +-5 on X and Z axes
+            playerDirection = new Vector3(playerTransform.Value.position.x + Random.Range(-5, 5), transform.position.y, playerTransform.Value.position.z + Random.Range(-5, 5));
+        }
         if (playerDistance < alertness.Value && playerDistance >= 3 && canMove)
         {
             anim.SetFloat("MoveSpeed", 1);
             // The step size is equal to speed times frame time.
             float step = 5 * Time.deltaTime;
 
-            // Move our position a step closer to the target.
+            // Move position a step closer to the target.
             transform.position = Vector3.MoveTowards(transform.position, playerDirection, step);
 
             // Rotate to face player
             transform.LookAt(playerDirection);
-
         } 
         else
         {
