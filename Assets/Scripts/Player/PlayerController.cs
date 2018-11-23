@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour {
         // set the point for enemies to follow
         playerTransform.Value.position = transform.position;
 
+        DepleteHealth();
+
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
         Move(horizontal, vertical);
@@ -96,6 +98,14 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    // Player slowly dies over time
+    void DepleteHealth()
+    {
+        if (Time.time % 10 == 0)
+        {
+            health.Value--;
+        }
+    }
 
     private void SetCanMove(int v)
     {
