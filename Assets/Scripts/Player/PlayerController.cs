@@ -18,9 +18,9 @@ public class PlayerController : MonoBehaviour {
     int currentCombo = 0;
     int currentKnockback = 0;
 
-    public FloatVariable health;
-    public FloatVariable maxHealth;
-    public FloatVariable moveSpeed;
+    public IntReference maxHealth;
+    public int health;
+    public FloatReference moveSpeed;
     public FloatVariable enemyHitTime;
     public FloatVariable playerHitTime;
     public TransformVariable playerTransform;
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         enemyHitTime.Value = -10;
-        health.Value = maxHealth.Value;
+        health = maxHealth.Value;
         body = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
 	}
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour {
             Attack();
         }
 
-        if (health.Value <= 0)
+        if (health <= 0)
         {
             Die();
         }
@@ -159,7 +159,7 @@ public class PlayerController : MonoBehaviour {
             playerHitTime.Value = Time.time;
             // Trigger the knockback
             anim.SetTrigger(knockbacks[currentKnockback]);
-            health.ApplyChange(-10);
+            health -= 1;
         }
     }
 
