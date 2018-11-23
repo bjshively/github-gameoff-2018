@@ -126,7 +126,14 @@ public class PlayerController : MonoBehaviour {
 
     private void Die()
     {
+        anim.SetTrigger("Knockback3");
+        anim.SetBool("IsAlive", false);
+    }
+
+    private void ReloadScene()
+    {
         // Reload current scene on death
+        // to be called from animation
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
