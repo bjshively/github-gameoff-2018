@@ -1952,8 +1952,10 @@ MonoBehaviour:
   attackCollider: {fileID: 1106495496847884}
   playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
   enemyHitTime: {fileID: 11400000, guid: 1400c6b899273c64f898bca69276dc8d, type: 2}
-  playerActivationDistance: 20
-  moveSpeed: 5
+  playerActivationDistance: {fileID: 11400000, guid: 332e7340a02d34f3c9e5d991c2021391,
+    type: 2}
+  MoveSpeed: {fileID: 11400000, guid: 083992838a2c04cb6b9ea3ba09a3660b, type: 2}
+  health: 100
 --- !u!114 &114757962202923716
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour {
     private int facing = 1;
     bool canMove = true;
     bool isInvincible = false;
-    int landedHit = 0;
-    int tookHit = 0;
+    int currentCombo = 0;
+    int currentKnockback = 0;
 
     public FloatVariable health;
     public FloatVariable maxHealth;
@@ -61,17 +61,17 @@ public class PlayerController : MonoBehaviour {
         if (canMove)
         {
             // Increase the combo counter if the last hit was recent enough
-            if ((Time.time - enemyHitTime.Value < 1) && landedHit < 2)
+            if ((Time.time - enemyHitTime.Value < 1) && currentCombo < 2)
             {
-                landedHit++;
+                currentCombo++;
             }
             else
             {
-                landedHit = 0; // Reset combo counter
+                currentCombo = 0; // Reset combo counter
             }
 
             // Execute the current combo move
-            anim.SetTrigger(attacks[landedHit]);
+            anim.SetTrigger(attacks[currentCombo]);
         }
     }
 
@@ -143,29 +143,29 @@ public class PlayerController : MonoBehaviour {
         if (!isInvincible)
         {
             // Reset combo counter
-            landedHit = 0;
+            currentCombo = 0;
             isInvincible = true;
 
-            if ((Time.time - playerHitTime.Value < 5) && tookHit < 2)
+            if ((Time.time - playerHitTime.Value < 5) && currentKnockback < 2)
             {
-                tookHit++;
+                currentKnockback++;
             }
             else
             {
-                tookHit = 0; // Reset player hit counter
+                currentKnockback = 0; // Reset player hit counter
             }
    
 
             playerHitTime.Value = Time.time;
             // Trigger the knockback
-            anim.SetTrigger(knockbacks[tookHit]);
+            anim.SetTrigger(knockbacks[currentKnockback]);
             health.ApplyChange(-10);
         }
     }
 
-private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "AttackCollider")
+        if (other.name == "AttackCollider")
         {
             TakeDamage();
         }

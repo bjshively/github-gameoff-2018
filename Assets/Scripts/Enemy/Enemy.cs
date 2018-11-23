@@ -9,12 +9,12 @@ public class Enemy : MonoBehaviour {
     public GameObject attackCollider;
     public TransformVariable playerTransform;
     public FloatVariable enemyHitTime;
-    public float playerActivationDistance = 20;
+    public FloatVariable playerActivationDistance ;
     float playerDistance;
-    public float moveSpeed = 5;
+    public FloatVariable MoveSpeed;
     private bool canMove = true;
-    private bool isInvincible = false;
-    private float health = 150;
+    public bool isInvincible = false;
+    public int health;
 
 	// Use this for initialization
 	void Start () {
@@ -30,13 +30,13 @@ public class Enemy : MonoBehaviour {
 
     private void Move()
     {
-        if (playerDistance < playerActivationDistance && playerDistance >= 3 && canMove)
+        Vector3 playerDirection = new Vector3(playerTransform.Value.position.x, transform.position.y, playerTransform.Value.position.z);
+
+        if (playerDistance < playerActivationDistance.Value && playerDistance >= 3 && canMove)
         {
             anim.SetFloat("MoveSpeed", 1);
             // The step size is equal to speed times frame time.
             float step = 5 * Time.deltaTime;
-
-            Vector3 playerDirection = new Vector3(playerTransform.Value.position.x, transform.position.y, playerTransform.Value.position.z);
 
             // Move our position a step closer to the target.
             transform.position = Vector3.MoveTowards(transform.position, playerDirection, step);
@@ -44,9 +44,13 @@ public class Enemy : MonoBehaviour {
             // Rotate to face player
             transform.LookAt(playerDirection);
 
-        } else
+        } 
+        else
         {
             anim.SetFloat("MoveSpeed", 0);
+
+            // Rotate to face player
+            transform.LookAt(playerDirection);
         }
 
         // Only attack if the player is within striking distance
@@ -96,17 +100,19 @@ public class Enemy : MonoBehaviour {
         if (!isInvincible)
         {
             isInvincible = true;
-            canMove = false;
+//            canMove = false;
             anim.SetTrigger("Knockback1");
             health -= 50;
         }
+
         if (health <= 0)
         {
-            Die();
+            anim.SetTrigger("Knockback3");
+            anim.SetBool("EnemyIsAlive", false);
         }
     }
 
-    void Die()
+    private void AnimDestroyEnemy()
     {
         Destroy(gameObject);
     }
