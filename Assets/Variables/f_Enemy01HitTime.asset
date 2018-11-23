@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fad5767a99402c44b1527408000e897, type: 3}
-  m_Name: Enemy01MovementSpeed
+  m_Name: f_Enemy01HitTime
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  Value: 3
+  Value: -10

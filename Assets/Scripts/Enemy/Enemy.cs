@@ -8,10 +8,11 @@ public class Enemy : MonoBehaviour {
     private Rigidbody body;
     public GameObject attackCollider;
     public TransformVariable playerTransform;
-    public FloatVariable enemyHitTime;
-    public FloatVariable playerActivationDistance ;
+    public FloatReference enemyHitTime;
+    public float currentCombo;
+    public FloatReference alertness;
     float playerDistance;
-    public FloatVariable MoveSpeed;
+    public FloatReference MoveSpeed;
     private bool canMove = true;
     public bool isInvincible = false;
     public int health;
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         body = GetComponent<Rigidbody>();
+        currentCombo = enemyHitTime.Value;
 	}
 	
 	// Update is called once per frame
@@ -32,7 +34,7 @@ public class Enemy : MonoBehaviour {
     {
         Vector3 playerDirection = new Vector3(playerTransform.Value.position.x, transform.position.y, playerTransform.Value.position.z);
 
-        if (playerDistance < playerActivationDistance.Value && playerDistance >= 3 && canMove)
+        if (playerDistance < alertness.Value && playerDistance >= 3 && canMove)
         {
             anim.SetFloat("MoveSpeed", 1);
             // The step size is equal to speed times frame time.
@@ -121,7 +123,7 @@ public class Enemy : MonoBehaviour {
     {
         if(other.name == "AttackCollider" && other.transform.parent.name == "Player")
         {
-            enemyHitTime.Value = Time.time;
+            currentCombo = Time.time;
             TakeDamage();
             
         }
