@@ -27,7 +27,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b65a7d667dabe1419dea0073196041a1
-    m_lastTime: -8586606787403696017
+    m_lastTime: -8586586007493302742
     List:
     - name: GameSounds
       guid: b543a3e0e70af743b1576ff032c806a3
@@ -42,8 +42,32 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8119b29db91540468c7bdc1a7e521c73
-    m_lastTime: -8586606789606389211
-    List: []
+    m_lastTime: -8586586007024677499
+    List:
+    - name: Play_Gameplay
+      guid: 5978149b07593c4ca907911e5fb24971
+      id: 3737014274
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Gameplay
+        ObjectType: 3
+      Path: Default Work Unit\Play_Gameplay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Gameplay_01
+      guid: 1a2802a0eefbf44c857dbc7394da422d
+      id: 3561765664
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Gameplay_01
+        ObjectType: 3
+      Path: Default Work Unit\Play_Gameplay_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -70,5 +94,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /GitHubGameOff2018_Wwise
+  - /GitHubGameOff2018_Wwise/Events
+  - /GitHubGameOff2018_Wwise/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

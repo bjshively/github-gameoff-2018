@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\</ProjectRoot>
+		<SourceFilesRoot>D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Documents\GitHub\github-gameoff-2018\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2841340823" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\GameSounds</ObjectPath>
+			<ShortName>GameSounds</ShortName>
+			<Path>GameSounds.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3737014274" Name="Play_Gameplay" ObjectPath="\Events\Default Work Unit\Play_Gameplay"/>
+				<Event Id="3561765664" Name="Play_Gameplay_01" ObjectPath="\Events\Default Work Unit\Play_Gameplay_01"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="393190534" Language="SFX">
+					<ShortName>GHGO_Gameplay_v2.wav</ShortName>
+					<Path>SFX\GHGO_Gameplay_v2_8956FC97.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

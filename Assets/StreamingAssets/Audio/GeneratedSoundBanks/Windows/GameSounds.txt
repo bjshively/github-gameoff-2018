@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3561765664	Play_Gameplay_01			\Default Work Unit\Play_Gameplay_01	
+	3737014274	Play_Gameplay			\Default Work Unit\Play_Gameplay	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	393190534	GHGO_Gameplay_v2	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\GHGO_Gameplay_v2_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Gameplay\GHGO_Gameplay_v2\GHGO_Gameplay_v2		3456064
+
