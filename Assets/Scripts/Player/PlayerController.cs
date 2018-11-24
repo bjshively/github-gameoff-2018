@@ -53,8 +53,9 @@ public class PlayerController : Character {
             Attack();
         }
 
-        if (health.Value <= 0)
+        if ((health.Value <= 0 || transform.position.y < -100) && isAlive)
         {
+            isAlive = false;
             Die("IsAlive");
             PlayerDamageSound.Post(gameObject);
         }

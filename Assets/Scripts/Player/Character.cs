@@ -8,11 +8,13 @@ public class Character : MonoBehaviour {
     public bool isInvincible = false;
     protected Animator anim;
     protected Rigidbody body;
+    protected bool isAlive;
 
     protected virtual void Start()
     {
         body = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        isAlive = true;
     }
 
     private void SetCanMove(int v)
