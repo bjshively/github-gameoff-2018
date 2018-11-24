@@ -46,6 +46,9 @@ public class Enemy : MonoBehaviour {
             // Set a new trajectory towards the player, but add some randomness to the trajectory +-5 on X and Z axes
             playerDirection = new Vector3(playerTransform.Value.position.x + Random.Range(-5, 5), transform.position.y, playerTransform.Value.position.z + Random.Range(-5, 5));
         }
+
+
+        // If player within attack range, move towards player
         if (playerDistance < alertness.Value && playerDistance >= 3 && canMove)
         {
             anim.SetFloat("MoveSpeed", 1);
@@ -67,8 +70,11 @@ public class Enemy : MonoBehaviour {
             {
                 playerDirection = new Vector3(playerTransform.Value.position.x, transform.position.y, playerTransform.Value.position.z);
             }
-            // Rotate to face player
-            transform.LookAt(playerDirection);
+            if (canMove)
+            {
+                // Rotate to face player
+                transform.LookAt(playerDirection);
+            }
         }
 
         // Only attack if the player is within striking distance
@@ -122,15 +128,20 @@ public class Enemy : MonoBehaviour {
         {
             isInvincible = true;
             //            canMove = false;
-            anim.SetTrigger("Knockback1");
-            health -= 50;
+            health -= 1;
+            if (health <= 0)
+            {
+                anim.SetTrigger("Knockback3");
+                anim.SetBool("EnemyIsAlive", false);
+            }
+            else
+            {
+                anim.SetTrigger("Knockback1");
+            }
+            
         }
 
-        if (health <= 0)
-        {
-            anim.SetTrigger("Knockback3");
-            anim.SetBool("EnemyIsAlive", false);
-        }
+
     }
 
     private void AnimDestroyEnemy()
