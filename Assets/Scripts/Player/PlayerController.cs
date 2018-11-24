@@ -165,7 +165,6 @@ public class PlayerController : MonoBehaviour {
             {
                 currentKnockback = 0; // Reset player hit counter
             }
-   
 
             playerHitTime.Value = Time.time;
             // Trigger the knockback

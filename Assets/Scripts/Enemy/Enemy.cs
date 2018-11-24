@@ -74,15 +74,18 @@ public class Enemy : MonoBehaviour {
         // Only attack if the player is within striking distance
         if (playerDistance < 5)
         {
-            Attack();
+                Attack();
         }
     }
 
     private void Attack()
     {
-        if (Random.Range(0, 100) == 1)
+        if (canMove)
         {
-            anim.SetTrigger("Combo1");
+            if (Random.Range(0, 100) == 1)
+            {
+                anim.SetTrigger("Combo1");
+            }
         }
     }
 
