@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
         // set the point for enemies to follow
         playerTransform.Value.position = transform.position;
 
-        DepleteHealth();
+        //DepleteHealth();
 
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");

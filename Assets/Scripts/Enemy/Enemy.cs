@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour {
     public GameObject attackCollider;
     public TransformVariable playerTransform;
     public FloatReference enemyHitTime;
-    public float currentCombo;
     public FloatReference alertness;
     float playerDistance;
     public FloatReference MoveSpeed;
@@ -26,7 +25,6 @@ public class Enemy : MonoBehaviour {
     void Start () {
         anim = GetComponent<Animator>();
         body = GetComponent<Rigidbody>();
-        currentCombo = enemyHitTime.Value;
         time = Time.time;
         movementRecalculation = Random.Range(3, 6);
     }
@@ -120,7 +118,6 @@ public class Enemy : MonoBehaviour {
         if (!isInvincible)
         {
             isInvincible = true;
-            currentCombo = Time.time;
             //            canMove = false;
             anim.SetTrigger("Knockback1");
             health -= 50;
