@@ -1795,7 +1795,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606946142010664}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 160.00006, y: 0.016698837, z: -6.671427}
+  m_LocalPosition: {x: 25, y: 0.01669693, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512375598262740}
@@ -2017,6 +2017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCollider: {fileID: 1716240557852290}
+  isInvincible: 0
   maxHealth:
     UseConstant: 0
     ConstantValue: 0

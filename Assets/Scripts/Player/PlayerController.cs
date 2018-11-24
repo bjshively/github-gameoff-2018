@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
     private int targetRotation = -90;
     private int facing = 1;
     bool canMove = true;
-    bool isInvincible = false;
+    public bool isInvincible = false;
     int currentCombo = 0;
     int currentKnockback = 0;
 
