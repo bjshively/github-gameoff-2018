@@ -3,18 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : Character {
 
-    private Rigidbody body;
-    private Animator anim;
+
     public GameObject attackCollider;
 
     private float horizontal;
     private float vertical;
     private int targetRotation = -90;
-    private int facing = 1;
-    bool canMove = true;
-    public bool isInvincible = false;
+
     int currentCombo = 0;
     int currentKnockback = 0;
 
@@ -29,12 +26,12 @@ public class PlayerController : MonoBehaviour {
     string[] knockbacks = { "Knockback1", "Knockback2", "Knockback3" };
 
     // Use this for initialization
-    void Start () {
+    protected override void Start () {
+        base.Start();
         enemyHitTime.Value = -10;
         playerHitTime.Value = -10;
         health.Value = maxHealth.Value;
-        body = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
+
 	}
 	
 	// Update is called once per frame
@@ -55,7 +52,7 @@ public class PlayerController : MonoBehaviour {
 
         if (health.Value <= 0)
         {
-            Die();
+            Die("IsAlive");
         }
     }
 
@@ -106,39 +103,6 @@ public class PlayerController : MonoBehaviour {
         {
             health.Value--;
         }
-    }
-
-    private void SetCanMove(int v)
-    {
-        if (v == 1)
-        {
-            canMove = true;
-        }
-
-        if (v == 0)
-        {
-            canMove = false;
-        }
-    }
-
-    private void SetIsInvincible(int v)
-    {
-        if (v == 1)
-        {
-            isInvincible = true;
-        }
-
-        if (v == 0)
-        {
-            isInvincible = false;
-        }
-
-    }
-
-    private void Die()
-    {
-        anim.SetTrigger("Knockback3");
-        anim.SetBool("IsAlive", false);
     }
 
     private void ReloadScene()

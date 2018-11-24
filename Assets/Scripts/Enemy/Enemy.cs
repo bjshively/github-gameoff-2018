@@ -2,18 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : Character {
 
-    private Animator anim;
-    private Rigidbody body;
     public GameObject attackCollider;
     public TransformVariable playerTransform;
     public FloatReference enemyHitTime;
     public FloatReference alertness;
     float playerDistance;
     public FloatReference MoveSpeed;
-    private bool canMove = true;
-    public bool isInvincible = false;
     public int health;
     float time;
 
@@ -22,9 +18,8 @@ public class Enemy : MonoBehaviour {
     Vector3 playerDirection;
 
     // Use this for initialization
-    void Start () {
-        anim = GetComponent<Animator>();
-        body = GetComponent<Rigidbody>();
+    override protected void Start () {
+        base.Start();
         time = Time.time;
         movementRecalculation = Random.Range(3, 6);
     }
@@ -46,7 +41,6 @@ public class Enemy : MonoBehaviour {
             // Set a new trajectory towards the player, but add some randomness to the trajectory +-5 on X and Z axes
             playerDirection = new Vector3(playerTransform.Value.position.x + Random.Range(-5, 5), transform.position.y, playerTransform.Value.position.z + Random.Range(-5, 5));
         }
-
 
         // If player within attack range, move towards player
         if (playerDistance < alertness.Value && playerDistance >= 3 && canMove)
@@ -80,7 +74,10 @@ public class Enemy : MonoBehaviour {
         // Only attack if the player is within striking distance
         if (playerDistance < 5)
         {
+            if (Random.Range(0, 100) == 1)
+            {
                 Attack();
+            }
         }
     }
 
@@ -88,38 +85,8 @@ public class Enemy : MonoBehaviour {
     {
         if (canMove)
         {
-            if (Random.Range(0, 100) == 1)
-            {
                 anim.SetTrigger("Combo1");
-            }
         }
-    }
-
-    private void SetCanMove(int v)
-    {
-        if (v == 1)
-        {
-            canMove = true;
-        }
-
-        if (v == 0)
-        {
-            canMove = false;
-        }
-    }
-
-    private void SetIsInvincible(int v)
-    {
-        if (v == 1)
-        {
-            isInvincible = true;
-        }
-
-        if (v == 0)
-        {
-            isInvincible = false;
-        }
-
     }
 
     void TakeDamage()
@@ -131,8 +98,7 @@ public class Enemy : MonoBehaviour {
             health -= 1;
             if (health <= 0)
             {
-                anim.SetTrigger("Knockback3");
-                anim.SetBool("EnemyIsAlive", false);
+                Die("EnemyIsAlive");
             }
             else
             {
@@ -140,8 +106,6 @@ public class Enemy : MonoBehaviour {
             }
             
         }
-
-
     }
 
     private void AnimDestroyEnemy()

@@ -1949,13 +1949,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e40b94a6162ce41a91d7f1c0fe31e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 1
+  isInvincible: 0
   attackCollider: {fileID: 1106495496847884}
   playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
   enemyHitTime:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 1400c6b899273c64f898bca69276dc8d, type: 2}
-  currentCombo: 0
   alertness:
     UseConstant: 0
     ConstantValue: 0
@@ -1964,8 +1965,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 083992838a2c04cb6b9ea3ba09a3660b, type: 2}
-  isInvincible: 0
-  health: 100
+  health: 3
 --- !u!114 &114757962202923716
 MonoBehaviour:
   m_ObjectHideFlags: 1
