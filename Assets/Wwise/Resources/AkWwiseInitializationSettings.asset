@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Name: AkWwiseInitializationSettings
   m_EditorClassIdentifier: 
   PlatformSettingsNameList:
+  - Mac
   - Windows
   PlatformSettingsList:
+  - {fileID: 11400000, guid: 427ac2b21ccdf404cbe0ad43c9bbe6b7, type: 2}
   - {fileID: 11400000, guid: 053c233abb9eeab4d8ac071fcbf87749, type: 2}
   InvalidReferencePlatforms: []
   UserSettings:
