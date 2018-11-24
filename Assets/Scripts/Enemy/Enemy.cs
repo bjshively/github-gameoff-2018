@@ -59,11 +59,16 @@ public class Enemy : MonoBehaviour {
 
             // Rotate to face player
             transform.LookAt(playerDirection);
-        } 
+        }
         else
         {
             anim.SetFloat("MoveSpeed", 0);
-
+            
+            // When close to the player, aim precisely
+            if (playerDistance < 3)
+            {
+                playerDirection = new Vector3(playerTransform.Value.position.x, transform.position.y, playerTransform.Value.position.z);
+            }
             // Rotate to face player
             transform.LookAt(playerDirection);
         }
@@ -115,7 +120,8 @@ public class Enemy : MonoBehaviour {
         if (!isInvincible)
         {
             isInvincible = true;
-//            canMove = false;
+            currentCombo = Time.time;
+            //            canMove = false;
             anim.SetTrigger("Knockback1");
             health -= 50;
         }
@@ -136,9 +142,7 @@ public class Enemy : MonoBehaviour {
     {
         if(other.name == "AttackCollider" && other.transform.parent.name == "Player")
         {
-            currentCombo = Time.time;
             TakeDamage();
-            
         }
     }
 }
