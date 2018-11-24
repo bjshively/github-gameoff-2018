@@ -13,6 +13,11 @@ public class Enemy : Character {
     public int health;
     float time;
 
+    //Audio Events
+    public AK.Wwise.Event EnemyDamagedSound;
+    public AK.Wwise.Event EnemySwingSound;
+
+
     // Pick a random number of seconds to wait between recalculating path to player
     int movementRecalculation;
     Vector3 playerDirection;
@@ -28,6 +33,11 @@ public class Enemy : Character {
 	void FixedUpdate () {
         time = Time.time;
         Move();
+    }
+
+    void PlayFallDownSound()
+    {
+        EnemyDamagedSound.Post(gameObject);
     }
 
     private void Move()
@@ -77,6 +87,7 @@ public class Enemy : Character {
             if (Random.Range(0, 100) == 1)
             {
                 Attack();
+                
             }
         }
     }
@@ -86,6 +97,7 @@ public class Enemy : Character {
         if (canMove)
         {
                 anim.SetTrigger("Combo1");
+                EnemySwingSound.Post(gameObject);
         }
     }
 
@@ -99,10 +111,12 @@ public class Enemy : Character {
             if (health <= 0)
             {
                 Die("EnemyIsAlive");
+                EnemyDamagedSound.Post(gameObject);
             }
             else
             {
                 anim.SetTrigger("Knockback1");
+                EnemyDamagedSound.Post(gameObject);
             }
             
         }

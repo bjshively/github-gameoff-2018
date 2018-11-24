@@ -1824,7 +1824,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606946142010664}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 28.438545, y: 0.016696453, z: -7.1437654}
+  m_LocalPosition: {x: 25, y: 0.01669693, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512375598262740}
@@ -2061,6 +2061,12 @@ MonoBehaviour:
   enemyHitTime: {fileID: 11400000, guid: 1400c6b899273c64f898bca69276dc8d, type: 2}
   playerHitTime: {fileID: 11400000, guid: b21645929a6ed0e4ebd1aafa05dd353e, type: 2}
   playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
+  PlayerDamageSound:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 0}
+  PlayerSwingSound:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &114697016806240982
 MonoBehaviour:
   m_ObjectHideFlags: 1

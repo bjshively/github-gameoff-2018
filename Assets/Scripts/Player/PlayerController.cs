@@ -25,6 +25,9 @@ public class PlayerController : Character {
     string[] attacks = { "Combo1", "Combo2", "Combo3" };
     string[] knockbacks = { "Knockback1", "Knockback2", "Knockback3" };
 
+    public AK.Wwise.Event PlayerDamageSound;
+    public AK.Wwise.Event PlayerSwingSound;
+
     // Use this for initialization
     protected override void Start () {
         base.Start();
@@ -53,7 +56,13 @@ public class PlayerController : Character {
         if (health.Value <= 0)
         {
             Die("IsAlive");
+            PlayerDamageSound.Post(gameObject);
         }
+    }
+
+    void PlayFallDownSound()
+    {
+        PlayerDamageSound.Post(gameObject);
     }
 
     private void Attack()
@@ -72,6 +81,7 @@ public class PlayerController : Character {
 
             // Execute the current combo move
             anim.SetTrigger(attacks[currentCombo]);
+            PlayerSwingSound.Post(gameObject);
         }
     }
 
@@ -134,6 +144,7 @@ public class PlayerController : Character {
             // Trigger the knockback
             anim.SetTrigger(knockbacks[currentKnockback]);
             health.Value -= 1;
+            PlayerDamageSound.Post(gameObject);
         }
     }
 

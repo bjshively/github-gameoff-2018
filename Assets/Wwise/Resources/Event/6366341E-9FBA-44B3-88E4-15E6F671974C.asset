@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4b23b12380fe24da8ae2637cf9cf59, type: 3}
+  m_Name: 6366341E-9FBA-44B3-88E4-15E6F671974C
+  m_EditorClassIdentifier: 
+  objectName: SFX_Impact
+  id: 2405854631
+  guid: 6366341E-9FBA-44B3-88E4-15E6F671974C

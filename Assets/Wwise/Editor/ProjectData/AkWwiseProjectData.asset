@@ -42,7 +42,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8119b29db91540468c7bdc1a7e521c73
-    m_lastTime: -8586586007024677499
+    m_lastTime: -8586585765417854882
     List:
     - name: Play_Gameplay
       guid: 5978149b07593c4ca907911e5fb24971
@@ -56,15 +56,27 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Play_Gameplay_01
-      guid: 1a2802a0eefbf44c857dbc7394da422d
-      id: 3561765664
+    - name: SFX_Impact
+      guid: 1e346663ba9fb34488e415e6f671974c
+      id: 2405854631
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Gameplay_01
+      - ElementName: SFX_Impact
         ObjectType: 3
-      Path: Default Work Unit\Play_Gameplay_01
+      Path: Default Work Unit\SFX_Impact
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_ZombieSwing
+      guid: 9e47599114603f41a7c52ca111b9956d
+      id: 3709280211
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX_ZombieSwing
+        ObjectType: 3
+      Path: Default Work Unit\SFX_ZombieSwing
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

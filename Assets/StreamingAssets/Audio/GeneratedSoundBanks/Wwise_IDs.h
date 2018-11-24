@@ -14,7 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_GAMEPLAY = 3737014274U;
-        static const AkUniqueID PLAY_GAMEPLAY_01 = 3561765664U;
+        static const AkUniqueID SFX_IMPACT = 2405854631U;
+        static const AkUniqueID SFX_ZOMBIESWING = 3709280211U;
     } // namespace EVENTS
 
     namespace BANKS
