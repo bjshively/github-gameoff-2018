@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         enemyHitTime.Value = -10;
+        playerHitTime.Value = -10;
         health.Value = maxHealth.Value;
         body = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
