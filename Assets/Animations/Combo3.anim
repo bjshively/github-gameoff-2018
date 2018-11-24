@@ -62138,16 +62138,16 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.44166666
+  - time: 0.425
     functionName: AnimEnableAnObject
-    data: AttackCollider
+    data: SmashCollider
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.48333332
+  - time: 0.51666665
     functionName: AnimDisableAnObject
-    data: AttackCollider
+    data: SmashCollider
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
