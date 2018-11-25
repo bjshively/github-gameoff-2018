@@ -17,6 +17,15 @@ public class Character : MonoBehaviour {
         isAlive = true;
     }
 
+    protected void Melee()
+    {
+//        if (canMove)
+        {
+            anim.SetTrigger("Melee");
+        }
+
+    }
+
     private void SetCanMove(int v)
     {
         if (v == 1)
@@ -44,9 +53,8 @@ public class Character : MonoBehaviour {
 
     }
 
-    protected void Die(string animBool)
+    protected void Die(string s)
     {
-        anim.SetTrigger("Knockback3");
-        anim.SetBool(animBool, false);
+        anim.SetTrigger(s);
     }
 }

@@ -42,6 +42,10 @@ public class PlayerController : Character {
         // set the point for enemies to follow
         playerTransform.Value.position = transform.position;
 
+        // tell animator the time for combos and knockbacks
+        anim.SetFloat("StateTime", Mathf.Repeat(anim.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
+        anim.ResetTrigger("Melee");
+
         //DepleteHealth();
 
         horizontal = Input.GetAxis("Horizontal");
@@ -56,7 +60,7 @@ public class PlayerController : Character {
         if ((health.Value <= 0 || transform.position.y < -100) && isAlive)
         {
             isAlive = false;
-            Die("IsAlive");
+            Die("PlayerIsDead");
             PlayerDamageSound.Post(gameObject);
         }
     }
@@ -68,24 +72,25 @@ public class PlayerController : Character {
 
     private void Attack()
     {
-        if (canMove)
+        Melee();
+        //if (canMove)
         {
-            // Increase the combo counter if the last hit was recent enough
-            if ((Time.time - enemyHitTime.Value < 1) && currentCombo < 2)
-            {
-                currentCombo++;
-            }
-            else
-            {
-                currentCombo = 0; // Reset combo counter
-            }
+            //// Increase the combo counter if the last hit was recent enough
+            //if ((Time.time - enemyHitTime.Value < 1) && currentCombo < 2)
+            //{
+            //    currentCombo++;
+            //}
+            //else
+            //{
+            //    currentCombo = 0; // Reset combo counter
+            //}
 
-            // Execute the current combo move
-            anim.SetTrigger(attacks[currentCombo]);
+            //// Execute the current combo move
+            //anim.SetTrigger(attacks[currentCombo]);
             PlayerSwingSound.Post(gameObject);
         }
     }
-
+    
     private void Move(float h, float v)
     {
         // If you can't move or player isn't pushing wasd, set velocity to 0

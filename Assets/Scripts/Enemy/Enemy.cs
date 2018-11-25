@@ -100,11 +100,12 @@ public class Enemy : Character {
 
     private void Attack()
     {
-        if (canMove)
-        {
-            anim.SetTrigger("Combo1");
+        Melee();
+        //if (canMove)
+        //{
+        //    anim.SetTrigger("Combo1");
             EnemySwingSound.Post(gameObject);
-        }
+        //}
     }
 
     void TakeDamage()
@@ -116,7 +117,7 @@ public class Enemy : Character {
             health -= 1;
             if (health <= 0)
             {
-                Die("EnemyIsAlive");
+                Die("EnemyIsDead");
                 EnemyDamagedSound.Post(gameObject);
             }
             else
