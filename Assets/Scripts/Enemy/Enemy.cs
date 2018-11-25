@@ -7,8 +7,13 @@ public class Enemy : Character {
     public GameObject attackCollider;
     public TransformVariable playerTransform;
     public FloatReference enemyHitTime;
-    public FloatReference alertness;
-    float playerDistance;
+    public float playerDistance;
+
+    // when does enemy notice the player
+    public FloatReference playerInSight;
+    // when should enemy start to attack
+    public float playerInRange = 3;
+
     public FloatReference MoveSpeed;
     public int health;
     float time;
@@ -19,7 +24,7 @@ public class Enemy : Character {
 
 
     // Pick a random number of seconds to wait between recalculating path to player
-    int movementRecalculation;
+    public int movementRecalculation;
     Vector3 playerDirection;
 
     // Use this for initialization
@@ -33,6 +38,7 @@ public class Enemy : Character {
 	void FixedUpdate () {
         time = Time.time;
         Move();
+        anim.SetFloat("DistanceToPlayer", playerDistance);
     }
 
     void PlayFallDownSound()
@@ -52,12 +58,12 @@ public class Enemy : Character {
             playerDirection = new Vector3(playerTransform.Value.position.x + Random.Range(-5, 5), transform.position.y, playerTransform.Value.position.z + Random.Range(-5, 5));
         }
 
-        // If player within attack range, move towards player
-        if (playerDistance < alertness.Value && playerDistance >= 3 && canMove)
+        // If player in sight, but not in attack range, move towards player
+        if (playerDistance < playerInSight.Value && playerDistance >= playerInRange && canMove)
         {
             anim.SetFloat("MoveSpeed", 1);
             // The step size is equal to speed times frame time.
-            float step = 5 * Time.deltaTime;
+            float step = MoveSpeed.Value * Time.deltaTime;
 
             // Move position a step closer to the target.
             transform.position = Vector3.MoveTowards(transform.position, playerDirection, step);
@@ -70,7 +76,7 @@ public class Enemy : Character {
             anim.SetFloat("MoveSpeed", 0);
             
             // When close to the player, aim precisely
-            if (playerDistance < 3)
+            if (playerDistance < playerInRange)
             {
                 playerDirection = new Vector3(playerTransform.Value.position.x, transform.position.y, playerTransform.Value.position.z);
             }
@@ -81,8 +87,8 @@ public class Enemy : Character {
             }
         }
 
-        // Only attack if the player is within striking distance
-        if (playerDistance < 5)
+        // Only attack if the player is within attack range
+        if (playerDistance < playerInRange)
         {
             if (Random.Range(0, 100) == 1)
             {
@@ -96,8 +102,8 @@ public class Enemy : Character {
     {
         if (canMove)
         {
-                anim.SetTrigger("Combo1");
-                EnemySwingSound.Post(gameObject);
+            anim.SetTrigger("Combo1");
+            EnemySwingSound.Post(gameObject);
         }
     }
 

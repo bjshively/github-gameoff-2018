@@ -125,7 +125,6 @@ public class PlayerController : Character {
 
     void TakeDamage()
     {
-       
         if (!isInvincible)
         {
             // Reset combo counter

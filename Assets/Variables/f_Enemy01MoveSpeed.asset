@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: f_Enemy01MoveSpeed
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  Value: 3
+  Value: 5
