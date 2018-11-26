@@ -29,7 +29,7 @@ MonoBehaviour:
   m_Color_keys:
   - z_pref_brushColor
   m_bool_values: 0100000101000101
-  m_int_values: 010000006a00000002000000
+  m_int_values: 010000006a00000001000000
   m_float_values: []
   m_string_values: []
   m_Color_values:

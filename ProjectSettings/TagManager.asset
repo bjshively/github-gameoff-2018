@@ -34,7 +34,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - DoNotLight
   - HideInEditor
   - Lanes
   m_SortingLayers:
