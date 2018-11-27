@@ -8,6 +8,7 @@ public class Enemy : Character {
     public TransformVariable playerTransform;
     public FloatReference enemyHitTime;
     public float playerDistance;
+    public bool isAwake = true;
 
     // when does enemy notice the player
     public FloatReference playerInSight;
@@ -36,9 +37,15 @@ public class Enemy : Character {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        time = Time.time;
-        Move();
-        anim.SetFloat("DistanceToPlayer", playerDistance);
+        if (isAwake)
+        {
+            time = Time.time;
+            Move();
+            anim.SetFloat("DistanceToPlayer", playerDistance);
+        } else
+        {
+            anim.SetFloat("MoveSpeed", 0);
+        }
     }
 
     void PlayFallDownSound()
@@ -136,7 +143,7 @@ public class Enemy : Character {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "AttackCollider" && other.transform.parent.name == "Player")
+        if((other.name == "AttackCollider" || other.name ==  "SmashCollider") && other.transform.parent.name == "Player")
         {
             TakeDamage();
         }
