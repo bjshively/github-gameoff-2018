@@ -105,7 +105,7 @@ public class Enemy : Character {
         }
     }
 
-    private void Attack()
+    protected virtual void Attack()
     {
         Melee();
         //if (canMove)

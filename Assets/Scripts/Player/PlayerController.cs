@@ -146,7 +146,7 @@ public class PlayerController : Character {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "AttackCollider")
+        if (other.name == "AttackCollider" || other.name == "SmashCollider")
         {
             TakeDamage();
         }
