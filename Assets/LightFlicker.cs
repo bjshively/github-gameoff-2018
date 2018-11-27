@@ -8,7 +8,8 @@ public class LightFlicker : MonoBehaviour {
     public float maximumSecondsUntilNextFlicker = 3;
     public float minimumIntensity = 0;
     public float maximumIntensity = 2;
-    public float flickerSpeed = 1;
+    public float flickerSpeed = .1f;
+    float startingIntensity;
     Light lamp;
     float time;
     float timeOfNextFlicker;
@@ -16,7 +17,8 @@ public class LightFlicker : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         SetFlickerTime();
-        lamp = transform.Find("Point Light").GetComponent<Light>();
+        lamp = GetComponent<Light>();
+        startingIntensity = lamp.intensity;
 	}
 	
 	// Update is called once per frame
@@ -30,12 +32,19 @@ public class LightFlicker : MonoBehaviour {
 
     void Flicker()
     {
-            lamp.intensity = Random.Range(minimumIntensity, maximumIntensity);
+        lamp.intensity = Random.Range(minimumIntensity, maximumIntensity);
+        StartCoroutine(resetLight());
     }
 
     void SetFlickerTime()
     {
         time = Time.time;
         timeOfNextFlicker = Random.Range(minimumSecondsUntilNextFlicker, maximumSecondsUntilNextFlicker);
+    }
+
+    IEnumerator resetLight()
+    {
+        yield return new WaitForSeconds(flickerSpeed);
+        lamp.intensity = startingIntensity;
     }
 }

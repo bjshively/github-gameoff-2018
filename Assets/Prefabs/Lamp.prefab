@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 33993021688201726}
   - component: {fileID: 114106572609503200}
   - component: {fileID: 64286864280401876}
-  - component: {fileID: 114839984518960358}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -61,6 +60,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4086185141285352}
   - component: {fileID: 108457448263230464}
+  - component: {fileID: 114283654271760088}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -136,7 +136,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 2
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -6998,6 +6998,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!114 &114283654271760088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1792752997989186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8bae4b89d3f3414aadb8255df25ef73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimumSecondsUntilNextFlicker: 0
+  maximumSecondsUntilNextFlicker: 3
+  minimumIntensity: 0
+  maximumIntensity: 2
+  flickerSpeed: 1
 --- !u!114 &114626255573930160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8000,22 +8016,6 @@ MonoBehaviour:
   - x: 74
     y: 76
   m_selectedTriangles: 2200000021000000200000002800000027000000260000002e0000002d0000002c0000003400000033000000320000003a0000003900000038000000400000003f0000003e0000004600000045000000440000004c0000004b0000004a000000
---- !u!114 &114839984518960358
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1253325577730186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8bae4b89d3f3414aadb8255df25ef73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minimumSecondsUntilNextFlicker: 0
-  maximumSecondsUntilNextFlicker: 1
-  minimumIntensity: 2
-  maximumIntensity: 5
-  flickerSpeed: 1
 --- !u!114 &114873233033840530
 MonoBehaviour:
   m_ObjectHideFlags: 1
