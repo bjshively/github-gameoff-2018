@@ -136,7 +136,7 @@ public class Enemy : Character {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "AttackCollider" && other.transform.parent.name == "Player")
+        if((other.name == "AttackCollider" || other.name ==  "SmashCollider") && other.transform.parent.name == "Player")
         {
             TakeDamage();
         }

@@ -7,6 +7,7 @@ public class PlayerController : Character {
 
 
     public GameObject attackCollider;
+    public GameObject smashCollider;
 
     private float horizontal;
     private float vertical;
