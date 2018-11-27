@@ -43,7 +43,7 @@ public class PlayerController : Character {
         playerTransform.Value.position = transform.position;
 
         // tell animator the time for combos and knockbacks
-        anim.SetFloat("StateTime", Mathf.Repeat(anim.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
+        anim.SetFloat("StateTime", Mathf.Repeat(anim.GetCurrentAnimatorStateInfo(0).normalizedTime, 2f));
         anim.ResetTrigger("Melee");
 
         //DepleteHealth();
