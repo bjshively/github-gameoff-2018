@@ -19,8 +19,9 @@ namespace AK
         static const AkUniqueID PLAY_GAMEPLAY = 3737014274U;
         static const AkUniqueID PLAY_GHGO_TITLESCREEN_TRANSITIONOUT = 1555749332U;
         static const AkUniqueID PLAY_TITLESCREEN = 3027900556U;
+        static const AkUniqueID SFX_ENEMYSWING = 3612432395U;
         static const AkUniqueID SFX_IMPACT = 2405854631U;
-        static const AkUniqueID SFX_ZOMBIESWING = 3709280211U;
+        static const AkUniqueID SFX_PLAYERSWING = 1118618552U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
