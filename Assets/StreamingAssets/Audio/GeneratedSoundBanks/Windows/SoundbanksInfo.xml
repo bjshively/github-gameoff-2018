@@ -22,13 +22,14 @@
 			<Path>GameSounds.bnk</Path>
 			<IncludedEvents>
 				<Event Id="387824038" Name="AMB_BirdCalls" ObjectPath="\Events\Default Work Unit\Ambience\AMB_BirdCalls" MaxAttenuation="65.000000"/>
-				<Event Id="3758534000" Name="AMB_FountainLoop" ObjectPath="\Events\Default Work Unit\Ambience\AMB_FountainLoop" MaxAttenuation="65.000000"/>
+				<Event Id="3758534000" Name="AMB_FountainLoop" ObjectPath="\Events\Default Work Unit\Ambience\AMB_FountainLoop" MaxAttenuation="60.000000"/>
 				<Event Id="2753271343" Name="AMB_MainLoop" ObjectPath="\Events\Default Work Unit\Ambience\AMB_MainLoop"/>
 				<Event Id="3737014274" Name="Play_Gameplay" ObjectPath="\Events\Default Work Unit\Music\Play_Gameplay"/>
 				<Event Id="1555749332" Name="Play_GHGO_TitleScreen_TransitionOut" ObjectPath="\Events\Default Work Unit\Music\Play_GHGO_TitleScreen_TransitionOut"/>
 				<Event Id="3027900556" Name="Play_TitleScreen" ObjectPath="\Events\Default Work Unit\Music\Play_TitleScreen"/>
 				<Event Id="3612432395" Name="SFX_EnemySwing" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_EnemySwing"/>
 				<Event Id="2405854631" Name="SFX_Impact" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_Impact"/>
+				<Event Id="724467519" Name="SFX_PlayerFootsteps" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_PlayerFootsteps"/>
 				<Event Id="1118618552" Name="SFX_PlayerSwing" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_PlayerSwing"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -44,6 +45,18 @@
 					<ShortName>AMB_birdCall7.wav</ShortName>
 					<Path>SFX\AMB_birdCall7_56D34C19.wem</Path>
 				</File>
+				<File Id="36768643" Language="SFX">
+					<ShortName>Player_FootSteps_Grass01.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Grass01_56D34C19.wem</Path>
+				</File>
+				<File Id="65809619" Language="SFX">
+					<ShortName>Player_FootSteps_Concrete10.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Concrete10_56D34C19.wem</Path>
+				</File>
+				<File Id="72080134" Language="SFX">
+					<ShortName>Player_FootSteps_Dirt04.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Dirt04_56D34C19.wem</Path>
+				</File>
 				<File Id="80690689" Language="SFX">
 					<ShortName>GHGO_AMB_MainLoop.wav</ShortName>
 					<Path>SFX\GHGO_AMB_MainLoop_56D34C19.wem</Path>
@@ -52,13 +65,33 @@
 					<ShortName>AMB_birdCall6.wav</ShortName>
 					<Path>SFX\AMB_birdCall6_56D34C19.wem</Path>
 				</File>
+				<File Id="117871596" Language="SFX">
+					<ShortName>Player_FootSteps_Grass02.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Grass02_56D34C19.wem</Path>
+				</File>
+				<File Id="120522203" Language="SFX">
+					<ShortName>Player_FootSteps_Grass03.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Grass03_56D34C19.wem</Path>
+				</File>
 				<File Id="125632358" Language="SFX">
 					<ShortName>GHGO_TitleScreen_intro.wav</ShortName>
 					<Path>SFX\GHGO_TitleScreen_intro_8956FC97.wem</Path>
 				</File>
+				<File Id="143037896" Language="SFX">
+					<ShortName>Player_FootSteps_Concrete01.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Concrete01_56D34C19.wem</Path>
+				</File>
+				<File Id="159355057" Language="SFX">
+					<ShortName>Player_FootSteps_Concrete08.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Concrete08_56D34C19.wem</Path>
+				</File>
 				<File Id="162538668" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_12.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_12_56D34C19.wem</Path>
+				</File>
+				<File Id="167899856" Language="SFX">
+					<ShortName>Player_FootSteps_Grass06.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Grass06_56D34C19.wem</Path>
 				</File>
 				<File Id="175199123" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_08.wav</ShortName>
@@ -76,6 +109,14 @@
 					<ShortName>SFX_ZombieSwing_1.wav</ShortName>
 					<Path>SFX\SFX_ZombieSwing_1_56D34C19.wem</Path>
 				</File>
+				<File Id="239090526" Language="SFX">
+					<ShortName>Player_FootSteps_Grass05.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Grass05_56D34C19.wem</Path>
+				</File>
+				<File Id="263540580" Language="SFX">
+					<ShortName>Player_FootSteps_Concrete09.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Concrete09_56D34C19.wem</Path>
+				</File>
 				<File Id="265717059" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_11.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_11_56D34C19.wem</Path>
@@ -84,9 +125,17 @@
 					<ShortName>SFX_ZombieGrowl_01.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_01_56D34C19.wem</Path>
 				</File>
+				<File Id="280956144" Language="SFX">
+					<ShortName>Player_FootSteps_Dirt10.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Dirt10_56D34C19.wem</Path>
+				</File>
 				<File Id="286698556" Language="SFX">
 					<ShortName>SFX_ZombieSwing_3.wav</ShortName>
 					<Path>SFX\SFX_ZombieSwing_3_56D34C19.wem</Path>
+				</File>
+				<File Id="293390837" Language="SFX">
+					<ShortName>Player_FootSteps_Grass09.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Grass09_56D34C19.wem</Path>
 				</File>
 				<File Id="309061875" Language="SFX">
 					<ShortName>SFX_ZombieSwing_6.wav</ShortName>
@@ -95,6 +144,14 @@
 				<File Id="375181482" Language="SFX">
 					<ShortName>SFX_ZombieSwing_2.wav</ShortName>
 					<Path>SFX\SFX_ZombieSwing_2_56D34C19.wem</Path>
+				</File>
+				<File Id="396327091" Language="SFX">
+					<ShortName>Player_FootSteps_Grass10.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Grass10_56D34C19.wem</Path>
+				</File>
+				<File Id="416673188" Language="SFX">
+					<ShortName>Player_FootSteps_Concrete06.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Concrete06_56D34C19.wem</Path>
 				</File>
 				<File Id="435188352" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_02.wav</ShortName>
@@ -108,9 +165,17 @@
 					<ShortName>SFX_ZombieGrowl_04.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_04_56D34C19.wem</Path>
 				</File>
+				<File Id="487669116" Language="SFX">
+					<ShortName>Player_FootSteps_Dirt05.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Dirt05_56D34C19.wem</Path>
+				</File>
 				<File Id="493072555" Language="SFX">
 					<ShortName>AMB_birdCall1.wav</ShortName>
 					<Path>SFX\AMB_birdCall1_56D34C19.wem</Path>
+				</File>
+				<File Id="544586894" Language="SFX">
+					<ShortName>Player_FootSteps_Concrete07.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Concrete07_56D34C19.wem</Path>
 				</File>
 				<File Id="552602701" Language="SFX">
 					<ShortName>AMB_birdCall3.wav</ShortName>
@@ -119,6 +184,10 @@
 				<File Id="553688044" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_03.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_03_56D34C19.wem</Path>
+				</File>
+				<File Id="566677547" Language="SFX">
+					<ShortName>Player_FootSteps_Dirt06.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Dirt06_56D34C19.wem</Path>
 				</File>
 				<File Id="578219830" Language="SFX">
 					<ShortName>AMB_birdCall8.wav</ShortName>
@@ -132,9 +201,17 @@
 					<ShortName>AMB_birdCall9.wav</ShortName>
 					<Path>SFX\AMB_birdCall9_56D34C19.wem</Path>
 				</File>
+				<File Id="603893819" Language="SFX">
+					<ShortName>Player_FootSteps_Dirt02.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Dirt02_56D34C19.wem</Path>
+				</File>
 				<File Id="620139846" Language="SFX">
 					<ShortName>GHGO_Impact2.wav</ShortName>
 					<Path>SFX\GHGO_Impact2_56D34C19.wem</Path>
+				</File>
+				<File Id="627985227" Language="SFX">
+					<ShortName>Player_FootSteps_Dirt09.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Dirt09_56D34C19.wem</Path>
 				</File>
 				<File Id="629262332" Language="SFX">
 					<ShortName>GHGO_FountainLoop.wav</ShortName>
@@ -144,29 +221,61 @@
 					<ShortName>GHGO_Impact1.wav</ShortName>
 					<Path>SFX\GHGO_Impact1_56D34C19.wem</Path>
 				</File>
+				<File Id="705151114" Language="SFX">
+					<ShortName>Player_FootSteps_Grass04.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Grass04_56D34C19.wem</Path>
+				</File>
 				<File Id="731070811" Language="SFX">
 					<ShortName>GHGO_Gameplay_v3.wav</ShortName>
 					<Path>SFX\GHGO_Gameplay_v3_8956FC97.wem</Path>
+				</File>
+				<File Id="737271416" Language="SFX">
+					<ShortName>Player_FootSteps_Dirt01.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Dirt01_56D34C19.wem</Path>
 				</File>
 				<File Id="780114232" Language="SFX">
 					<ShortName>SFX_ZombieSwing_5.wav</ShortName>
 					<Path>SFX\SFX_ZombieSwing_5_56D34C19.wem</Path>
 				</File>
+				<File Id="792684081" Language="SFX">
+					<ShortName>Player_FootSteps_Grass07.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Grass07_56D34C19.wem</Path>
+				</File>
 				<File Id="814849825" Language="SFX">
 					<ShortName>AMB_birdCall4.wav</ShortName>
 					<Path>SFX\AMB_birdCall4_56D34C19.wem</Path>
+				</File>
+				<File Id="829588824" Language="SFX">
+					<ShortName>Player_FootSteps_Concrete03.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Concrete03_56D34C19.wem</Path>
+				</File>
+				<File Id="835815673" Language="SFX">
+					<ShortName>Player_FootSteps_Concrete02.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Concrete02_56D34C19.wem</Path>
 				</File>
 				<File Id="856029902" Language="SFX">
 					<ShortName>AMB_Crow1.wav</ShortName>
 					<Path>SFX\AMB_Crow1_56D34C19.wem</Path>
 				</File>
+				<File Id="886921845" Language="SFX">
+					<ShortName>Player_FootSteps_Concrete04.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Concrete04_56D34C19.wem</Path>
+				</File>
 				<File Id="888905177" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_06.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_06_56D34C19.wem</Path>
 				</File>
+				<File Id="919210769" Language="SFX">
+					<ShortName>Player_FootSteps_Dirt08.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Dirt08_56D34C19.wem</Path>
+				</File>
 				<File Id="945208243" Language="SFX">
 					<ShortName>AMB_Hiss1.wav</ShortName>
 					<Path>SFX\AMB_Hiss1_56D34C19.wem</Path>
+				</File>
+				<File Id="947397054" Language="SFX">
+					<ShortName>Player_FootSteps_Dirt03.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Dirt03_56D34C19.wem</Path>
 				</File>
 				<File Id="971313575" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_05.wav</ShortName>
@@ -176,6 +285,14 @@
 					<ShortName>SFX_ZombieGrowl_09.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_09_56D34C19.wem</Path>
 				</File>
+				<File Id="975188786" Language="SFX">
+					<ShortName>Player_FootSteps_Grass08.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Grass08_56D34C19.wem</Path>
+				</File>
+				<File Id="1006465755" Language="SFX">
+					<ShortName>Player_FootSteps_Concrete05.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Concrete05_56D34C19.wem</Path>
+				</File>
 				<File Id="1006688428" Language="SFX">
 					<ShortName>AMB_birdCall2.wav</ShortName>
 					<Path>SFX\AMB_birdCall2_56D34C19.wem</Path>
@@ -183,6 +300,10 @@
 				<File Id="1016156496" Language="SFX">
 					<ShortName>AMB_birdCall5.wav</ShortName>
 					<Path>SFX\AMB_birdCall5_56D34C19.wem</Path>
+				</File>
+				<File Id="1050583497" Language="SFX">
+					<ShortName>Player_FootSteps_Dirt07.wav</ShortName>
+					<Path>SFX\Player_FootSteps_Dirt07_56D34C19.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

@@ -2024,10 +2024,12 @@ MonoBehaviour:
   health: 5
   EnemyDamagedSound:
     valueGuid: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 8082653bb71506f48ab03157a487a2ce,
+      type: 2}
   EnemySwingSound:
     valueGuid: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: b7b265fb3145f3647bf73d8d65a207c1,
+      type: 2}
   movementRecalculation: 0
   smashCollider: {fileID: 1222814823321782}
 --- !u!136 &136539351260479048

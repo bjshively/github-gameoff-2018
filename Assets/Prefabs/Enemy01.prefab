@@ -1563,7 +1563,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484048469611620}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 17.64, y: 0.7182064, z: -3.67}
+  m_LocalPosition: {x: 35.010925, y: 1, z: -7.7115974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4685059595528598}
@@ -2018,7 +2018,7 @@ MonoBehaviour:
       type: 2}
   EnemySwingSound:
     valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: bea251b1ec69e974483871db201f697f,
+    WwiseObjectReference: {fileID: 11400000, guid: b7b265fb3145f3647bf73d8d65a207c1,
       type: 2}
   movementRecalculation: 0
 --- !u!114 &114686261116537830

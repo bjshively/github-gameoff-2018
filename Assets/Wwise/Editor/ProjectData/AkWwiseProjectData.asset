@@ -53,7 +53,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8119b29db91540468c7bdc1a7e521c73
-    m_lastTime: -8586582601488438043
+    m_lastTime: -8586582471781998843
     List:
     - name: AMB_BirdCalls
       guid: f59fdcd225276942a5399795c0e72cf9
@@ -61,10 +61,12 @@ MonoBehaviour:
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 4
       - ElementName: AMB_BirdCalls
         ObjectType: 3
-      Path: Default Work Unit\AMB_BirdCalls
-      maxAttenuation: 65
+      Path: Default Work Unit\Ambience\AMB_BirdCalls
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: AMB_FountainLoop
@@ -78,7 +80,7 @@ MonoBehaviour:
       - ElementName: AMB_FountainLoop
         ObjectType: 3
       Path: Default Work Unit\Ambience\AMB_FountainLoop
-      maxAttenuation: 65
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: AMB_MainLoop
@@ -137,6 +139,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: SFX_EnemySwing
+      guid: 53ec5424ae43ca4e8e7ed80714b817ae
+      id: 3612432395
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CharacterSFX
+        ObjectType: 4
+      - ElementName: SFX_EnemySwing
+        ObjectType: 3
+      Path: Default Work Unit\CharacterSFX\SFX_EnemySwing
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: SFX_Impact
       guid: 1e346663ba9fb34488e415e6f671974c
       id: 2405854631
@@ -151,17 +167,31 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: SFX_ZombieSwing
-      guid: 9e47599114603f41a7c52ca111b9956d
-      id: 3709280211
+    - name: SFX_PlayerFootsteps
+      guid: 7f8633a38b409e44abbc04559682ce26
+      id: 724467519
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: CharacterSFX
         ObjectType: 4
-      - ElementName: SFX_ZombieSwing
+      - ElementName: SFX_PlayerFootsteps
         ObjectType: 3
-      Path: Default Work Unit\CharacterSFX\SFX_ZombieSwing
+      Path: Default Work Unit\CharacterSFX\SFX_PlayerFootsteps
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_PlayerSwing
+      guid: f9564f6ed8d02943b11c2345652a0e55
+      id: 1118618552
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CharacterSFX
+        ObjectType: 4
+      - ElementName: SFX_PlayerSwing
+        ObjectType: 3
+      Path: Default Work Unit\CharacterSFX\SFX_PlayerSwing
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -190,8 +220,36 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 1c361a616fce1047a0ea742e093906ad
-    m_lastTime: -8586585676421110332
-    List: []
+    m_lastTime: -8586582471782088122
+    List:
+    - name: GroundMaterials
+      guid: 662454ffe424e9488b3a3cf49354687e
+      id: 1431031706
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GroundMaterials
+        ObjectType: 11
+      Path: Default Work Unit\GroundMaterials
+      values:
+      - name: Concrete
+        guid: c2d9ca3738a7264f947071d8f78c7dd8
+        id: 841620460
+        PathAndIcons:
+        - ElementName: Concrete
+          ObjectType: 10
+      - name: Dirt
+        guid: 26b418fe7c950c4a94a96b2f37c21a54
+        id: 2195636714
+        PathAndIcons:
+        - ElementName: Dirt
+          ObjectType: 10
+      - name: Grass
+        guid: 6d6790528a48f9468b20e8ca97f66e15
+        id: 4248645337
+        PathAndIcons:
+        - ElementName: Grass
+          ObjectType: 10
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -200,8 +258,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /GitHubGameOff2018_Wwise
-  - /GitHubGameOff2018_Wwise/Events
-  - /GitHubGameOff2018_Wwise/Events/Default Work Unit
-  - /GitHubGameOff2018_Wwise/Events/Default Work Unit/Music
+  - /GitHubGameOff2018_Wwise/Switches
+  - /GitHubGameOff2018_Wwise/Switches/Default Work Unit
+  - /GitHubGameOff2018_Wwise/Switches/Default Work Unit/GroundMaterials
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -19,6 +19,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4385343924661926}
+  - component: {fileID: 114660179811339536}
+  - component: {fileID: 114170639427249174}
   m_Layer: 0
   m_Name: Grave
   m_TagString: Untagged
@@ -41,7 +43,7 @@ GameObject:
   - component: {fileID: 64273232719310668}
   m_Layer: 0
   m_Name: Dirt
-  m_TagString: Untagged
+  m_TagString: Dirt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 127
@@ -72,15 +74,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1529565894862738}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.06, y: 0, z: 4.58}
-  m_LocalScale: {x: 3.63, y: 3.63, z: 8.47}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000822544}
+  m_LocalPosition: {x: 19.412561, y: -12.191752, z: -20.259094}
+  m_LocalScale: {x: 3.6299999, y: 3.6299999, z: 8.469999}
   m_Children:
   - {fileID: 4474146546428864}
   - {fileID: 4664361467762178}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99901, z: 0}
 --- !u!4 &4474146546428864
 Transform:
   m_ObjectHideFlags: 1
@@ -101,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1746532960786392}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.030303033, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4385343924661926}
@@ -1152,6 +1154,18 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114170639427249174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529565894862738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb5a73622afdcb4396d68860478fdc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerObject: {fileID: 0}
 --- !u!114 &114221632940818642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1164,6 +1178,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!114 &114660179811339536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529565894862738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e4040d7170f464eb8bc9a505824818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: d1bbb3b5
+  useOtherObject: 0
+  data:
+    valueGuid: 
+    groupGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: d53d59f460e57bb44b7f9170efb9dbb7,
+      type: 2}
+  valueGuid: 
+  groupGuid: 
 --- !u!114 &114665545328830804
 MonoBehaviour:
   m_ObjectHideFlags: 1

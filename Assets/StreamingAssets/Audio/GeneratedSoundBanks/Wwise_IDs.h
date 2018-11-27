@@ -21,8 +21,25 @@ namespace AK
         static const AkUniqueID PLAY_TITLESCREEN = 3027900556U;
         static const AkUniqueID SFX_ENEMYSWING = 3612432395U;
         static const AkUniqueID SFX_IMPACT = 2405854631U;
+        static const AkUniqueID SFX_PLAYERFOOTSTEPS = 724467519U;
         static const AkUniqueID SFX_PLAYERSWING = 1118618552U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace GROUNDMATERIALS
+        {
+            static const AkUniqueID GROUP = 1431031706U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CONCRETE = 841620460U;
+                static const AkUniqueID DIRT = 2195636714U;
+                static const AkUniqueID GRASS = 4248645337U;
+            } // namespace SWITCH
+        } // namespace GROUNDMATERIALS
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {

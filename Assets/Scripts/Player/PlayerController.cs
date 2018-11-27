@@ -26,8 +26,16 @@ public class PlayerController : Character {
     string[] attacks = { "Combo1", "Combo2", "Combo3" };
     string[] knockbacks = { "Knockback1", "Knockback2", "Knockback3" };
 
+
+    //Audio
     public AK.Wwise.Event PlayerDamageSound;
     public AK.Wwise.Event PlayerSwingSound;
+    public AK.Wwise.Event FootStepSound;
+
+    public AK.Wwise.Switch GrassSwitch;
+    public AK.Wwise.Switch DirtSwitch;
+    public AK.Wwise.Switch ConcreteSwitch;
+
 
     // Use this for initialization
     protected override void Start () {
@@ -37,6 +45,8 @@ public class PlayerController : Character {
         health.Value = maxHealth.Value;
 
 	}
+
+
 	
 	// Update is called once per frame
 	void FixedUpdate () {
