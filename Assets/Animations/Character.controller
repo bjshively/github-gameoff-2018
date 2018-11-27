@@ -961,7 +961,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: StateTime
-    m_EventTreshold: 0.5
+    m_EventTreshold: 0.45
   - m_ConditionMode: 4
     m_ConditionEvent: StateTime
     m_EventTreshold: 1
@@ -1155,8 +1155,8 @@ AnimatorStateTransition:
     m_ConditionEvent: Melee
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: MoveSpeed
-    m_EventTreshold: 0.5
+    m_ConditionEvent: StateTime
+    m_EventTreshold: 0.6
   - m_ConditionMode: 4
     m_ConditionEvent: StateTime
     m_EventTreshold: 1
@@ -1485,31 +1485,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102615681263959712
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Attack1Right
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: bdec18e6f65984cca90634a805c1af86, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &1102810439165730294
 AnimatorState:
   serializedVersion: 5
@@ -1633,9 +1608,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1102985619324370506}
     m_Position: {x: 1224, y: -264, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 1102615681263959712}
-    m_Position: {x: 949.5344, y: 40.336, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107502425957155012}
