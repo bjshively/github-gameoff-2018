@@ -17,7 +17,7 @@ public class Enemy : Character {
 
     public FloatReference MoveSpeed;
     public int health;
-    float time;
+    protected float time;
 
     //Audio Events
     public AK.Wwise.Event EnemyDamagedSound;
@@ -26,7 +26,7 @@ public class Enemy : Character {
 
     // Pick a random number of seconds to wait between recalculating path to player
     public int movementRecalculation;
-    Vector3 playerDirection;
+    protected Vector3 playerDirection;
 
     // Use this for initialization
     override protected void Start () {
@@ -53,7 +53,7 @@ public class Enemy : Character {
         EnemyDamagedSound.Post(gameObject);
     }
 
-    private void Move()
+    protected virtual void Move()
     {
         // Calculate the distance to the player
         playerDistance = Mathf.Abs(Vector3.Distance(playerTransform.Value.position, transform.position));
