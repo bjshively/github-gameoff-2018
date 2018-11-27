@@ -11,7 +11,7 @@ public class EnemyAwakener : MonoBehaviour {
         // Start all enemies in a sleep state
         for (int i = 0; i < enemies.Length; i++)
         {
-            enemies[i].GetComponent<Enemy>().isAwake = false;
+            enemies[i].GetComponent<Enemy>().SetAwake(false);
         }
     }
 	
@@ -27,7 +27,7 @@ public class EnemyAwakener : MonoBehaviour {
         {
             for (int i = 0; i < enemies.Length; i++)
             {
-                enemies[i].GetComponent<Enemy>().isAwake = true;
+                enemies[i].GetComponent<Enemy>().SetAwake(true);
             }
         }
     }

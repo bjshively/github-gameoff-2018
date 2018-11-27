@@ -148,4 +148,12 @@ public class Enemy : Character {
             TakeDamage();
         }
     }
+
+    // Either wakeup (true) or put to sleep (false) enemy
+    public void SetAwake(bool state)
+    {
+        isAwake = state;
+        anim.SetBool("Awake", state);
+    }
+
 }
