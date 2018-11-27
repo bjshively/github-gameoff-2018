@@ -21,6 +21,7 @@
 			<ShortName>GameSounds</ShortName>
 			<Path>GameSounds.bnk</Path>
 			<IncludedEvents>
+				<Event Id="387824038" Name="AMB_BirdCalls" ObjectPath="\Events\Default Work Unit\AMB_BirdCalls" MaxAttenuation="65.000000"/>
 				<Event Id="3758534000" Name="AMB_FountainLoop" ObjectPath="\Events\Default Work Unit\Ambience\AMB_FountainLoop" MaxAttenuation="65.000000"/>
 				<Event Id="2753271343" Name="AMB_MainLoop" ObjectPath="\Events\Default Work Unit\Ambience\AMB_MainLoop"/>
 				<Event Id="3737014274" Name="Play_Gameplay" ObjectPath="\Events\Default Work Unit\Music\Play_Gameplay"/>
@@ -30,6 +31,14 @@
 				<Event Id="3709280211" Name="SFX_ZombieSwing" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_ZombieSwing"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="19339159" Language="SFX">
+					<ShortName>AMB_Crow2.wav</ShortName>
+					<Path>SFX\AMB_Crow2_56D34C19.wem</Path>
+				</File>
+				<File Id="32974778" Language="SFX">
+					<ShortName>AMB_birdCall7.wav</ShortName>
+					<Path>SFX\AMB_birdCall7_56D34C19.wem</Path>
+				</File>
 				<File Id="42760231" Language="SFX">
 					<ShortName>SFX_ZombieSwing_3.wav</ShortName>
 					<Path>SFX\SFX_ZombieSwing_3_56D34C19.wem</Path>
@@ -37,6 +46,10 @@
 				<File Id="80690689" Language="SFX">
 					<ShortName>GHGO_AMB_MainLoop.wav</ShortName>
 					<Path>SFX\GHGO_AMB_MainLoop_56D34C19.wem</Path>
+				</File>
+				<File Id="102478577" Language="SFX">
+					<ShortName>AMB_birdCall6.wav</ShortName>
+					<Path>SFX\AMB_birdCall6_56D34C19.wem</Path>
 				</File>
 				<File Id="125632358" Language="SFX">
 					<ShortName>GHGO_TitleScreen_intro.wav</ShortName>
@@ -86,13 +99,29 @@
 					<ShortName>SFX_ZombieGrowl_04.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_04_56D34C19.wem</Path>
 				</File>
+				<File Id="493072555" Language="SFX">
+					<ShortName>AMB_birdCall1.wav</ShortName>
+					<Path>SFX\AMB_birdCall1_56D34C19.wem</Path>
+				</File>
+				<File Id="552602701" Language="SFX">
+					<ShortName>AMB_birdCall3.wav</ShortName>
+					<Path>SFX\AMB_birdCall3_56D34C19.wem</Path>
+				</File>
 				<File Id="553688044" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_03.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_03_56D34C19.wem</Path>
 				</File>
+				<File Id="578219830" Language="SFX">
+					<ShortName>AMB_birdCall8.wav</ShortName>
+					<Path>SFX\AMB_birdCall8_56D34C19.wem</Path>
+				</File>
 				<File Id="589629608" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_10.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_10_56D34C19.wem</Path>
+				</File>
+				<File Id="602537109" Language="SFX">
+					<ShortName>AMB_birdCall9.wav</ShortName>
+					<Path>SFX\AMB_birdCall9_56D34C19.wem</Path>
 				</File>
 				<File Id="620139846" Language="SFX">
 					<ShortName>GHGO_Impact2.wav</ShortName>
@@ -122,9 +151,21 @@
 					<ShortName>GHGO_Gameplay_v3.wav</ShortName>
 					<Path>SFX\GHGO_Gameplay_v3_8956FC97.wem</Path>
 				</File>
+				<File Id="814849825" Language="SFX">
+					<ShortName>AMB_birdCall4.wav</ShortName>
+					<Path>SFX\AMB_birdCall4_56D34C19.wem</Path>
+				</File>
+				<File Id="856029902" Language="SFX">
+					<ShortName>AMB_Crow1.wav</ShortName>
+					<Path>SFX\AMB_Crow1_56D34C19.wem</Path>
+				</File>
 				<File Id="888905177" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_06.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_06_56D34C19.wem</Path>
+				</File>
+				<File Id="945208243" Language="SFX">
+					<ShortName>AMB_Hiss1.wav</ShortName>
+					<Path>SFX\AMB_Hiss1_56D34C19.wem</Path>
 				</File>
 				<File Id="971313575" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_05.wav</ShortName>
@@ -133,6 +174,14 @@
 				<File Id="974252689" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_09.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_09_56D34C19.wem</Path>
+				</File>
+				<File Id="1006688428" Language="SFX">
+					<ShortName>AMB_birdCall2.wav</ShortName>
+					<Path>SFX\AMB_birdCall2_56D34C19.wem</Path>
+				</File>
+				<File Id="1016156496" Language="SFX">
+					<ShortName>AMB_birdCall5.wav</ShortName>
+					<Path>SFX\AMB_birdCall5_56D34C19.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

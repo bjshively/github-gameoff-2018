@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMB_BIRDCALLS = 387824038U;
         static const AkUniqueID AMB_FOUNTAINLOOP = 3758534000U;
         static const AkUniqueID AMB_MAINLOOP = 2753271343U;
         static const AkUniqueID PLAY_GAMEPLAY = 3737014274U;
@@ -21,6 +22,11 @@ namespace AK
         static const AkUniqueID SFX_IMPACT = 2405854631U;
         static const AkUniqueID SFX_ZOMBIESWING = 3709280211U;
     } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID NEW_GAME_PARAMETER = 3671138082U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
@@ -31,7 +37,15 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID VO = 1534528548U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID EXTERIORREVERB = 3720409019U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

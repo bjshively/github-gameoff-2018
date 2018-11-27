@@ -116,6 +116,7 @@ public class PlayerController : Character {
     {
         // Reload current scene on death
         // to be called from animation
+  
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

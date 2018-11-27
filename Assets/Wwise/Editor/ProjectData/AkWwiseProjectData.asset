@@ -21,8 +21,19 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f9a470c7d6a9e34b98d5de8ec59b22a6
-    m_lastTime: -8586585676420686408
-    List: []
+    m_lastTime: -8586582601488348762
+    List:
+    - name: ExteriorReverb
+      guid: e7fedf3f93ac39409f92d2bdac7abbee
+      id: 3720409019
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: ExteriorReverb
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\ExteriorReverb
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -42,8 +53,20 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8119b29db91540468c7bdc1a7e521c73
-    m_lastTime: -8586582709012910055
+    m_lastTime: -8586582601488438043
     List:
+    - name: AMB_BirdCalls
+      guid: f59fdcd225276942a5399795c0e72cf9
+      id: 387824038
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: AMB_BirdCalls
+        ObjectType: 3
+      Path: Default Work Unit\AMB_BirdCalls
+      maxAttenuation: 65
+      maxDuration: 0
+      minDuration: 0
     - name: AMB_FountainLoop
       guid: 37e24ffac8d02146ab7cf84bcd3b9ceb
       id: 3758534000
@@ -146,8 +169,17 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e1d6f233b7f992469cd74b15230bc22b
-    m_lastTime: -8586585676421040516
-    List: []
+    m_lastTime: -8586582601488710843
+    List:
+    - name: New_Game_Parameter
+      guid: 30f8a24aebb7da4baf553807a20a109b
+      id: 3671138082
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: New_Game_Parameter
+        ObjectType: 13
+      Path: Default Work Unit\New_Game_Parameter
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
