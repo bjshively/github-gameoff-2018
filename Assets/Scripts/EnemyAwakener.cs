@@ -8,6 +8,7 @@ public class EnemyAwakener : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        // Start all enemies in a sleep state
         for (int i = 0; i < enemies.Length; i++)
         {
             enemies[i].GetComponent<Enemy>().isAwake = false;
@@ -21,6 +22,7 @@ public class EnemyAwakener : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        // When the player passes through the trigger, awaken all enemies
         if(other.name == "Player")
         {
             for (int i = 0; i < enemies.Length; i++)
