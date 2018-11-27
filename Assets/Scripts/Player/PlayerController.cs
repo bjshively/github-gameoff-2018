@@ -73,24 +73,14 @@ public class PlayerController : Character {
     private void Attack()
     {
         Melee();
-        //if (canMove)
-        {
-            //// Increase the combo counter if the last hit was recent enough
-            //if ((Time.time - enemyHitTime.Value < 1) && currentCombo < 2)
-            //{
-            //    currentCombo++;
-            //}
-            //else
-            //{
-            //    currentCombo = 0; // Reset combo counter
-            //}
-
-            //// Execute the current combo move
-            //anim.SetTrigger(attacks[currentCombo]);
-            PlayerSwingSound.Post(gameObject);
-        }
+        // TODO: Attack swing sounds for combos 2 and 3
     }
-    
+
+    void PlaySwingSound()
+    {
+        PlayerSwingSound.Post(gameObject);
+    }
+
     private void Move(float h, float v)
     {
         // If you can't move or player isn't pushing wasd, set velocity to 0
