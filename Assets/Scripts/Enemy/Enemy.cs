@@ -68,7 +68,7 @@ public class Enemy : Character {
         // If player in sight, but not in attack range, move towards player
         if (playerDistance < playerInSight.Value && playerDistance >= playerInRange && canMove)
         {
-            anim.SetFloat("MoveSpeed", 1);
+            anim.SetFloat("MoveSpeed", MoveSpeed.Value);
             // The step size is equal to speed times frame time.
             float step = MoveSpeed.Value * Time.deltaTime;
 

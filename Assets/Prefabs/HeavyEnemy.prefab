@@ -2020,7 +2020,7 @@ MonoBehaviour:
   MoveSpeed:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 083992838a2c04cb6b9ea3ba09a3660b, type: 2}
+    Variable: {fileID: 11400000, guid: 1c8dea4944de886488046b91ee8a983a, type: 2}
   health: 5
   EnemyDamagedSound:
     valueGuid: 
