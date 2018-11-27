@@ -8,6 +8,7 @@ public class Enemy : Character {
     public TransformVariable playerTransform;
     public FloatReference enemyHitTime;
     public float playerDistance;
+    public bool isAwake = true;
 
     // when does enemy notice the player
     public FloatReference playerInSight;
@@ -36,9 +37,15 @@ public class Enemy : Character {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        time = Time.time;
-        Move();
-        anim.SetFloat("DistanceToPlayer", playerDistance);
+        if (isAwake)
+        {
+            time = Time.time;
+            Move();
+            anim.SetFloat("DistanceToPlayer", playerDistance);
+        } else
+        {
+            anim.SetFloat("MoveSpeed", 0);
+        }
     }
 
     void PlayFallDownSound()
