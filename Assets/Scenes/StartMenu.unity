@@ -343,6 +343,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f04dfac06b06f4b438ada724d83d74dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MenuMusic:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: 989369570e0f53e4184afaf5383b8a5e,
+      type: 2}
+  StartTransition:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: a32b84715c6b8b245b717dc52a610c2e,
+      type: 2}
 --- !u!1 &786990623
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 844786070}
   - component: {fileID: 844786069}
+  - component: {fileID: 844786071}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -474,6 +483,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &844786071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 844786068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3c73645469a7243a2e97adb25e193c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameSoundbank:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: e1e9ee6ec0dcfc34cb10654986431e6f,
+      type: 2}
 --- !u!1 &1022350219
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,19 +15,19 @@ MonoBehaviour:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0e65d415667a6d4aab86be3da2b9543a
-    m_lastTime: -8586606789605679930
+    m_lastTime: -8586585676420028168
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f9a470c7d6a9e34b98d5de8ec59b22a6
-    m_lastTime: -8586606789606607452
+    m_lastTime: -8586585676420686408
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b65a7d667dabe1419dea0073196041a1
-    m_lastTime: -8586586007493302742
+    m_lastTime: -8586583528815204996
     List:
     - name: GameSounds
       guid: b543a3e0e70af743b1576ff032c806a3
@@ -42,17 +42,75 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8119b29db91540468c7bdc1a7e521c73
-    m_lastTime: -8586585765417854882
+    m_lastTime: -8586582709012910055
     List:
+    - name: AMB_FountainLoop
+      guid: 37e24ffac8d02146ab7cf84bcd3b9ceb
+      id: 3758534000
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 4
+      - ElementName: AMB_FountainLoop
+        ObjectType: 3
+      Path: Default Work Unit\Ambience\AMB_FountainLoop
+      maxAttenuation: 65
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_MainLoop
+      guid: b1e6deb4a0866c418ad907deeed9a91d
+      id: 2753271343
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 4
+      - ElementName: AMB_MainLoop
+        ObjectType: 3
+      Path: Default Work Unit\Ambience\AMB_MainLoop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Gameplay
       guid: 5978149b07593c4ca907911e5fb24971
       id: 3737014274
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
       - ElementName: Play_Gameplay
         ObjectType: 3
-      Path: Default Work Unit\Play_Gameplay
+      Path: Default Work Unit\Music\Play_Gameplay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_GHGO_TitleScreen_TransitionOut
+      guid: e2aaa432a3a8fe4ca41d1355dc27807a
+      id: 1555749332
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Play_GHGO_TitleScreen_TransitionOut
+        ObjectType: 3
+      Path: Default Work Unit\Music\Play_GHGO_TitleScreen_TransitionOut
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_TitleScreen
+      guid: 6f245e5c3020af4f9e194548cffe2e1f
+      id: 3027900556
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Play_TitleScreen
+        ObjectType: 3
+      Path: Default Work Unit\Music\Play_TitleScreen
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -62,9 +120,11 @@ MonoBehaviour:
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: CharacterSFX
+        ObjectType: 4
       - ElementName: SFX_Impact
         ObjectType: 3
-      Path: Default Work Unit\SFX_Impact
+      Path: Default Work Unit\CharacterSFX\SFX_Impact
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -74,9 +134,11 @@ MonoBehaviour:
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: CharacterSFX
+        ObjectType: 4
       - ElementName: SFX_ZombieSwing
         ObjectType: 3
-      Path: Default Work Unit\SFX_ZombieSwing
+      Path: Default Work Unit\CharacterSFX\SFX_ZombieSwing
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -84,29 +146,30 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e1d6f233b7f992469cd74b15230bc22b
-    m_lastTime: -8586606789606309854
+    m_lastTime: -8586585676421040516
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d74f1a538c60de44bdf67b2ffda7b4e7
-    m_lastTime: -8586606789606547934
+    m_lastTime: -8586585676420950756
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 1c361a616fce1047a0ea742e093906ad
-    m_lastTime: -8586606789606691774
+    m_lastTime: -8586585676421110332
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4a16e99d8c6a1241bbb1a1a1c6ed324e
-    m_lastTime: -8586606789605615453
+    m_lastTime: -8586585676420447049
     List: []
   ExpandedItems:
   - /GitHubGameOff2018_Wwise
   - /GitHubGameOff2018_Wwise/Events
   - /GitHubGameOff2018_Wwise/Events/Default Work Unit
+  - /GitHubGameOff2018_Wwise/Events/Default Work Unit/Music
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

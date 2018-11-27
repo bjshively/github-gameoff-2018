@@ -13,7 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMB_FOUNTAINLOOP = 3758534000U;
+        static const AkUniqueID AMB_MAINLOOP = 2753271343U;
         static const AkUniqueID PLAY_GAMEPLAY = 3737014274U;
+        static const AkUniqueID PLAY_GHGO_TITLESCREEN_TRANSITIONOUT = 1555749332U;
+        static const AkUniqueID PLAY_TITLESCREEN = 3027900556U;
         static const AkUniqueID SFX_IMPACT = 2405854631U;
         static const AkUniqueID SFX_ZOMBIESWING = 3709280211U;
     } // namespace EVENTS

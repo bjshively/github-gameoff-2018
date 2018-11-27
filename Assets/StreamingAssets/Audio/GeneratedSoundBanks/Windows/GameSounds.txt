@@ -1,27 +1,34 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1555749332	Play_GHGO_TitleScreen_TransitionOut			\Default Work Unit\Music\Play_GHGO_TitleScreen_TransitionOut	
 	2405854631	SFX_Impact			\Default Work Unit\SFX_Impact	
+	3027900556	Play_TitleScreen			\Default Work Unit\Music\Play_TitleScreen	
 	3709280211	SFX_ZombieSwing			\Default Work Unit\SFX_ZombieSwing	
-	3737014274	Play_Gameplay			\Default Work Unit\Play_Gameplay	
+	3737014274	Play_Gameplay			\Default Work Unit\Music\Play_Gameplay	
+	3758534000	AMB_FountainLoop			\Default Work Unit\AMB_FountainLoop	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	42760231	SFX_ZombieSwing_3	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieSwing_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieSwing\SFX_ZombieSwing_3		293056
+	125632358	GHGO_TitleScreen_intro	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\GHGO_TitleScreen_intro_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\TitleScreen\MX_TitleScreen_intro\GHGO_TitleScreen_intro		6582924
 	152888324	SFX_ZombieSwing_1	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieSwing_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieSwing\SFX_ZombieSwing_1		290752
 	162538668	SFX_ZombieGrowl_12	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_12_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieGrowl\SFX_ZombieGrowl_12		208504
 	175199123	SFX_ZombieGrowl_08	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_08_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieGrowl\SFX_ZombieGrowl_08		226912
 	190506028	SFX_ZombieGrowl_07	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_07_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieGrowl\SFX_ZombieGrowl_07		188200
+	197801888	GHGO_TitleScreen_loop	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\GHGO_TitleScreen_loop_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\TitleScreen\MX_TitleScreen_loop\GHGO_TitleScreen_loop		11849208
 	265717059	SFX_ZombieGrowl_11	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_11_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieGrowl\SFX_ZombieGrowl_11		196562
 	269627489	SFX_ZombieGrowl_01	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieGrowl\SFX_ZombieGrowl_01		188864
 	287475505	SFX_ZombieSwing_6	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieSwing_6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieSwing\SFX_ZombieSwing_6		319552
-	393190534	GHGO_Gameplay_v2	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\GHGO_Gameplay_v2_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Gameplay\GHGO_Gameplay_v2\GHGO_Gameplay_v2		3456064
 	435188352	SFX_ZombieGrowl_02	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieGrowl\SFX_ZombieGrowl_02		201522
+	440296049	GHGO_TitleScreen_TransitionOut	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\GHGO_TitleScreen_TransitionOut_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\MX_TitleScreen_TransitionOut\GHGO_TitleScreen_TransitionOut		3291496
 	483972553	SFX_ZombieGrowl_04	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieGrowl\SFX_ZombieGrowl_04		178506
 	553688044	SFX_ZombieGrowl_03	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieGrowl\SFX_ZombieGrowl_03		206944
 	589629608	SFX_ZombieGrowl_10	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_10_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieGrowl\SFX_ZombieGrowl_10		183430
 	620139846	GHGO_Impact2	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\GHGO_Impact2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Impact\GHGO_Impact2		171264
 	626279196	SFX_ZombieSwing_2	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieSwing_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieSwing\SFX_ZombieSwing_2		278080
+	629262332	GHGO_FountainLoop	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\GHGO_FountainLoop_7A00E923.wem		\Actor-Mixer Hierarchy\Default Work Unit\GHGO_FountainLoop		2649728
 	631012781	SFX_ZombieSwing_5	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieSwing_5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieSwing\SFX_ZombieSwing_5		308032
 	670056793	GHGO_Impact1	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\GHGO_Impact1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Impact\GHGO_Impact1		150464
 	696878333	SFX_ZombieSwing_4	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieSwing_4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieSwing\SFX_ZombieSwing_4		290752
+	731070811	GHGO_Gameplay_v3	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\GHGO_Gameplay_v3_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Gameplay\MX_Gameplay\GHGO_Gameplay_v3		3456064
 	888905177	SFX_ZombieGrowl_06	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_06_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieGrowl\SFX_ZombieGrowl_06		192156
 	971313575	SFX_ZombieGrowl_05	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_05_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieGrowl\SFX_ZombieGrowl_05		181598
 	974252689	SFX_ZombieGrowl_09	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_09_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_ZombieGrowl\SFX_ZombieGrowl_09		244204

@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
+    public AK.Wwise.Event MenuMusic;
+    public AK.Wwise.Event StartTransition;
+
 	// Use this for initialization
 	void Start () {
-		
+
+        MenuMusic.Post(gameObject);
+
 	}
 	
 	// Update is called once per frame
@@ -17,6 +22,7 @@ public class Menu : MonoBehaviour {
 
     public void StartGame()
     {
+        StartTransition.Post(gameObject);
         SceneManager.LoadScene(1);
     }
 

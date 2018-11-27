@@ -21,14 +21,26 @@
 			<ShortName>GameSounds</ShortName>
 			<Path>GameSounds.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3737014274" Name="Play_Gameplay" ObjectPath="\Events\Default Work Unit\Play_Gameplay"/>
-				<Event Id="2405854631" Name="SFX_Impact" ObjectPath="\Events\Default Work Unit\SFX_Impact"/>
-				<Event Id="3709280211" Name="SFX_ZombieSwing" ObjectPath="\Events\Default Work Unit\SFX_ZombieSwing"/>
+				<Event Id="3758534000" Name="AMB_FountainLoop" ObjectPath="\Events\Default Work Unit\Ambience\AMB_FountainLoop" MaxAttenuation="65.000000"/>
+				<Event Id="2753271343" Name="AMB_MainLoop" ObjectPath="\Events\Default Work Unit\Ambience\AMB_MainLoop"/>
+				<Event Id="3737014274" Name="Play_Gameplay" ObjectPath="\Events\Default Work Unit\Music\Play_Gameplay"/>
+				<Event Id="1555749332" Name="Play_GHGO_TitleScreen_TransitionOut" ObjectPath="\Events\Default Work Unit\Music\Play_GHGO_TitleScreen_TransitionOut"/>
+				<Event Id="3027900556" Name="Play_TitleScreen" ObjectPath="\Events\Default Work Unit\Music\Play_TitleScreen"/>
+				<Event Id="2405854631" Name="SFX_Impact" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_Impact"/>
+				<Event Id="3709280211" Name="SFX_ZombieSwing" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_ZombieSwing"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="42760231" Language="SFX">
 					<ShortName>SFX_ZombieSwing_3.wav</ShortName>
 					<Path>SFX\SFX_ZombieSwing_3_56D34C19.wem</Path>
+				</File>
+				<File Id="80690689" Language="SFX">
+					<ShortName>GHGO_AMB_MainLoop.wav</ShortName>
+					<Path>SFX\GHGO_AMB_MainLoop_56D34C19.wem</Path>
+				</File>
+				<File Id="125632358" Language="SFX">
+					<ShortName>GHGO_TitleScreen_intro.wav</ShortName>
+					<Path>SFX\GHGO_TitleScreen_intro_8956FC97.wem</Path>
 				</File>
 				<File Id="152888324" Language="SFX">
 					<ShortName>SFX_ZombieSwing_1.wav</ShortName>
@@ -46,6 +58,10 @@
 					<ShortName>SFX_ZombieGrowl_07.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_07_56D34C19.wem</Path>
 				</File>
+				<File Id="197801888" Language="SFX">
+					<ShortName>GHGO_TitleScreen_loop.wav</ShortName>
+					<Path>SFX\GHGO_TitleScreen_loop_8956FC97.wem</Path>
+				</File>
 				<File Id="265717059" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_11.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_11_56D34C19.wem</Path>
@@ -58,13 +74,13 @@
 					<ShortName>SFX_ZombieSwing_6.wav</ShortName>
 					<Path>SFX\SFX_ZombieSwing_6_56D34C19.wem</Path>
 				</File>
-				<File Id="393190534" Language="SFX">
-					<ShortName>GHGO_Gameplay_v2.wav</ShortName>
-					<Path>SFX\GHGO_Gameplay_v2_8956FC97.wem</Path>
-				</File>
 				<File Id="435188352" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_02.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_02_56D34C19.wem</Path>
+				</File>
+				<File Id="440296049" Language="SFX">
+					<ShortName>GHGO_TitleScreen_TransitionOut.wav</ShortName>
+					<Path>SFX\GHGO_TitleScreen_TransitionOut_8956FC97.wem</Path>
 				</File>
 				<File Id="483972553" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_04.wav</ShortName>
@@ -86,6 +102,10 @@
 					<ShortName>SFX_ZombieSwing_2.wav</ShortName>
 					<Path>SFX\SFX_ZombieSwing_2_56D34C19.wem</Path>
 				</File>
+				<File Id="629262332" Language="SFX">
+					<ShortName>GHGO_FountainLoop.wav</ShortName>
+					<Path>SFX\GHGO_FountainLoop_7A00E923.wem</Path>
+				</File>
 				<File Id="631012781" Language="SFX">
 					<ShortName>SFX_ZombieSwing_5.wav</ShortName>
 					<Path>SFX\SFX_ZombieSwing_5_56D34C19.wem</Path>
@@ -97,6 +117,10 @@
 				<File Id="696878333" Language="SFX">
 					<ShortName>SFX_ZombieSwing_4.wav</ShortName>
 					<Path>SFX\SFX_ZombieSwing_4_56D34C19.wem</Path>
+				</File>
+				<File Id="731070811" Language="SFX">
+					<ShortName>GHGO_Gameplay_v3.wav</ShortName>
+					<Path>SFX\GHGO_Gameplay_v3_8956FC97.wem</Path>
 				</File>
 				<File Id="888905177" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_06.wav</ShortName>
