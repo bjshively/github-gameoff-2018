@@ -1826,7 +1826,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606946142010664}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 210.45584, y: 0.644845, z: -9.410617}
+  m_LocalPosition: {x: 8.62, y: 0.016698837, z: -7.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512375598262740}
@@ -2084,6 +2084,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove: 1
   isInvincible: 0
+  PlayerSwingSound:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: 04c28514bfa9c3b4a89a2b1f5a588af5,
+      type: 2}
+  FootStepSound:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 0}
+  GrassSwitch:
+    valueGuid: 
+    groupGuid: 
+    WwiseObjectReference: {fileID: 0}
+  DirtSwitch:
+    valueGuid: 
+    groupGuid: 
+    WwiseObjectReference: {fileID: 0}
+  ConcreteSwitch:
+    valueGuid: 
+    groupGuid: 
+    WwiseObjectReference: {fileID: 0}
   attackCollider: {fileID: 1946780994868188}
   smashCollider: {fileID: 1716240557852290}
   maxHealth:
@@ -2106,21 +2125,6 @@ MonoBehaviour:
     valueGuid: 
     WwiseObjectReference: {fileID: 11400000, guid: 04c28514bfa9c3b4a89a2b1f5a588af5,
       type: 2}
-  FootStepSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 0}
-  GrassSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 0}
-  DirtSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 0}
-  ConcreteSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!114 &114697016806240982
 MonoBehaviour:
   m_ObjectHideFlags: 1
