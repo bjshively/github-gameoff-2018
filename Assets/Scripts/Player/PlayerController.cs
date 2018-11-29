@@ -32,6 +32,7 @@ public class PlayerController : Character
     // Use this for initialization
     protected override void Start () {
         base.Start();
+        playerTransform.Value.position = transform.position;
         enemyHitTime.Value = -10;
         playerHitTime.Value = -10;
         health.Value = maxHealth.Value;
@@ -142,6 +143,16 @@ public class PlayerController : Character
         if (other.name == "AttackCollider" || other.name == "SmashCollider")
         {
             TakeDamage();
+        }
+
+        if (other.name == "Car")
+        {
+            if (!isInvincible)
+            {
+                health.Value -= 1;
+                isInvincible = true;
+                anim.SetTrigger("Knockback3");
+            }
         }
     }
 
