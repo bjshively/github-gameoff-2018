@@ -33,7 +33,7 @@ public class Character : MonoBehaviour {
         }
     }
 
-    private void SetCanMove(int v)
+    protected void SetCanMove(int v)
     {
         if (v == 1)
         {
@@ -46,7 +46,7 @@ public class Character : MonoBehaviour {
         }
     }
 
-    private void SetIsInvincible(int v)
+    protected void SetIsInvincible(int v)
     {
         if (v == 1)
         {
