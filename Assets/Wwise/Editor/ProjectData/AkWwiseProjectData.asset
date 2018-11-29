@@ -53,7 +53,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8119b29db91540468c7bdc1a7e521c73
-    m_lastTime: -8586582471781998843
+    m_lastTime: -8586580932654589818
     List:
     - name: AMB_BirdCalls
       guid: f59fdcd225276942a5399795c0e72cf9
@@ -258,8 +258,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /GitHubGameOff2018_Wwise
-  - /GitHubGameOff2018_Wwise/Switches
-  - /GitHubGameOff2018_Wwise/Switches/Default Work Unit
-  - /GitHubGameOff2018_Wwise/Switches/Default Work Unit/GroundMaterials
+  - /GitHubGameOff2018_Wwise/Events
+  - /GitHubGameOff2018_Wwise/Events/Default Work Unit
+  - /GitHubGameOff2018_Wwise/Events/Default Work Unit/Music
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

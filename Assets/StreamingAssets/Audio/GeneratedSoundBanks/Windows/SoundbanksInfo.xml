@@ -153,9 +153,17 @@
 					<ShortName>Player_FootSteps_Concrete06.wav</ShortName>
 					<Path>SFX\Player_FootSteps_Concrete06_56D34C19.wem</Path>
 				</File>
+				<File Id="419196972" Language="SFX">
+					<ShortName>MX_GamePlay1.wav</ShortName>
+					<Path>SFX\MX_GamePlay1_8956FC97.wem</Path>
+				</File>
 				<File Id="435188352" Language="SFX">
 					<ShortName>SFX_ZombieGrowl_02.wav</ShortName>
 					<Path>SFX\SFX_ZombieGrowl_02_56D34C19.wem</Path>
+				</File>
+				<File Id="438450489" Language="SFX">
+					<ShortName>MX_GamePlay2.wav</ShortName>
+					<Path>SFX\MX_GamePlay2_8956FC97.wem</Path>
 				</File>
 				<File Id="440296049" Language="SFX">
 					<ShortName>GHGO_TitleScreen_TransitionOut.wav</ShortName>
@@ -224,10 +232,6 @@
 				<File Id="705151114" Language="SFX">
 					<ShortName>Player_FootSteps_Grass04.wav</ShortName>
 					<Path>SFX\Player_FootSteps_Grass04_56D34C19.wem</Path>
-				</File>
-				<File Id="731070811" Language="SFX">
-					<ShortName>GHGO_Gameplay_v3.wav</ShortName>
-					<Path>SFX\GHGO_Gameplay_v3_8956FC97.wem</Path>
 				</File>
 				<File Id="737271416" Language="SFX">
 					<ShortName>Player_FootSteps_Dirt01.wav</ShortName>
