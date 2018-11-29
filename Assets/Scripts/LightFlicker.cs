@@ -9,7 +9,8 @@ public class LightFlicker : MonoBehaviour
     public float maximumSecondsUntilNextFlicker = 3;
     public float minimumIntensity = 0;
     public float maximumIntensity = 2;
-    public float flickerLength = .1f;
+    public float flickerMinimumLength = .1f;
+    public float flickerMaximumLength = .5f;
     float startingIntensity;
     Light lamp;
 
@@ -21,7 +22,7 @@ public class LightFlicker : MonoBehaviour
     {
         lamp = GetComponent<Light>();
         startingIntensity = lamp.intensity;
-        currentFlickerTime = flickerLength;
+        SetFlickerLength();
     }
 
     // Update is called once per frame
@@ -52,11 +53,16 @@ public class LightFlicker : MonoBehaviour
             {
                 // Else, reset and resume flickering
                 SetFlickerWait();
-                currentFlickerTime = flickerLength;
+                SetFlickerLength();
             }
         }
 
 
+    }
+
+    void SetFlickerLength()
+    {
+        currentFlickerTime = Random.Range(flickerMinimumLength, flickerMaximumLength);
     }
 
     // Set the number of seconds until the next flicker
