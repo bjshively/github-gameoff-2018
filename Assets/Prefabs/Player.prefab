@@ -1826,7 +1826,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606946142010664}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 8.62, y: 0.016698837, z: -7.97}
+  m_LocalPosition: {x: 242, y: 0.5, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512375598262740}
@@ -2090,19 +2090,23 @@ MonoBehaviour:
       type: 2}
   FootStepSound:
     valueGuid: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: b169a07123c43f9468a7878c6d8503c7,
+      type: 2}
   GrassSwitch:
     valueGuid: 
     groupGuid: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 04eba869661a1d14fb28687d49e5979c,
+      type: 2}
   DirtSwitch:
     valueGuid: 
     groupGuid: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d53d59f460e57bb44b7f9170efb9dbb7,
+      type: 2}
   ConcreteSwitch:
     valueGuid: 
     groupGuid: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d671ecb36b22ed14291fb64c96b5aae3,
+      type: 2}
   attackCollider: {fileID: 1946780994868188}
   smashCollider: {fileID: 1716240557852290}
   maxHealth:
