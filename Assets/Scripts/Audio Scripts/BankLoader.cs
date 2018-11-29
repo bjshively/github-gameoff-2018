@@ -6,7 +6,7 @@ public class BankLoader : MonoBehaviour {
 
     public AK.Wwise.Bank GameSoundbank;
 
-	void Start ()
+	void Awake ()
     {
         GameSoundbank.Load();
 	}
