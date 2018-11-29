@@ -10,6 +10,13 @@ public class Character : MonoBehaviour {
     protected Rigidbody body;
     protected bool isAlive;
 
+    // Audio variables
+    public AK.Wwise.Event FootStepSound;
+    public AK.Wwise.Switch GrassSwitch;
+    public AK.Wwise.Switch DirtSwitch;
+    public AK.Wwise.Switch ConcreteSwitch;
+
+
     protected virtual void Start()
     {
         body = GetComponent<Rigidbody>();
@@ -19,11 +26,10 @@ public class Character : MonoBehaviour {
 
     protected void Melee()
     {
-//        if (canMove)
+        //        if (canMove)
         {
             anim.SetTrigger("Melee");
         }
-
     }
 
     private void SetCanMove(int v)
@@ -50,11 +56,20 @@ public class Character : MonoBehaviour {
         {
             isInvincible = false;
         }
-
     }
 
     protected void Die(string s)
     {
         anim.SetTrigger(s);
     }
+
+
+    // AUDIO =================================
+    // =======================================
+    private void PlayFootstepSound()
+    {
+        //FootStepSound.Post(gameObject);
+        //AK.SoundEngine.PostEvent("SFX_PlayerFootsteps", gameObject);
+    }
+
 }

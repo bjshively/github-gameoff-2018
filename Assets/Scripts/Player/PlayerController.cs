@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : Character {
-
-
+public class PlayerController : Character
+{
     public GameObject attackCollider;
     public GameObject smashCollider;
 
@@ -26,16 +25,9 @@ public class PlayerController : Character {
     string[] attacks = { "Combo1", "Combo2", "Combo3" };
     string[] knockbacks = { "Knockback1", "Knockback2", "Knockback3" };
 
-
-    //Audio
+    // Audio variables
     public AK.Wwise.Event PlayerDamageSound;
     public AK.Wwise.Event PlayerSwingSound;
-    public AK.Wwise.Event FootStepSound;
-
-    public AK.Wwise.Switch GrassSwitch;
-    public AK.Wwise.Switch DirtSwitch;
-    public AK.Wwise.Switch ConcreteSwitch;
-
 
     // Use this for initialization
     protected override void Start () {
@@ -43,17 +35,16 @@ public class PlayerController : Character {
         enemyHitTime.Value = -10;
         playerHitTime.Value = -10;
         health.Value = maxHealth.Value;
-
 	}
 
-
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+    // Update is called once per frame
+    void FixedUpdate()
+    {
         // set the point for enemies to follow
         playerTransform.Value.position = transform.position;
 
-        // tell animator the time for combos and knockbacks
+        // tell animator the time for combos and knockback
+        // TODO: Change this back to 1f
         anim.SetFloat("StateTime", Mathf.Repeat(anim.GetCurrentAnimatorStateInfo(0).normalizedTime, 2f));
         anim.ResetTrigger("Melee");
 
@@ -72,24 +63,14 @@ public class PlayerController : Character {
         {
             isAlive = false;
             Die("PlayerIsDead");
-            PlayerDamageSound.Post(gameObject);
+            PlayPlayerDamagedSound();
         }
-    }
-
-    void PlayFallDownSound()
-    {
-        PlayerDamageSound.Post(gameObject);
     }
 
     private void Attack()
     {
         Melee();
         // TODO: Attack swing sounds for combos 2 and 3
-    }
-
-    void PlaySwingSound()
-    {
-        PlayerSwingSound.Post(gameObject);
     }
 
     private void Move(float h, float v)
@@ -150,8 +131,9 @@ public class PlayerController : Character {
             playerHitTime.Value = Time.time;
             // Trigger the knockback
             anim.SetTrigger(knockbacks[currentKnockback]);
+
             health.Value -= 1;
-            PlayerDamageSound.Post(gameObject);
+            PlayPlayerDamagedSound();
         }
     }
 
@@ -161,5 +143,22 @@ public class PlayerController : Character {
         {
             TakeDamage();
         }
+    }
+
+    // AUDIO =================================
+    // =======================================
+    private void PlayFallDownSound()
+    {
+        PlayerDamageSound.Post(gameObject);
+    }
+
+    private void PlayPlayerDamagedSound()
+    {
+        PlayerDamageSound.Post(gameObject);
+    }
+
+    void PlaySwingSound()
+    {
+        PlayerSwingSound.Post(gameObject);
     }
 }
