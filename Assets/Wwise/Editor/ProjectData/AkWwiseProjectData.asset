@@ -66,7 +66,7 @@ MonoBehaviour:
       - ElementName: AMB_BirdCalls
         ObjectType: 3
       Path: Default Work Unit\Ambience\AMB_BirdCalls
-      maxAttenuation: 0
+      maxAttenuation: 65
       maxDuration: 0
       minDuration: 0
     - name: AMB_FountainLoop
@@ -80,7 +80,7 @@ MonoBehaviour:
       - ElementName: AMB_FountainLoop
         ObjectType: 3
       Path: Default Work Unit\Ambience\AMB_FountainLoop
-      maxAttenuation: 0
+      maxAttenuation: 60
       maxDuration: 0
       minDuration: 0
     - name: AMB_MainLoop
@@ -258,10 +258,6 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /GitHubGameOff2018_Wwise
-  - /GitHubGameOff2018_Wwise/Events
-  - /GitHubGameOff2018_Wwise/Events/Default Work Unit
-  - /GitHubGameOff2018_Wwise/Events/Default Work Unit/CharacterSFX
-  - /GitHubGameOff2018_Wwise/SoundBanks
   - /GitHubGameOff2018_Wwise/Switches
   - /GitHubGameOff2018_Wwise/Switches/Default Work Unit
   - /GitHubGameOff2018_Wwise/Switches/Default Work Unit/GroundMaterials

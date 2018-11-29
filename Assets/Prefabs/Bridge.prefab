@@ -946,6 +946,8 @@ GameObject:
   - component: {fileID: 33057759781318326}
   - component: {fileID: 114594812312129806}
   - component: {fileID: 64284576078694820}
+  - component: {fileID: 114526408950149128}
+  - component: {fileID: 114433776587421388}
   m_Layer: 0
   m_Name: Road
   m_TagString: Concrete
@@ -56230,6 +56232,18 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114433776587421388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1469377532304382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb5a73622afdcb4396d68860478fdc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerObject: {fileID: 0}
 --- !u!114 &114441424562647086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -63922,6 +63936,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!114 &114526408950149128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1469377532304382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e4040d7170f464eb8bc9a505824818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: d1bbb3b5
+  useOtherObject: 0
+  data:
+    valueGuid: 
+    groupGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: d671ecb36b22ed14291fb64c96b5aae3,
+      type: 2}
+  valueGuid: 
+  groupGuid: 
 --- !u!114 &114526532757060896
 MonoBehaviour:
   m_ObjectHideFlags: 1
