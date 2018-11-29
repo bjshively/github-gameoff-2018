@@ -8,6 +8,7 @@ public class Car : MonoBehaviour
     Vector3 target;
     public float step = .5f;
     BoxCollider col;
+    bool isAwake = false;
 
     // 1 = right, -1 = left
     public int direction = 1;
@@ -16,18 +17,21 @@ public class Car : MonoBehaviour
     void Start()
     {
         col = GetComponent<BoxCollider>();
-        target = new Vector3(transform.position.x + 100 * direction, transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Move();
-
-        // Destroy the object once it is far away from the player
-        if(Mathf.Abs(Vector3.Distance(transform.position, GameObject.Find("Player").transform.position)) > 50)
+        if (isAwake)
         {
-            Destroy(gameObject);
+            target = new Vector3(transform.position.x + 100 * direction, transform.position.y, transform.position.z);
+            Move();
+
+            // Destroy the object once it is far away from the player
+            if (Mathf.Abs(Vector3.Distance(transform.position, GameObject.Find("Player").transform.position)) > 50)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -42,5 +46,11 @@ public class Car : MonoBehaviour
         {
             col.enabled = false;
         }
+    }
+
+    public void SetAwake(bool state)
+    {
+        isAwake = state;
+        //anim.SetBool("Awake", state);
     }
 }

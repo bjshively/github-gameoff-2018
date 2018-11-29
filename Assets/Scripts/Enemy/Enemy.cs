@@ -36,7 +36,7 @@ public class Enemy : Character {
     }
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	protected virtual void FixedUpdate () {
         if (isAwake)
         {
             time = Time.time;
@@ -153,7 +153,6 @@ public class Enemy : Character {
     public void SetAwake(bool state)
     {
         isAwake = state;
-        anim.SetBool("Awake", state);
+        //anim.SetBool("Awake", state);
     }
-
 }
