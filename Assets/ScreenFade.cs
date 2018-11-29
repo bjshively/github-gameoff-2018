@@ -49,7 +49,4 @@ public class ScreenFade : MonoBehaviour {
         yield return new WaitForSeconds(2);
         TurnScreenBlack();
     }
-
-
-
 }

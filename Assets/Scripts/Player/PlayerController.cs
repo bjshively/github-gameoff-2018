@@ -104,14 +104,6 @@ public class PlayerController : Character
         }
     }
 
-    private void ReloadScene()
-    {
-        // Reload current scene on death
-        // to be called from animation
-  
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     void TakeDamage()
     {
         if (!isInvincible)
@@ -140,7 +132,7 @@ public class PlayerController : Character
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "AttackCollider" || other.name == "SmashCollider")
+        if (other.name == "AttackCollider" || other.name == "SmashCollider" || other.name == "Bullet")
         {
             TakeDamage();
         }
