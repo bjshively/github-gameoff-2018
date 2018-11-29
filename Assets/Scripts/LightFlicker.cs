@@ -2,49 +2,71 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightFlicker : MonoBehaviour {
+public class LightFlicker : MonoBehaviour
+{
 
     public float minimumSecondsUntilNextFlicker = 0;
     public float maximumSecondsUntilNextFlicker = 3;
     public float minimumIntensity = 0;
     public float maximumIntensity = 2;
-    public float flickerSpeed = .1f;
+    public float flickerLength = .1f;
     float startingIntensity;
     Light lamp;
-    float time;
-    float timeOfNextFlicker;
 
-	// Use this for initialization
-	void Start () {
-        SetFlickerTime();
+    float timeToWait;
+    float currentFlickerTime;
+
+    // Use this for initialization
+    void Start()
+    {
         lamp = GetComponent<Light>();
         startingIntensity = lamp.intensity;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Time.time - time >= timeOfNextFlicker)
-        {
-            SetFlickerTime();
-            Flicker();
-        }
+        currentFlickerTime = flickerLength;
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        Flicker();
+    }
+
+    // Set a random intensity for the light between min and max values
     void Flicker()
     {
-        lamp.intensity = Random.Range(minimumIntensity, maximumIntensity);
-        StartCoroutine(resetLight());
+        // Flicker if there is flicker time
+        if (currentFlickerTime >= 0)
+        {
+            lamp.intensity = Random.Range(minimumIntensity, maximumIntensity);
+            currentFlickerTime -= Time.deltaTime;
+        }
+
+        // Else, wait if there is wait time
+        else
+        {
+            ResetLight();
+            if (timeToWait >= 0)
+            {
+                timeToWait -= Time.deltaTime;
+            }
+            else
+            {
+                // Else, reset and resume flickering
+                SetFlickerWait();
+                currentFlickerTime = flickerLength;
+            }
+        }
+
+
     }
 
-    void SetFlickerTime()
+    // Set the number of seconds until the next flicker
+    void SetFlickerWait()
     {
-        time = Time.time;
-        timeOfNextFlicker = Random.Range(minimumSecondsUntilNextFlicker, maximumSecondsUntilNextFlicker);
+        timeToWait = Random.Range(minimumSecondsUntilNextFlicker, maximumSecondsUntilNextFlicker);
     }
 
-    IEnumerator resetLight()
+    void ResetLight()
     {
-        yield return new WaitForSeconds(flickerSpeed);
         lamp.intensity = startingIntensity;
     }
 }
