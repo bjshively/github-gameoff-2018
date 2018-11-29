@@ -27,7 +27,7 @@ public class Character : MonoBehaviour {
 
     protected void Melee()
     {
-        //        if (canMove)
+                if (canMove)
         {
             anim.SetTrigger("Melee");
         }
