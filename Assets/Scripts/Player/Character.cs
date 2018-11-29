@@ -11,6 +11,7 @@ public class Character : MonoBehaviour {
     protected bool isAlive;
 
     // Audio variables
+    public AK.Wwise.Event PlayerSwingSound;
     public AK.Wwise.Event FootStepSound;
     public AK.Wwise.Switch GrassSwitch;
     public AK.Wwise.Switch DirtSwitch;
@@ -70,6 +71,11 @@ public class Character : MonoBehaviour {
     {
         //FootStepSound.Post(gameObject);
         //AK.SoundEngine.PostEvent("SFX_PlayerFootsteps", gameObject);
+    }
+
+    private void PlaySwingSound()
+    {
+        PlayerSwingSound.Post(gameObject);
     }
 
 }

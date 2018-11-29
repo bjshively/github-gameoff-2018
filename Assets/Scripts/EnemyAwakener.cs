@@ -30,7 +30,7 @@ public class EnemyAwakener : MonoBehaviour {
                 enemies[i].GetComponent<Enemy>().SetAwake(true);
             }
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
