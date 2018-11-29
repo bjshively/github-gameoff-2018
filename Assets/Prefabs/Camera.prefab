@@ -911,6 +911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   youDied: {fileID: 114931977189547438}
+  playerHealth: {fileID: 11400000, guid: 93b5cd6092da1455a9f0a2470bd18c02, type: 2}
 --- !u!114 &114720745473300932
 MonoBehaviour:
   m_ObjectHideFlags: 1
