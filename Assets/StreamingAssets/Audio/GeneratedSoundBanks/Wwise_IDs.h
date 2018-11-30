@@ -15,7 +15,8 @@ namespace AK
     {
         static const AkUniqueID AMB_BIRDCALLS = 387824038U;
         static const AkUniqueID AMB_FOUNTAINLOOP = 3758534000U;
-        static const AkUniqueID AMB_MAINLOOP = 2753271343U;
+        static const AkUniqueID PLAY_AMBIENCE = 278617630U;
+        static const AkUniqueID PLAY_BULLET = 808719710U;
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_GAMEPLAY = 3737014274U;
         static const AkUniqueID PLAY_TITLESCREEN = 3027900556U;
@@ -24,7 +25,6 @@ namespace AK
         static const AkUniqueID SFX_IMPACT = 2405854631U;
         static const AkUniqueID SFX_PLAYERFOOTSTEPS = 724467519U;
         static const AkUniqueID SFX_PLAYERSWING = 1118618552U;
-        static const AkUniqueID TRIGGER_PLAYERDIED = 830841415U;
     } // namespace EVENTS
 
     namespace STATES
@@ -40,6 +40,17 @@ namespace AK
                 static const AkUniqueID TITLESCREEN = 152105657U;
             } // namespace STATE
         } // namespace GAMESTATES
+
+        namespace LOCATION
+        {
+            static const AkUniqueID GROUP = 1176052424U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BRIDGE = 2068062714U;
+                static const AkUniqueID PARK = 1610254009U;
+            } // namespace STATE
+        } // namespace LOCATION
 
     } // namespace STATES
 
@@ -77,6 +88,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;

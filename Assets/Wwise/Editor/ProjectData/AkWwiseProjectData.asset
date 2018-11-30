@@ -21,7 +21,7 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f9a470c7d6a9e34b98d5de8ec59b22a6
-    m_lastTime: -8586580922563393435
+    m_lastTime: -8586580114423704303
     List:
     - name: ExteriorReverb
       guid: e7fedf3f93ac39409f92d2bdac7abbee
@@ -53,7 +53,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8119b29db91540468c7bdc1a7e521c73
-    m_lastTime: -8586580206211432509
+    m_lastTime: -8586580110196168242
     List:
     - name: AMB_BirdCalls
       guid: f59fdcd225276942a5399795c0e72cf9
@@ -66,7 +66,7 @@ MonoBehaviour:
       - ElementName: AMB_BirdCalls
         ObjectType: 3
       Path: Default Work Unit\Ambience\AMB_BirdCalls
-      maxAttenuation: 65
+      maxAttenuation: 120
       maxDuration: 0
       minDuration: 0
     - name: AMB_FountainLoop
@@ -83,17 +83,31 @@ MonoBehaviour:
       maxAttenuation: 60
       maxDuration: 0
       minDuration: 0
-    - name: AMB_MainLoop
-      guid: b1e6deb4a0866c418ad907deeed9a91d
-      id: 2753271343
+    - name: Play_Ambience
+      guid: f451e6b130e7aa4087f441526198ff34
+      id: 278617630
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Ambience
         ObjectType: 4
-      - ElementName: AMB_MainLoop
+      - ElementName: Play_Ambience
         ObjectType: 3
-      Path: Default Work Unit\Ambience\AMB_MainLoop
+      Path: Default Work Unit\Ambience\Play_Ambience
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Bullet
+      guid: 05de197c9335c241879e89c5faccc9e5
+      id: 808719710
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CharacterSFX
+        ObjectType: 4
+      - ElementName: Play_Bullet
+        ObjectType: 3
+      Path: Default Work Unit\CharacterSFX\Play_Bullet
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -209,18 +223,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Trigger_PlayerDied
-      guid: 23c5f5e473d03943b7e85bae439b40dd
-      id: 830841415
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Trigger_PlayerDied
-        ObjectType: 3
-      Path: Default Work Unit\Trigger_PlayerDied
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -240,7 +242,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d74f1a538c60de44bdf67b2ffda7b4e7
-    m_lastTime: -8586580206211625955
+    m_lastTime: -8586580153893434908
     List:
     - name: GameStates
       guid: 5020adb0e4fb38459a77db9ca1bed6ca
@@ -275,6 +277,34 @@ MonoBehaviour:
         id: 152105657
         PathAndIcons:
         - ElementName: TitleScreen
+          ObjectType: 8
+    - name: Location
+      guid: 7d4ebd2a6aa31e4290a33d5e5c16810c
+      id: 1176052424
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Location
+        ObjectType: 9
+      Path: Default Work Unit\Location
+      values:
+      - name: Bridge
+        guid: 5e3922e820972940a0c6db68a5777ef3
+        id: 2068062714
+        PathAndIcons:
+        - ElementName: Bridge
+          ObjectType: 8
+      - name: None
+        guid: 5ddf540cbac0934e87fc10ddb0339e07
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Park
+        guid: 214fbb730718fc4bbdad3dd237a9bd70
+        id: 1610254009
+        PathAndIcons:
+        - ElementName: Park
           ObjectType: 8
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu

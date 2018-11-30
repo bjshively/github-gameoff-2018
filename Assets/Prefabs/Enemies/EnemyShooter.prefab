@@ -1274,7 +1274,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1638986529609240}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 15.5770645, y: -0.2817936, z: -0.33226395}
+  m_LocalPosition: {x: 11, y: 0, z: -16.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4356022328915166}
@@ -2568,18 +2568,6 @@ MonoBehaviour:
   FootStepSound:
     valueGuid: 
     WwiseObjectReference: {fileID: 0}
-  GrassSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 0}
-  DirtSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 0}
-  ConcreteSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 0}
   attackCollider: {fileID: 0}
   playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
   enemyHitTime:
@@ -2607,6 +2595,10 @@ MonoBehaviour:
   movementRecalculation: 0
   gunBarrel: {fileID: 1277476473191190}
   shootDistance: {fileID: 11400000, guid: ed81684e91025ce40aeb419e61af90c9, type: 2}
+  BulletSound:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: d3019bde9b49d9b4eb8d6c62ef9fff7f,
+      type: 2}
 --- !u!136 &136139281924964586
 CapsuleCollider:
   m_ObjectHideFlags: 1

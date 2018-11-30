@@ -1,13 +1,18 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	777429653	GameStates			\Default Work Unit\GameStates	
+	1176052424	Location			\Default Work Unit\Location	
 
 State	ID	Name	State Group			Notes
 	0	None	GameStates			
 	89505537	Gameplay	GameStates			
 	152105657	TitleScreen	GameStates			
 	1886223524	PlayerDied	GameStates			
+	0	None	Location			
+	1610254009	Park	Location			
+	2068062714	Bridge	Location			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\SFX\Ambience	
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	1534528548	VO			\Default Work Unit\Master Audio Bus\VO	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
