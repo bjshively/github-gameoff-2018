@@ -944,11 +944,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4061441455218538}
   - component: {fileID: 95016522020618590}
-  - component: {fileID: 114772145316634980}
   - component: {fileID: 136557205796111510}
   - component: {fileID: 54640725416428636}
   - component: {fileID: 114443318776873570}
   - component: {fileID: 114996932124594980}
+  - component: {fileID: 114310929894608556}
   m_Layer: 9
   m_Name: EnemyProjectiler
   m_TagString: Untagged
@@ -1047,8 +1047,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1914520320591082}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000014603138}
-  m_LocalPosition: {x: 23.344551, y: -10, z: -17.520765}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 19.03, y: 0, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4017902296922890}
@@ -1071,7 +1071,7 @@ Transform:
   - {fileID: 4645510872029474}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4099655859737564
 Transform:
   m_ObjectHideFlags: 1
@@ -2071,6 +2071,63 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114310929894608556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1914520320591082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169321adaf152584bb67ab3bf378e7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canMove: 1
+  isInvincible: 0
+  PlayerSwingSound:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 0}
+  FootStepSound:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 0}
+  GrassSwitch:
+    valueGuid: 
+    groupGuid: 
+    WwiseObjectReference: {fileID: 0}
+  DirtSwitch:
+    valueGuid: 
+    groupGuid: 
+    WwiseObjectReference: {fileID: 0}
+  ConcreteSwitch:
+    valueGuid: 
+    groupGuid: 
+    WwiseObjectReference: {fileID: 0}
+  attackCollider: {fileID: 0}
+  playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
+  enemyHitTime:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  playerDistance: 0
+  isAwake: 1
+  playerInSight:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  playerInRange: 3
+  MoveSpeed:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 4b7ea836a0e83d04f9262b94e8b77ac6, type: 2}
+  health: 3
+  EnemyDamagedSound:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 0}
+  EnemySwingSound:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 0}
+  movementRecalculation: 0
+  gunBarrel: {fileID: 1246667988673644}
 --- !u!114 &114443318776873570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2820,64 +2877,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!114 &114772145316634980
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1914520320591082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e40b94a6162ce41a91d7f1c0fe31e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canMove: 1
-  isInvincible: 0
-  PlayerSwingSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 0}
-  FootStepSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 0}
-  GrassSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 0}
-  DirtSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 0}
-  ConcreteSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 0}
-  attackCollider: {fileID: 1598464154069266}
-  playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
-  enemyHitTime:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 1400c6b899273c64f898bca69276dc8d, type: 2}
-  playerDistance: 0
-  isAwake: 1
-  playerInSight:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 332e7340a02d34f3c9e5d991c2021391, type: 2}
-  playerInRange: 3
-  MoveSpeed:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 083992838a2c04cb6b9ea3ba09a3660b, type: 2}
-  health: 3
-  EnemyDamagedSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: 8082653bb71506f48ab03157a487a2ce,
-      type: 2}
-  EnemySwingSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: b7b265fb3145f3647bf73d8d65a207c1,
-      type: 2}
-  movementRecalculation: 0
 --- !u!114 &114837897934212072
 MonoBehaviour:
   m_ObjectHideFlags: 1
