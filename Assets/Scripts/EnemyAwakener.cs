@@ -9,10 +9,12 @@ public class EnemyAwakener : MonoBehaviour {
     public bool isArena;
     public GameObject[] walls;
     CinemachineVirtualCamera cam;
+    Transform playerCamFollow;
    
 
 	// Use this for initialization
 	void Start () {
+        playerCamFollow = GameObject.Find("Player").transform.Find("CameraFollow").transform;
         // Start all enemies in a sleep state
         for (int i = 0; i < enemies.Count; i++)
         {
@@ -36,7 +38,8 @@ public class EnemyAwakener : MonoBehaviour {
             {
                 // If all the enemies are dead, turn off the second wall and trigger, reset camera follow
                 walls[1].SetActive(false);
-                cam.Follow = GameObject.Find("Player").transform.Find("CameraFollow").transform;
+                cam.Follow = playerCamFollow;
+                cam.LookAt = playerCamFollow;
                 gameObject.SetActive(false);
             }
         }
@@ -56,6 +59,7 @@ public class EnemyAwakener : MonoBehaviour {
             {
                 ToggleWalls(true);
                 cam.Follow = transform;
+                cam.LookAt = transform;
             }
         }
     }
