@@ -62,7 +62,7 @@ public class ShootingEnemy : Enemy
         {
             attackTime -= Time.deltaTime;
             // Attack if within range
-            if (targetDistance <= shootDistance.Value || attackTime <= 0)
+            if (targetDistance <= 3 || attackTime <= 0)
             {
                 anim.SetFloat("MoveSpeed", 0);
                 Attack();
