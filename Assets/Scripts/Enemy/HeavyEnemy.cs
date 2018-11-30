@@ -108,7 +108,7 @@ public class HeavyEnemy : Enemy {
     void StartRetreat()
     {
         retreatTime = 3;
-        target = new Vector3(playerTransform.Value.position.x + Random.Range(-50, 50), transform.position.y, playerTransform.Value.position.z + Random.Range(-5, 5));
+        target = new Vector3(Mathf.Clamp(playerTransform.Value.position.x + Random.Range(-50, 50), 0, Mathf.Infinity), transform.position.y, Random.Range(-20, 4));
         retreatMode = true;
     }
 

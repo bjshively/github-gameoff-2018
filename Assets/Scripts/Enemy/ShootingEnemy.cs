@@ -30,6 +30,7 @@ public class ShootingEnemy : Enemy
     // Update is called once per frame
     protected override void FixedUpdate()
     {
+        // Only move if enemy is awake and player is within range
         if (isAwake && Mathf.Abs(Vector3.Distance(transform.position, playerTransform.Value.position)) < shootDistance.Value)
         {
             Move();
@@ -100,7 +101,7 @@ public class ShootingEnemy : Enemy
                 attackMode = true;
                 attackTime = 3;
                 sleepMode = false;
-                target = target = new Vector3(playerTransform.Value.position.x + Random.Range(-35, 35), transform.position.y, playerTransform.Value.position.z + Random.Range(-5, 5));
+                target = new Vector3(Mathf.Clamp(playerTransform.Value.position.x + Random.Range(-35, 35), 0, Mathf.Infinity), transform.position.y, Random.Range(-20, 4));
             }
             else
             {
@@ -127,7 +128,8 @@ public class ShootingEnemy : Enemy
     void ShootingEnemyStartRetreat()
     {
         retreatTime = 3;
-        target = new Vector3(playerTransform.Value.position.x + Random.Range(-35, 35), transform.position.y, playerTransform.Value.position.z + Random.Range(-5, 5));
+        target = new Vector3(Mathf.Clamp(playerTransform.Value.position.x + Random.Range(-35, 35), 0, Mathf.Infinity), transform.position.y, Random.Range(-20, 4));
+        //target = new Vector3(playerTransform.Value.position.x + Random.Range(-35, 35), transform.position.y, playerTransform.Value.position.z + Random.Range(-5, 5));
         retreatMode = true;
     }
 
