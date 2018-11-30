@@ -37,6 +37,9 @@ public class EnemyAwakener : MonoBehaviour {
                 // If all the enemies are dead, turn off the second wall and trigger, reset camera follow
                 walls[1].SetActive(false);
                 cam.Follow = GameObject.Find("Player").transform.Find("CameraFollow").transform;
+
+                cam.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, transform.eulerAngles.z);
+                Debug.Log(cam.transform.eulerAngles.x);
                 gameObject.SetActive(false);
             }
         }
