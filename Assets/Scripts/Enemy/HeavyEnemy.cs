@@ -38,6 +38,7 @@ public class HeavyEnemy : Enemy {
 
     void MoveToLocation(Vector3 pos)
     {
+        anim.SetFloat("MoveSpeed", MoveSpeed.Value);
         // The step size is equal to speed times frame time.
         float step = MoveSpeed.Value * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, pos, step);
@@ -55,13 +56,10 @@ public class HeavyEnemy : Enemy {
 
         if (attackMode)
         {
-            // Target player
-            anim.SetFloat("MoveSpeed", MoveSpeed.Value);
-            
-
             // Attack if within range
             if (targetDistance <= 3)
             {
+                anim.SetFloat("MoveSpeed", 0);
                 Attack();
             } else
             {
@@ -94,8 +92,10 @@ public class HeavyEnemy : Enemy {
                 attackMode = true;
                 sleepMode = false;
                 target = playerTransform.Value.position;
+            } else
+            {
+                anim.SetFloat("MoveSpeed", 0);
             }
-            Debug.Log("Sleepmode");
         }
     }
 
