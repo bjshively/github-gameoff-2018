@@ -1063,7 +1063,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1914520320591082}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 60.458115, y: 0, z: -0.9330921}
+  m_LocalPosition: {x: 29.73, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4017902296922890}
@@ -2113,11 +2113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove: 1
   isInvincible: 0
-  maxHealth:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 0}
-  health: {fileID: 0}
   PlayerSwingSound:
     valueGuid: 
     WwiseObjectReference: {fileID: 0}
@@ -2153,7 +2148,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 4b7ea836a0e83d04f9262b94e8b77ac6, type: 2}
-  health: 3
+  health: 2
   EnemyDamagedSound:
     valueGuid: 
     WwiseObjectReference: {fileID: 0}
@@ -2161,7 +2156,7 @@ MonoBehaviour:
     valueGuid: 
     WwiseObjectReference: {fileID: 0}
   movementRecalculation: 0
-  gunBarrel: {fileID: 1246667988673644}
+  gunBarrel: {fileID: 1756485977102798}
   shootDistance: {fileID: 11400000, guid: ed81684e91025ce40aeb419e61af90c9, type: 2}
 --- !u!114 &114443318776873570
 MonoBehaviour:
