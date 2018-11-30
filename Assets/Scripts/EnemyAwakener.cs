@@ -8,8 +8,10 @@ public class EnemyAwakener : MonoBehaviour {
     public List<GameObject> enemies;
     public bool isArena;
     public GameObject[] walls;
+    public Transform focalPoint;
     CinemachineVirtualCamera cam;
     Transform playerCamFollow;
+
    
 
 	// Use this for initialization
@@ -58,8 +60,8 @@ public class EnemyAwakener : MonoBehaviour {
             if(isArena)
             {
                 ToggleWalls(true);
-                cam.Follow = transform;
-                cam.LookAt = transform;
+                cam.Follow = focalPoint;
+                cam.LookAt = focalPoint;
             }
         }
     }
