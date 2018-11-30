@@ -11,6 +11,7 @@ public class ShootingEnemy : Enemy
     float retreatTime = 3;
     float sleepTime = 1.5f;
     float attackTime = 3;
+    public FloatVariable shootDistance;
 
 
     Vector3 target;
@@ -23,7 +24,7 @@ public class ShootingEnemy : Enemy
         body = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         isAlive = true;
-        StartRetreat();
+        ShootingEnemyStartRetreat();
     }
 
     // Update is called once per frame
@@ -61,7 +62,7 @@ public class ShootingEnemy : Enemy
         {
             attackTime -= Time.deltaTime;
             // Attack if within range
-            if (targetDistance <= 3 || attackTime <= 0)
+            if (targetDistance <= shootDistance.Value || attackTime <= 0)
             {
                 anim.SetFloat("MoveSpeed", 0);
                 Attack();
@@ -115,14 +116,15 @@ public class ShootingEnemy : Enemy
             Vector3 barrelPoint = gunBarrel.transform.position;
             GameObject bullet = Instantiate(Resources.Load("Bullet") as GameObject);
             bullet.transform.position = barrelPoint;
+            anim.SetTrigger("FirePistol");
         }
         canAttack = false;
         attackMode = false;
-        StartRetreat();
+        //ShootingEnemyStartRetreat();
     }
 
     // Triggered in animation controller
-    void StartRetreat()
+    void ShootingEnemyStartRetreat()
     {
         retreatTime = 3;
         target = new Vector3(playerTransform.Value.position.x + Random.Range(-35, 35), transform.position.y, playerTransform.Value.position.z + Random.Range(-5, 5));
