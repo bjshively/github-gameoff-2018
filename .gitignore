@@ -36,3 +36,14 @@ sysinfo.txt
 *.unitypackage
 Assets/Cinemachine/CinemachineExamples.unitypackage.meta
 Assets/Cinemachine/Timeline/LegacyTimelineAPI.unitypackage.meta
+Assets/kode80/PixelRender/Examples.meta
+Assets/kode80/PixelRender/Examples/Shooter.meta
+Assets/kode80/PixelRender/Examples/Shooter/Models.meta
+Assets/kode80/PixelRender/Examples/Shooter/Models/Jelly.fbm.meta
+Assets/kode80/PixelRender/Examples/Shooter/Models/jet.fbm.meta
+Assets/kode80/PixelRender/Examples/Shooter/Models/Wall.fbm.meta
+Assets/Scenes/FirstPersonCharacter/Audio.meta
+Assets/Standard Assets/Characters/FirstPersonCharacter.meta
+Assets/Standard Assets/Characters/FirstPersonCharacter/Audio.meta
+Assets/Standard Assets/Characters/FirstPersonCharacter/Prefabs.meta
+Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts.meta
