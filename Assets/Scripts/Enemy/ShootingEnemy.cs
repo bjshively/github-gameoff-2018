@@ -30,7 +30,7 @@ public class ShootingEnemy : Enemy
     // Update is called once per frame
     protected override void FixedUpdate()
     {
-        if (isAwake)
+        if (isAwake && Mathf.Abs(Vector3.Distance(transform.position, playerTransform.Value.position)) < shootDistance.Value)
         {
             Move();
         }
