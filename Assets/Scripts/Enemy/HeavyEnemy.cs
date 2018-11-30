@@ -27,7 +27,13 @@ public class HeavyEnemy : Enemy {
     // Update is called once per frame
     protected override void FixedUpdate()
     {
-        Move();
+        if (isAwake)
+        {
+            Move();
+        } else
+        {
+            anim.SetFloat("MoveSpeed", 0);
+        }
     }
 
     void MoveToLocation(Vector3 pos)
