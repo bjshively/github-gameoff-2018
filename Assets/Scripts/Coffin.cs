@@ -31,7 +31,7 @@ public class Coffin : MonoBehaviour
             // Destroy the object once it is far away from the player
             if (Mathf.Abs(Vector3.Distance(transform.position, GameObject.Find("Player").transform.position)) > 50)
             {
-                Destroy(gameObject.transform.parent);
+                Destroy(gameObject.transform.parent.gameObject);
             }
         }
     }
