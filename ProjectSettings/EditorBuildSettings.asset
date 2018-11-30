@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 0e9c216aa192a50479030f0e4eea385a
   - enabled: 1
-    path: Assets/Scenes/_SandboxEmo.unity
+    path: Assets/Scenes/MainLevel.unity
     guid: b89ce5b6792de425fb61f5aa65b1c5d9
   m_configObjects: {}
