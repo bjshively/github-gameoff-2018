@@ -1,0 +1,12 @@
+newmtl clr-blueDull-f
+Kd 0.4313726 0.5607843 0.6196079
+d 1
+
+newmtl clr-black-f
+Kd 0.1294118 0.1294118 0.1294118
+d 1
+
+newmtl clr-fleshmed-f
+Kd 0.7924528 0.5988443 0.4149163
+d 1
+
