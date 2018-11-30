@@ -66,6 +66,7 @@ public class ShootingEnemy : Enemy
             if (targetDistance <= 3 || attackTime <= 0)
             {
                 anim.SetFloat("MoveSpeed", 0);
+                transform.LookAt(playerTransform.Value.position);
                 Attack();
             }
             else
@@ -129,13 +130,13 @@ public class ShootingEnemy : Enemy
     {
         retreatTime = 3;
         target = new Vector3(Mathf.Clamp(playerTransform.Value.position.x + Random.Range(-35, 35), 0, Mathf.Infinity), transform.position.y, Random.Range(-20, 4));
-        //target = new Vector3(playerTransform.Value.position.x + Random.Range(-35, 35), transform.position.y, playerTransform.Value.position.z + Random.Range(-5, 5));
         retreatMode = true;
     }
 
     // Triggered after retreat
     void StartSleeping()
     {
+        transform.LookAt(playerTransform.Value.position);
         sleepTime = 1.5f;
         anim.SetFloat("MoveSpeed", 0);
         canAttack = true;
