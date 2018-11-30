@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: Textures
   m_EditorClassIdentifier: 
   array:
-  - {fileID: 2100000, guid: b0493f62f593d71418e7e24c8024cb8c, type: 2}
+  - {fileID: 0}
   - {fileID: 2100000, guid: e0cb57585d16bf44f809171127f5abab, type: 2}
   - {fileID: 2100000, guid: dbeab4b68f2abda4882b377be40bdde9, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 3f8e0c44a79cc1648af957887e656d8c, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
