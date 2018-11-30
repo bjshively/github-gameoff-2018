@@ -13,9 +13,7 @@ public class Character : MonoBehaviour {
     // Audio variables
     public AK.Wwise.Event PlayerSwingSound;
     public AK.Wwise.Event FootStepSound;
-    public AK.Wwise.Switch GrassSwitch;
-    public AK.Wwise.Switch DirtSwitch;
-    public AK.Wwise.Switch ConcreteSwitch;
+
 
 
     protected virtual void Start()
@@ -27,8 +25,7 @@ public class Character : MonoBehaviour {
 
     protected void Melee()
     {
-        // TODO: This works like expected, but does not allow combos
-        //if (canMove)
+                if (canMove)
         {
             anim.SetTrigger("Melee");
         }
@@ -70,8 +67,8 @@ public class Character : MonoBehaviour {
     // =======================================
     private void PlayFootstepSound()
     {
-        //FootStepSound.Post(gameObject);
-        //AK.SoundEngine.PostEvent("SFX_PlayerFootsteps", gameObject);
+        FootStepSound.Post(gameObject);
+        //AkSoundEngine.PostEvent("SFX_PlayerFootsteps", gameObject);    
     }
 
     private void PlaySwingSound()

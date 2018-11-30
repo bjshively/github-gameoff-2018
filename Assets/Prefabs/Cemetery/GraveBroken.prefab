@@ -59,6 +59,8 @@ GameObject:
   - component: {fileID: 33683153077614374}
   - component: {fileID: 114550539487153784}
   - component: {fileID: 64796057371156990}
+  - component: {fileID: 114604327927921490}
+  - component: {fileID: 114544899455457114}
   m_Layer: 0
   m_Name: Dirt
   m_TagString: Untagged
@@ -85,15 +87,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118716643212774}
-  m_LocalRotation: {x: -0, y: -0.0000016987321, z: -0, w: 1}
-  m_LocalPosition: {x: 43, y: 0, z: 19}
-  m_LocalScale: {x: 3.63, y: 3.63, z: 8.47}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000009804963}
+  m_LocalPosition: {x: -251.08215, y: 102.23909, z: -101.29985}
+  m_LocalScale: {x: 3.6299999, y: 3.6299999, z: 8.469999}
   m_Children:
   - {fileID: 4719827201151042}
   - {fileID: 4130290730123566}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99901, z: 0}
 --- !u!4 &4719827201151042
 Transform:
   m_ObjectHideFlags: 1
@@ -2130,6 +2132,18 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114544899455457114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685380172521192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb5a73622afdcb4396d68860478fdc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerObject: {fileID: 0}
 --- !u!114 &114550539487153784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3051,6 +3065,26 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114604327927921490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685380172521192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e4040d7170f464eb8bc9a505824818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: d1bbb3b5
+  useOtherObject: 1
+  data:
+    valueGuid: 
+    groupGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: d53d59f460e57bb44b7f9170efb9dbb7,
+      type: 2}
+  valueGuid: 
+  groupGuid: 
 --- !u!114 &114918446660958744
 MonoBehaviour:
   m_ObjectHideFlags: 1

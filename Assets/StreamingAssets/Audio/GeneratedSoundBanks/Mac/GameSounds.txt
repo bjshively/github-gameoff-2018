@@ -1,11 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
 	387824038	AMB_BirdCalls			\Default Work Unit\Ambience\AMB_BirdCalls	
 	724467519	SFX_PlayerFootsteps			\Default Work Unit\CharacterSFX\SFX_PlayerFootsteps	
+	830841415	Trigger_PlayerDied			\Default Work Unit\Trigger_PlayerDied	
 	1118618552	SFX_PlayerSwing			\Default Work Unit\CharacterSFX\SFX_PlayerSwing	
-	1555749332	Play_GHGO_TitleScreen_TransitionOut			\Default Work Unit\Music\Play_GHGO_TitleScreen_TransitionOut	
+	1172822028	Play_Death			\Default Work Unit\Music\Play_Death	
 	2405854631	SFX_Impact			\Default Work Unit\CharacterSFX\SFX_Impact	
 	2753271343	AMB_MainLoop			\Default Work Unit\Ambience\AMB_MainLoop	
 	3027900556	Play_TitleScreen			\Default Work Unit\Music\Play_TitleScreen	
+	3210172030	Play_TitleScreen_TransitionOut			\Default Work Unit\Music\Play_TitleScreen_TransitionOut	
 	3612432395	SFX_EnemySwing			\Default Work Unit\CharacterSFX\SFX_EnemySwing	
 	3737014274	Play_Gameplay			\Default Work Unit\Music\Play_Gameplay	
 	3758534000	AMB_FountainLoop			\Default Work Unit\Ambience\AMB_FountainLoop	
@@ -52,6 +54,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	286698556	SFX_ZombieSwing_3	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Mac\SFX\SFX_ZombieSwing_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character SFX\SFX_EnemySwing\SFX_ZombieSwing_3		293056
 	293390837	Player_FootSteps_Grass09	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Mac\SFX\Player_FootSteps_Grass09_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character SFX\PlayerFootsteps\Player_Footsteps_Grass\Player_FootSteps_Grass09		25002
 	309061875	SFX_ZombieSwing_6	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Mac\SFX\SFX_ZombieSwing_6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character SFX\SFX_EnemySwing\SFX_ZombieSwing_6		319552
+	309716979	MX_Death	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Mac\SFX\MX_Death_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\MX_Death\MX_Death		3848792
 	375181482	SFX_ZombieSwing_2	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Mac\SFX\SFX_ZombieSwing_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character SFX\SFX_EnemySwing\SFX_ZombieSwing_2		278080
 	396327091	Player_FootSteps_Grass10	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Mac\SFX\Player_FootSteps_Grass10_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character SFX\PlayerFootsteps\Player_Footsteps_Grass\Player_FootSteps_Grass10		28200
 	416673188	Player_FootSteps_Concrete06	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Mac\SFX\Player_FootSteps_Concrete06_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character SFX\PlayerFootsteps\Player_Footsteps_Concrete\Player_FootSteps_Concrete06		20156

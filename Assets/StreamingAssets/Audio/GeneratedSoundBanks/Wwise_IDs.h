@@ -16,14 +16,32 @@ namespace AK
         static const AkUniqueID AMB_BIRDCALLS = 387824038U;
         static const AkUniqueID AMB_FOUNTAINLOOP = 3758534000U;
         static const AkUniqueID AMB_MAINLOOP = 2753271343U;
+        static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_GAMEPLAY = 3737014274U;
-        static const AkUniqueID PLAY_GHGO_TITLESCREEN_TRANSITIONOUT = 1555749332U;
         static const AkUniqueID PLAY_TITLESCREEN = 3027900556U;
+        static const AkUniqueID PLAY_TITLESCREEN_TRANSITIONOUT = 3210172030U;
         static const AkUniqueID SFX_ENEMYSWING = 3612432395U;
         static const AkUniqueID SFX_IMPACT = 2405854631U;
         static const AkUniqueID SFX_PLAYERFOOTSTEPS = 724467519U;
         static const AkUniqueID SFX_PLAYERSWING = 1118618552U;
+        static const AkUniqueID TRIGGER_PLAYERDIED = 830841415U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GAMESTATES
+        {
+            static const AkUniqueID GROUP = 777429653U;
+
+            namespace STATE
+            {
+                static const AkUniqueID GAMEPLAY = 89505537U;
+                static const AkUniqueID PLAYERDIED = 1886223524U;
+                static const AkUniqueID TITLESCREEN = 152105657U;
+            } // namespace STATE
+        } // namespace GAMESTATES
+
+    } // namespace STATES
 
     namespace SWITCHES
     {
@@ -45,6 +63,11 @@ namespace AK
     {
         static const AkUniqueID NEW_GAME_PARAMETER = 3671138082U;
     } // namespace GAME_PARAMETERS
+
+    namespace TRIGGERS
+    {
+        static const AkUniqueID PLAYERDIED = 1886223524U;
+    } // namespace TRIGGERS
 
     namespace BANKS
     {

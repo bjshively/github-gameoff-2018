@@ -1826,7 +1826,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606946142010664}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 507.1428, y: 1.3042839, z: -11.351487}
+  m_LocalPosition: {x: 516.8006, y: 1.2067301, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512375598262740}
@@ -2055,7 +2055,7 @@ MonoBehaviour:
   isStaticObject: 0
   m_positionOffsetData:
     KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
+    positionOffset: {x: 0.0000009536743, y: 0, z: -11.0510645}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
 --- !u!114 &114290689166740350
@@ -2092,21 +2092,6 @@ MonoBehaviour:
     valueGuid: 
     WwiseObjectReference: {fileID: 11400000, guid: b169a07123c43f9468a7878c6d8503c7,
       type: 2}
-  GrassSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: 04eba869661a1d14fb28687d49e5979c,
-      type: 2}
-  DirtSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: d53d59f460e57bb44b7f9170efb9dbb7,
-      type: 2}
-  ConcreteSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: d671ecb36b22ed14291fb64c96b5aae3,
-      type: 2}
   attackCollider: {fileID: 1946780994868188}
   smashCollider: {fileID: 1716240557852290}
   maxHealth:
@@ -2121,6 +2106,12 @@ MonoBehaviour:
   enemyHitTime: {fileID: 11400000, guid: 1400c6b899273c64f898bca69276dc8d, type: 2}
   playerHitTime: {fileID: 11400000, guid: b21645929a6ed0e4ebd1aafa05dd353e, type: 2}
   playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
+  GameplayMusic:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 0}
+  GameplayAmbience:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 0}
   PlayerDamageSound:
     valueGuid: 
     WwiseObjectReference: {fileID: 11400000, guid: 8082653bb71506f48ab03157a487a2ce,
@@ -2128,6 +2119,10 @@ MonoBehaviour:
   PlayerSwingSound:
     valueGuid: 
     WwiseObjectReference: {fileID: 11400000, guid: 04c28514bfa9c3b4a89a2b1f5a588af5,
+      type: 2}
+  PlayerDeathSound:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1a5fa5a084a61a04eb3a72d008ff388d,
       type: 2}
 --- !u!114 &114697016806240982
 MonoBehaviour:

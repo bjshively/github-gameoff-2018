@@ -26,8 +26,11 @@ public class PlayerController : Character
     string[] knockbacks = { "Knockback1", "Knockback2", "Knockback3" };
 
     // Audio variables
+    public AK.Wwise.Event GameplayMusic;
+    public AK.Wwise.Event GameplayAmbience;
     public AK.Wwise.Event PlayerDamageSound;
     public AK.Wwise.Event PlayerSwingSound;
+    public AK.Wwise.Event PlayerDeathSound;
 
     // Use this for initialization
     protected override void Start () {
@@ -36,6 +39,10 @@ public class PlayerController : Character
         enemyHitTime.Value = -10;
         playerHitTime.Value = -10;
         health.Value = maxHealth.Value;
+
+        GameplayMusic.Post(gameObject);
+        GameplayAmbience.Post(gameObject);
+
 	}
 
     // Update is called once per frame
@@ -65,6 +72,8 @@ public class PlayerController : Character
             isAlive = false;
             Die("PlayerIsDead");
             PlayPlayerDamagedSound();
+            AkSoundEngine.StopAll();
+            PlayerDeathSound.Post(gameObject);
         }
     }
 

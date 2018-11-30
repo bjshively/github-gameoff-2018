@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4b23b12380fe24da8ae2637cf9cf59, type: 3}
   m_Name: 32A4AAE2-A8A3-4CFE-A41D-1355DC27807A
   m_EditorClassIdentifier: 
-  objectName: Play_GHGO_TitleScreen_TransitionOut
-  id: 1555749332
+  objectName: Play_TitleScreen_TransitionOut
+  id: 3210172030
   guid: 32A4AAE2-A8A3-4CFE-A41D-1355DC27807A

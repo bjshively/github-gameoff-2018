@@ -24,13 +24,15 @@
 				<Event Id="387824038" Name="AMB_BirdCalls" ObjectPath="\Events\Default Work Unit\Ambience\AMB_BirdCalls" MaxAttenuation="65.000000"/>
 				<Event Id="3758534000" Name="AMB_FountainLoop" ObjectPath="\Events\Default Work Unit\Ambience\AMB_FountainLoop" MaxAttenuation="60.000000"/>
 				<Event Id="2753271343" Name="AMB_MainLoop" ObjectPath="\Events\Default Work Unit\Ambience\AMB_MainLoop"/>
+				<Event Id="1172822028" Name="Play_Death" ObjectPath="\Events\Default Work Unit\Music\Play_Death"/>
 				<Event Id="3737014274" Name="Play_Gameplay" ObjectPath="\Events\Default Work Unit\Music\Play_Gameplay"/>
-				<Event Id="1555749332" Name="Play_GHGO_TitleScreen_TransitionOut" ObjectPath="\Events\Default Work Unit\Music\Play_GHGO_TitleScreen_TransitionOut"/>
 				<Event Id="3027900556" Name="Play_TitleScreen" ObjectPath="\Events\Default Work Unit\Music\Play_TitleScreen"/>
+				<Event Id="3210172030" Name="Play_TitleScreen_TransitionOut" ObjectPath="\Events\Default Work Unit\Music\Play_TitleScreen_TransitionOut"/>
 				<Event Id="3612432395" Name="SFX_EnemySwing" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_EnemySwing"/>
 				<Event Id="2405854631" Name="SFX_Impact" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_Impact"/>
 				<Event Id="724467519" Name="SFX_PlayerFootsteps" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_PlayerFootsteps"/>
 				<Event Id="1118618552" Name="SFX_PlayerSwing" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_PlayerSwing"/>
+				<Event Id="830841415" Name="Trigger_PlayerDied" ObjectPath="\Events\Default Work Unit\Trigger_PlayerDied" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="17752111" Language="SFX">
@@ -140,6 +142,10 @@
 				<File Id="309061875" Language="SFX">
 					<ShortName>SFX_ZombieSwing_6.wav</ShortName>
 					<Path>SFX\SFX_ZombieSwing_6_56D34C19.wem</Path>
+				</File>
+				<File Id="309716979" Language="SFX">
+					<ShortName>MX_Death.wav</ShortName>
+					<Path>SFX\MX_Death_8956FC97.wem</Path>
 				</File>
 				<File Id="375181482" Language="SFX">
 					<ShortName>SFX_ZombieSwing_2.wav</ShortName>

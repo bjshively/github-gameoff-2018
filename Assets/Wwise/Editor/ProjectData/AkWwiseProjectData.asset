@@ -53,7 +53,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8119b29db91540468c7bdc1a7e521c73
-    m_lastTime: -8586580932654589818
+    m_lastTime: -8586580206211432509
     List:
     - name: AMB_BirdCalls
       guid: f59fdcd225276942a5399795c0e72cf9
@@ -97,6 +97,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Death
+      guid: cbcbb1cb76dd924d807443945cdc77e5
+      id: 1172822028
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Play_Death
+        ObjectType: 3
+      Path: Default Work Unit\Music\Play_Death
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Gameplay
       guid: 5978149b07593c4ca907911e5fb24971
       id: 3737014274
@@ -111,20 +125,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Play_GHGO_TitleScreen_TransitionOut
-      guid: e2aaa432a3a8fe4ca41d1355dc27807a
-      id: 1555749332
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Music
-        ObjectType: 4
-      - ElementName: Play_GHGO_TitleScreen_TransitionOut
-        ObjectType: 3
-      Path: Default Work Unit\Music\Play_GHGO_TitleScreen_TransitionOut
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Play_TitleScreen
       guid: 6f245e5c3020af4f9e194548cffe2e1f
       id: 3027900556
@@ -136,6 +136,20 @@ MonoBehaviour:
       - ElementName: Play_TitleScreen
         ObjectType: 3
       Path: Default Work Unit\Music\Play_TitleScreen
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_TitleScreen_TransitionOut
+      guid: e2aaa432a3a8fe4ca41d1355dc27807a
+      id: 3210172030
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Play_TitleScreen_TransitionOut
+        ObjectType: 3
+      Path: Default Work Unit\Music\Play_TitleScreen_TransitionOut
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -195,6 +209,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Trigger_PlayerDied
+      guid: 23c5f5e473d03943b7e85bae439b40dd
+      id: 830841415
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Trigger_PlayerDied
+        ObjectType: 3
+      Path: Default Work Unit\Trigger_PlayerDied
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -214,8 +240,42 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d74f1a538c60de44bdf67b2ffda7b4e7
-    m_lastTime: -8586585676420950756
-    List: []
+    m_lastTime: -8586580206211625955
+    List:
+    - name: GameStates
+      guid: 5020adb0e4fb38459a77db9ca1bed6ca
+      id: 777429653
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GameStates
+        ObjectType: 9
+      Path: Default Work Unit\GameStates
+      values:
+      - name: Gameplay
+        guid: 7ea501d51f49c74bbd0551f1dabf47a5
+        id: 89505537
+        PathAndIcons:
+        - ElementName: Gameplay
+          ObjectType: 8
+      - name: None
+        guid: 8d50bca398508e4da16a3c5e71dcad07
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: PlayerDied
+        guid: 2e9653c0c6246b4594931c9324592085
+        id: 1886223524
+        PathAndIcons:
+        - ElementName: PlayerDied
+          ObjectType: 8
+      - name: TitleScreen
+        guid: 1540d358f2ea4643b7227827f77ae324
+        id: 152105657
+        PathAndIcons:
+        - ElementName: TitleScreen
+          ObjectType: 8
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -254,12 +314,21 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4a16e99d8c6a1241bbb1a1a1c6ed324e
-    m_lastTime: -8586585676420447049
-    List: []
+    m_lastTime: -8586580206211566432
+    List:
+    - name: PlayerDied
+      guid: d13ed1eb625fe64996db9729f153bf81
+      id: 1886223524
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerDied
+        ObjectType: 14
+      Path: Default Work Unit\PlayerDied
   ExpandedItems:
   - /GitHubGameOff2018_Wwise
   - /GitHubGameOff2018_Wwise/Events
   - /GitHubGameOff2018_Wwise/Events/Default Work Unit
-  - /GitHubGameOff2018_Wwise/Events/Default Work Unit/Music
+  - /GitHubGameOff2018_Wwise/Events/Default Work Unit/Ambience
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

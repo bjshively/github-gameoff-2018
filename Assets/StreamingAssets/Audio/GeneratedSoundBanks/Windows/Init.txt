@@ -1,3 +1,12 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	777429653	GameStates			\Default Work Unit\GameStates	
+
+State	ID	Name	State Group			Notes
+	0	None	GameStates			
+	89505537	Gameplay	GameStates			
+	152105657	TitleScreen	GameStates			
+	1886223524	PlayerDied	GameStates			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	1534528548	VO			\Default Work Unit\Master Audio Bus\VO	
