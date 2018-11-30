@@ -5,23 +5,30 @@ using UnityEngine;
 public class HeavyEnemy : Enemy {
 
     public GameObject smashCollider;
-    public bool attacking = true;
-    public bool sleeping = false;
-    public bool retreating = false;
-    Vector3 retreatPosition;
-    float sleepTime = 5;
-    Vector3 target = Vector3.zero;
+    bool attackMode = false;
+    bool retreatMode = true;
+    bool sleepMode = false;
+    float retreatTime = 3;
+    float sleepTime = 1.5f;
+
+    Vector3 target;
     float targetDistance;
+    bool canAttack = true;
 
-    //// Use this for initialization
-    //void Start () {
+    // Use this for initialization
+    protected override void Start()
+    {
+        body = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
+        isAlive = true;
+        StartRetreat();
+    }
 
-    //}
-
-    //// Update is called once per frame
-    //void Update () {
-
-    //}
+    // Update is called once per frame
+    protected override void FixedUpdate()
+    {
+        Move();
+    }
 
     void MoveToLocation(Vector3 pos)
     {
@@ -33,69 +40,85 @@ public class HeavyEnemy : Enemy {
 
     protected override void Move()
     {
-        // Target the player only once per movement round
-        if(target == Vector3.zero)
+        if (!attackMode && !sleepMode && !retreatMode)
         {
-            target = playerTransform.Value.position;
+            attackMode = true;
         }
 
-        if (attacking)
+        targetDistance = Mathf.Abs(Vector3.Distance(target, transform.position));
+
+        if (attackMode)
         {
             // Target player
-            targetDistance = Mathf.Abs(Vector3.Distance(target, transform.position));
-            target = new Vector3(playerTransform.Value.position.x, transform.position.y, playerTransform.Value.position.z);
             anim.SetFloat("MoveSpeed", MoveSpeed.Value);
-
-            // Run to player
             
 
-            if(targetDistance <= 3)
+            // Attack if within range
+            if (targetDistance <= 3)
             {
                 Attack();
-            } else {
+            } else
+            {
                 MoveToLocation(target);
             }
 
-        } else if (retreating)
+        } else if (retreatMode)
         {
-            MoveToLocation(retreatPosition);
-            if(Vector3.Distance(retreatPosition, transform.position) <= 3)
+            // Switch to sleep mode if time is up
+            retreatTime -= Time.deltaTime;
+            if(retreatTime <= 0)
             {
-                retreating = false;
-                sleeping = true;
+                StartSleeping();
             }
 
-        } else if(sleeping)
+            if (targetDistance >= 2)
+            {
+                MoveToLocation(target);
+            }
+            else
+            {
+                anim.SetFloat("MoveSpeed", 0);
+            }
+        } else if (sleepMode)
         {
-            // Do sleep stuff
-            StartCoroutine(StartSleeping());
+            // Switch back to attack mode if time is up
+            sleepTime -= Time.deltaTime;
+            if(sleepTime <= 0)
+            {
+                attackMode = true;
+                sleepMode = false;
+                target = playerTransform.Value.position;
+            }
+            Debug.Log("Sleepmode");
         }
     }
 
     override protected void Attack()
     {
-        attacking = false;
-        //StartCoroutine(StartRetreat());
-        anim.SetTrigger("Combo3Heavy");
+        if (canAttack)
+        {
+            anim.SetTrigger("Combo3Heavy");
+        }
+        canAttack = false;
+        attackMode = false;
     }
 
-    IEnumerator StartRetreat()
+    // Triggered in animation controller
+    void StartRetreat()
     {
-        retreatPosition = new Vector3(playerTransform.Value.position.x + Random.Range(-10, 10), transform.position.y, playerTransform.Value.position.z + Random.Range(-10, 10));
-        yield return new WaitForSeconds(.5f);
-        retreating = true;
-        sleepTime = 5;
+        retreatTime = 3;
+        target = new Vector3(playerTransform.Value.position.x + Random.Range(-50, 50), transform.position.y, playerTransform.Value.position.z + Random.Range(-5, 5));
+        retreatMode = true;
     }
 
-    IEnumerator StartSleeping()
+    // Triggered after retreat
+    void StartSleeping()
     {
+        sleepTime = 1.5f;
         anim.SetFloat("MoveSpeed", 0);
-        yield return new WaitForSeconds(sleepTime);
-
-        // Zero out target so player is retargeted
-        // Transition from sleep to attack mode
-        target = Vector3.zero;
-        sleeping = false;
-        attacking = true;
+        canAttack = true;
+        retreatMode = false;
+        sleepMode = true;
+        attackMode = false;
     }
 }
