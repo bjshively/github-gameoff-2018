@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: f_EnemyShooterShotDistance
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  Value: 10
+  Value: 15

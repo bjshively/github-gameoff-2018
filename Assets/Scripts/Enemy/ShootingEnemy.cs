@@ -31,7 +31,7 @@ public class ShootingEnemy : Enemy
     protected override void FixedUpdate()
     {
         // Only move if enemy is awake and player is within range
-        if (isAwake && Mathf.Abs(Vector3.Distance(transform.position, playerTransform.Value.position)) < shootDistance.Value)
+        if (isAwake && canMove && Mathf.Abs(Vector3.Distance(transform.position, playerTransform.Value.position)) < shootDistance.Value)
         {
             Move();
         }
