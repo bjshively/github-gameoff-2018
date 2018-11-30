@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Car : MonoBehaviour
+public class Coffin : MonoBehaviour
 {
 
     Vector3 target;
-    public float step = .5f;
     BoxCollider col;
     bool isAwake = false;
-
+    public float step = .5f;
+    
     // 1 = right, -1 = left
     public int direction = 1;
 
@@ -17,6 +17,7 @@ public class Car : MonoBehaviour
     void Start()
     {
         col = GetComponent<BoxCollider>();
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,7 +31,7 @@ public class Car : MonoBehaviour
             // Destroy the object once it is far away from the player
             if (Mathf.Abs(Vector3.Distance(transform.position, GameObject.Find("Player").transform.position)) > 50)
             {
-                Destroy(gameObject);
+                Destroy(gameObject.transform.parent);
             }
         }
     }

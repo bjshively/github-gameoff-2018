@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarTrigger : MonoBehaviour {
+public class CoffinTrigger : MonoBehaviour {
+
+    public GameObject coffin;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +22,8 @@ public class CarTrigger : MonoBehaviour {
         // When the player passes through the trigger, awaken all enemies
         if (other.name == "Player")
         {
-            transform.parent.GetComponent<Car>().SetAwake(true);
+            coffin.SetActive(true);
+            coffin.GetComponent<Coffin>().SetAwake(true);
         }
     }
 }
