@@ -28,7 +28,7 @@ public class Character : MonoBehaviour {
     protected void Melee()
     {
         // TODO: This works like expected, but does not allow combos
-        if (canMove)
+        //if (canMove)
         {
             anim.SetTrigger("Melee");
         }
