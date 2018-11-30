@@ -68,21 +68,16 @@ public class HeavyEnemy : Enemy {
 
         } else if (retreatMode)
         {
-            // Switch to sleep mode if time is up
+            // Switch to sleep mode if time is up or retreat location has been reached
             retreatTime -= Time.deltaTime;
-            if(retreatTime <= 0)
-            {
-                StartSleeping();
-            }
-
-            if (targetDistance >= 2)
-            {
-                MoveToLocation(target);
-            }
-            else
+            if(retreatTime <= 0 || targetDistance < 2)
             {
                 anim.SetFloat("MoveSpeed", 0);
+                StartSleeping();
+            } else {    
+                MoveToLocation(target);
             }
+
         } else if (sleepMode)
         {
             // Switch back to attack mode if time is up
@@ -120,6 +115,7 @@ public class HeavyEnemy : Enemy {
     // Triggered after retreat
     void StartSleeping()
     {
+        transform.LookAt(playerTransform.Value.position);
         sleepTime = 1.5f;
         anim.SetFloat("MoveSpeed", 0);
         canAttack = true;
