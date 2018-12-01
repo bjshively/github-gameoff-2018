@@ -139,6 +139,16 @@ public class PlayerController : Character
         }
     }
 
+    void TakeHeavyDamage()
+    {
+        if (!isInvincible)
+        {
+            health.Value -= 1;
+            isInvincible = true;
+            anim.SetTrigger("Knockback3");
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "AttackCollider" || other.name == "SmashCollider")
@@ -148,12 +158,7 @@ public class PlayerController : Character
 
         else if (other.name == "Car" || other.name == "Bullet(Clone)")
         {
-            if (!isInvincible)
-            {
-                health.Value -= 1;
-                isInvincible = true;
-                anim.SetTrigger("Knockback3");
-            }
+            TakeHeavyDamage();
         }
     }
 
