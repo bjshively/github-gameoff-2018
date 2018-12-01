@@ -159,7 +159,7 @@ public class PlayerController : Character
             TakeDamage();
         }
 
-        else if (other.name == "Car" || other.name == "Bullet(Clone)" ||  other.name == "SmashCollider")
+        else if (other.name == "Coffin" || other.name == "Bullet(Clone)" ||  other.name == "SmashCollider")
         {
             TakeHeavyDamage();
         }
