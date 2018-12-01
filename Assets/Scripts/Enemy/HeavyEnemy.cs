@@ -32,10 +32,7 @@ public class HeavyEnemy : Enemy {
         {
             if (isAwake)
             {
-                if (canMove)
-                {
                     Move();
-                }
             }
             else
             {
