@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID AMB_FOUNTAINLOOP = 3758534000U;
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_BULLET = 808719710U;
+        static const AkUniqueID PLAY_CREDITS = 2970769112U;
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_GAMEPLAY = 3737014274U;
         static const AkUniqueID PLAY_GAMEPLAYLOOP = 2467217844U;

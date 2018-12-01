@@ -6,11 +6,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	1118618552	SFX_PlayerSwing			\Default Work Unit\CharacterSFX\SFX_PlayerSwing	
 	1172822028	Play_Death			\Default Work Unit\Music\Play_Death	
 	2405854631	SFX_Impact			\Default Work Unit\CharacterSFX\SFX_Impact	
-	2467217844	Play_GameplayLoop			\Default Work Unit\Play_GameplayLoop	
+	2467217844	Play_GameplayLoop			\Default Work Unit\Music\Play_GameplayLoop	
+	2970769112	Play_Credits			\Default Work Unit\Music\Play_Credits	
 	3027900556	Play_TitleScreen			\Default Work Unit\Music\Play_TitleScreen	
 	3210172030	Play_TitleScreen_TransitionOut			\Default Work Unit\Music\Play_TitleScreen_TransitionOut	
 	3612432395	SFX_EnemySwing			\Default Work Unit\CharacterSFX\SFX_EnemySwing	
-	3644618883	SFX_EnemyFireDeath			\Default Work Unit\SFX_EnemyFireDeath	
+	3644618883	SFX_EnemyFireDeath			\Default Work Unit\CharacterSFX\SFX_EnemyFireDeath	
 	3737014274	Play_Gameplay			\Default Work Unit\Music\Play_Gameplay	
 	3758534000	AMB_FountainLoop			\Default Work Unit\Ambience\AMB_FountainLoop	
 
@@ -125,6 +126,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	971313575	SFX_ZombieGrowl_05	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_05_B3CBCF71.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character SFX\SFX_ZombieGrowl\SFX_ZombieGrowl_05		16144
 	974252689	SFX_ZombieGrowl_09	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\SFX_ZombieGrowl_09_B3CBCF71.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character SFX\SFX_ZombieGrowl\SFX_ZombieGrowl_09		22336
 	975188786	Player_FootSteps_Grass08	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\Player_FootSteps_Grass08_B3CBCF71.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character SFX\PlayerFootsteps\Player_Footsteps_Grass\Player_FootSteps_Grass08		2473
+	989694849	MX_Credits	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\MX_Credits_F4F25A0F.wem		\Interactive Music Hierarchy\Default Work Unit\MX_Credits\MX_Credits		285646
 	1006465755	Player_FootSteps_Concrete05	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\Player_FootSteps_Concrete05_B3CBCF71.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character SFX\PlayerFootsteps\Player_Footsteps_Concrete\Player_FootSteps_Concrete05		2389
 	1006688428	AMB_birdCall2	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\AMB_birdCall2_B3CBCF71.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient SFX\AMB_BirdCalls1\BirdCalls\AMB_birdCall2		20897
 	1016156496	AMB_birdCall5	D:\Documents\GitHub\github-gameoff-2018-wwise\GitHubGameOff2018_Wwise\.cache\Windows\SFX\AMB_birdCall5_B3CBCF71.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient SFX\AMB_BirdCalls1\BirdCalls\AMB_birdCall5		5776

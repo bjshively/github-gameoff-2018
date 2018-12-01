@@ -25,12 +25,13 @@
 				<Event Id="3758534000" Name="AMB_FountainLoop" ObjectPath="\Events\Default Work Unit\Ambience\AMB_FountainLoop" MaxAttenuation="60.000000"/>
 				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience"/>
 				<Event Id="808719710" Name="Play_Bullet" ObjectPath="\Events\Default Work Unit\CharacterSFX\Play_Bullet"/>
+				<Event Id="2970769112" Name="Play_Credits" ObjectPath="\Events\Default Work Unit\Music\Play_Credits"/>
 				<Event Id="1172822028" Name="Play_Death" ObjectPath="\Events\Default Work Unit\Music\Play_Death"/>
 				<Event Id="3737014274" Name="Play_Gameplay" ObjectPath="\Events\Default Work Unit\Music\Play_Gameplay"/>
-				<Event Id="2467217844" Name="Play_GameplayLoop" ObjectPath="\Events\Default Work Unit\Play_GameplayLoop"/>
+				<Event Id="2467217844" Name="Play_GameplayLoop" ObjectPath="\Events\Default Work Unit\Music\Play_GameplayLoop"/>
 				<Event Id="3027900556" Name="Play_TitleScreen" ObjectPath="\Events\Default Work Unit\Music\Play_TitleScreen"/>
 				<Event Id="3210172030" Name="Play_TitleScreen_TransitionOut" ObjectPath="\Events\Default Work Unit\Music\Play_TitleScreen_TransitionOut"/>
-				<Event Id="3644618883" Name="SFX_EnemyFireDeath" ObjectPath="\Events\Default Work Unit\SFX_EnemyFireDeath"/>
+				<Event Id="3644618883" Name="SFX_EnemyFireDeath" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_EnemyFireDeath"/>
 				<Event Id="3612432395" Name="SFX_EnemySwing" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_EnemySwing"/>
 				<Event Id="2405854631" Name="SFX_Impact" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_Impact"/>
 				<Event Id="724467519" Name="SFX_PlayerFootsteps" ObjectPath="\Events\Default Work Unit\CharacterSFX\SFX_PlayerFootsteps"/>
@@ -340,6 +341,10 @@
 				<File Id="975188786" Language="SFX">
 					<ShortName>Player_FootSteps_Grass08.wav</ShortName>
 					<Path>SFX\Player_FootSteps_Grass08_B3CBCF71.wem</Path>
+				</File>
+				<File Id="989694849" Language="SFX">
+					<ShortName>MX_Credits.wav</ShortName>
+					<Path>SFX\MX_Credits_F4F25A0F.wem</Path>
 				</File>
 				<File Id="1006465755" Language="SFX">
 					<ShortName>Player_FootSteps_Concrete05.wav</ShortName>
