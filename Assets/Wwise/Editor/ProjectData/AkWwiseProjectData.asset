@@ -53,7 +53,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8119b29db91540468c7bdc1a7e521c73
-    m_lastTime: -8586580110196168242
+    m_lastTime: -8586579327242925391
     List:
     - name: AMB_BirdCalls
       guid: f59fdcd225276942a5399795c0e72cf9
@@ -66,7 +66,7 @@ MonoBehaviour:
       - ElementName: AMB_BirdCalls
         ObjectType: 3
       Path: Default Work Unit\Ambience\AMB_BirdCalls
-      maxAttenuation: 120
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: AMB_FountainLoop
@@ -80,7 +80,7 @@ MonoBehaviour:
       - ElementName: AMB_FountainLoop
         ObjectType: 3
       Path: Default Work Unit\Ambience\AMB_FountainLoop
-      maxAttenuation: 60
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Ambience
@@ -164,6 +164,18 @@ MonoBehaviour:
       - ElementName: Play_TitleScreen_TransitionOut
         ObjectType: 3
       Path: Default Work Unit\Music\Play_TitleScreen_TransitionOut
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_EnemyFireDeath
+      guid: a6b7cd27349834438953bb06a4e3e5d5
+      id: 3644618883
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX_EnemyFireDeath
+        ObjectType: 3
+      Path: Default Work Unit\SFX_EnemyFireDeath
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

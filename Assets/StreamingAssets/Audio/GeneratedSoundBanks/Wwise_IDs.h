@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID PLAY_GAMEPLAY = 3737014274U;
         static const AkUniqueID PLAY_TITLESCREEN = 3027900556U;
         static const AkUniqueID PLAY_TITLESCREEN_TRANSITIONOUT = 3210172030U;
+        static const AkUniqueID SFX_ENEMYFIREDEATH = 3644618883U;
         static const AkUniqueID SFX_ENEMYSWING = 3612432395U;
         static const AkUniqueID SFX_IMPACT = 2405854631U;
         static const AkUniqueID SFX_PLAYERFOOTSTEPS = 724467519U;

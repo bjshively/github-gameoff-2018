@@ -22,6 +22,7 @@ public class Enemy : Character {
     //Audio Events
     public AK.Wwise.Event EnemyDamagedSound;
     public AK.Wwise.Event EnemySwingSound;
+ 
 
 
     // Pick a random number of seconds to wait between recalculating path to player
@@ -149,6 +150,7 @@ public class Enemy : Character {
     private void AnimDestroyEnemy()
     {
         Destroy(gameObject);
+       
     }
 
     private void OnTriggerEnter(Collider other)

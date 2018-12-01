@@ -13,7 +13,10 @@ public class Character : MonoBehaviour {
     // Audio variables
     public AK.Wwise.Event PlayerSwingSound;
     public AK.Wwise.Event FootStepSound;
+    public AK.Wwise.Event EnemyDeathSound;
 
+    public float DelayTime;
+ 
     protected virtual void Start()
     {
         body = GetComponent<Rigidbody>();
@@ -55,9 +58,19 @@ public class Character : MonoBehaviour {
         }
     }
 
+    //DeathSound Delay
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        EnemyDeathSound.Post(gameObject);
+    }
+
     protected void Die(string s)
     {
         anim.SetTrigger(s);
+        StartCoroutine(ExecuteAfterTime(DelayTime));
+        
     }
 
 
