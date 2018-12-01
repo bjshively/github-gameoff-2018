@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114499373261149084}
   - component: {fileID: 114603778857524200}
   m_Layer: 9
-  m_Name: HeavyEnemy
+  m_Name: HeavyEnemyOLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2013,7 +2013,6 @@ MonoBehaviour:
   attackCollider: {fileID: 1182880164843244}
   playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
   playerHealth: {fileID: 11400000, guid: 93b5cd6092da1455a9f0a2470bd18c02, type: 2}
-  playerDistance: 0
   isAwake: 1
   playerInSight:
     UseConstant: 0
@@ -2034,6 +2033,9 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: b7b265fb3145f3647bf73d8d65a207c1,
       type: 2}
   smashCollider: {fileID: 1222814823321782}
+  attackMode: 0
+  retreatMode: 1
+  sleepMode: 0
 --- !u!136 &136539351260479048
 CapsuleCollider:
   m_ObjectHideFlags: 1
