@@ -5,9 +5,9 @@ using UnityEngine;
 public class HeavyEnemy : Enemy {
 
     public GameObject smashCollider;
-    bool attackMode = false;
-    bool retreatMode = true;
-    bool sleepMode = false;
+    public bool attackMode = false;
+    public bool retreatMode = true;
+    public bool sleepMode = false;
     float retreatTime = 3;
     float sleepTime = 1.5f;
 
