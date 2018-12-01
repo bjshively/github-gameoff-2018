@@ -154,12 +154,12 @@ public class PlayerController : Character
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "AttackCollider" || other.name == "SmashCollider")
+        if (other.name == "AttackCollider")
         {
             TakeDamage();
         }
 
-        else if (other.name == "Car" || other.name == "Bullet(Clone)")
+        else if (other.name == "Car" || other.name == "Bullet(Clone)" ||  other.name == "SmashCollider")
         {
             TakeHeavyDamage();
         }

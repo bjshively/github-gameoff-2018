@@ -10,6 +10,7 @@ public class HeavyEnemy : Enemy {
     public bool sleepMode = false;
     float retreatTime = 3;
     float sleepTime = 1.5f;
+    float attackTimer = 5f;
 
     Vector3 target;
     float targetDistance;
@@ -60,6 +61,7 @@ public class HeavyEnemy : Enemy {
 
         if (attackMode)
         {
+            attackTimer -= Time.deltaTime;
             // Attack if within range
             if (targetDistance <= 3)
             {
@@ -69,9 +71,14 @@ public class HeavyEnemy : Enemy {
             {
                 MoveToLocation(target);
             }
+            if(attackTimer <= 0)
+            {
+                StartRetreat();
+            }
 
         } else if (retreatMode)
         {
+            attackTimer = 5f;
             // Switch to sleep mode if time is up or retreat location has been reached
             retreatTime -= Time.deltaTime;
             if(retreatTime <= 0 || targetDistance < 2)
