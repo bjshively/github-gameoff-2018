@@ -14,8 +14,6 @@ public class Character : MonoBehaviour {
     public AK.Wwise.Event PlayerSwingSound;
     public AK.Wwise.Event FootStepSound;
 
-
-
     protected virtual void Start()
     {
         body = GetComponent<Rigidbody>();

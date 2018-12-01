@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 114470006075536022}
   - component: {fileID: 114676503118401264}
   - component: {fileID: 114486262699252570}
+  - component: {fileID: 114939598148155792}
   m_Layer: 30
   m_Name: PlayerHPMeter
   m_TagString: Untagged
@@ -1248,6 +1249,18 @@ MonoBehaviour:
     FarClipPlane: 5000
     Dutch: 0
   m_ComponentOwner: {fileID: 4000333791480976}
+--- !u!114 &114939598148155792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288526688625378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8306272ce501fa343a1a503c076dc53e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 11400000, guid: 93b5cd6092da1455a9f0a2470bd18c02, type: 2}
 --- !u!114 &114974285678427046
 MonoBehaviour:
   m_ObjectHideFlags: 1
