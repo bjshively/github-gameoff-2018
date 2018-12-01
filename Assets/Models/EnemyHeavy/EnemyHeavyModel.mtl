@@ -1,0 +1,16 @@
+newmtl clr-brown-f
+Kd 0.4745098 0.3333333 0.282353
+d 1
+
+newmtl clr-fleshlight-f
+Kd 0.9843137 0.90569 0.8317451
+d 1
+
+newmtl clr-grey-f
+Kd 0.5283019 0.5283019 0.5283019
+d 1
+
+newmtl clr-blacktrue-g
+Kd 0 0 0
+d 1
+
