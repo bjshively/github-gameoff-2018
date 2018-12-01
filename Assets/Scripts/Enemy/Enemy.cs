@@ -7,7 +7,6 @@ public class Enemy : Character {
     public GameObject attackCollider;
     public TransformVariable playerTransform;
     public IntVariable playerHealth;
-    public 
     float playerDistance;
     public bool isAwake = true;
     string[] attacks = { "Melee", "Combo2", "Combo3" };

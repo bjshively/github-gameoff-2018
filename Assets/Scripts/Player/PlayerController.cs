@@ -28,7 +28,7 @@ public class PlayerController : Character
     public AK.Wwise.Event GameplayMusic;
     public AK.Wwise.Event GameplayAmbience;
     public AK.Wwise.Event PlayerDamageSound;
-    public AK.Wwise.Event PlayerSwingSound;
+    //public AK.Wwise.Event PlayerSwingSound;
     public AK.Wwise.Event PlayerDeathSound;
 
     // Use this for initialization
