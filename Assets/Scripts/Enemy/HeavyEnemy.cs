@@ -111,9 +111,12 @@ public class HeavyEnemy : Enemy {
     // Triggered in animation controller
     void StartRetreat()
     {
+        attackMode = false;
+        sleepMode = false;
+        retreatMode = true;
         retreatTime = 3;
         target = new Vector3(Mathf.Clamp(playerTransform.Value.position.x + Random.Range(-50, 50), 0, Mathf.Infinity), transform.position.y, Random.Range(-20, 4));
-        retreatMode = true;
+
     }
 
     // Triggered after retreat
