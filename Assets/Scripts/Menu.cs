@@ -17,7 +17,7 @@ public class Menu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButton("Submit"))
+		if(Input.GetButton("Start"))
         {
             StartGame();
         }
