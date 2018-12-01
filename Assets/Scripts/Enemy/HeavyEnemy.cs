@@ -50,6 +50,9 @@ public class HeavyEnemy : Enemy {
             float step = MoveSpeed.Value * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, pos, step);
             transform.LookAt(pos);
+        } else
+        {
+            anim.SetFloat("MoveSpeed", 0);
         }
     }
 
