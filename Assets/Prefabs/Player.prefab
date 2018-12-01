@@ -1825,7 +1825,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606946142010664}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.14, y: 0.016698837, z: -7.97}
+  m_LocalPosition: {x: 172, y: 0, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512375598262740}
@@ -2008,9 +2008,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
-  m_Range: 10
+  m_Color: {r: 0.7122642, g: 1, b: 0.9524342, a: 1}
+  m_Intensity: 1.5
+  m_Range: 16.16
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -2054,7 +2054,7 @@ MonoBehaviour:
   isStaticObject: 0
   m_positionOffsetData:
     KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
+    positionOffset: {x: -15.038301, y: 8.151911, z: 207.93918}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
 --- !u!114 &114588211424659440
