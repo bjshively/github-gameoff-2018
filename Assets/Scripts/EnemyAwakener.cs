@@ -5,14 +5,14 @@ using Cinemachine;
 
 public class EnemyAwakener : MonoBehaviour {
 
+    public TransformVariable playerTransform;
     public List<GameObject> enemies;
     public bool isArena;
     public GameObject[] walls;
     public Transform focalPoint;
     CinemachineVirtualCamera cam;
     Transform playerCamFollow;
-
-   
+    Vector3 middleOfArena;
 
 	// Use this for initialization
 	void Start () {
@@ -38,11 +38,8 @@ public class EnemyAwakener : MonoBehaviour {
         {
             if (enemies.Count == 0)
             {
-                // If all the enemies are dead, turn off the second wall and trigger, reset camera follow
-                walls[1].SetActive(false);
-                cam.Follow = playerCamFollow;
-                cam.LookAt = playerCamFollow;
-                gameObject.SetActive(false);
+                focalPoint.GetComponent<MatchPlayerZ>().BeginExitRoutine();
+                StartCoroutine(DestroyArena());
             }
         }
 	}
@@ -60,9 +57,14 @@ public class EnemyAwakener : MonoBehaviour {
             if(isArena)
             {
                 ToggleWalls(true);
+                middleOfArena = new Vector3((walls[0].transform.position.x + walls[1].transform.position.x) / 2, 4, playerTransform.Value.position.z);
+                focalPoint.gameObject.SetActive(true);
+                focalPoint.gameObject.transform.position = new Vector3 (playerTransform.Value.position.x, 4, playerTransform.Value.position.z);
                 cam.Follow = focalPoint;
                 cam.LookAt = focalPoint;
+                focalPoint.GetComponent<MatchPlayerZ>().SetCenter(middleOfArena);
             }
+            gameObject.GetComponent<Collider>().enabled = false;
         }
     }
 
@@ -72,5 +74,21 @@ public class EnemyAwakener : MonoBehaviour {
         {
             walls[i].SetActive(b);
         }
+    }
+
+    public void DisableRightWall()
+    {
+        walls[1].SetActive(false);
+    }
+
+    public IEnumerator DestroyArena()
+    {
+       
+        yield return new WaitForSeconds(3);
+        // If all the enemies are dead, turn off the second wall and trigger, reset camera follow
+        Destroy(walls[1].gameObject);
+        cam.Follow = playerCamFollow;
+        cam.LookAt = playerCamFollow;
+        gameObject.SetActive(false);
     }
 }
