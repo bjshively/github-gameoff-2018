@@ -27,12 +27,16 @@ public class HeavyEnemy : Enemy {
     // Update is called once per frame
     protected override void FixedUpdate()
     {
-        if (isAwake)
+        if (playerHealth.Value > 0)
         {
-            Move();
-        } else
-        {
-            anim.SetFloat("MoveSpeed", 0);
+            if (isAwake)
+            {
+                Move();
+            }
+            else
+            {
+                anim.SetFloat("MoveSpeed", 0);
+            }
         }
     }
 

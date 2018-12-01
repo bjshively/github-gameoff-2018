@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 114923757262322874}
   - component: {fileID: 114998236769056288}
   - component: {fileID: 114464918557873704}
+  - component: {fileID: 114981169865836636}
   m_Layer: 5
   m_Name: PlayerHPMeter
   m_TagString: Untagged
@@ -307,7 +308,7 @@ MonoBehaviour:
   Variable:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 29655ca8bcab1064ab6080fe56ed1469, type: 2}
+    Variable: {fileID: 0}
   Min:
     UseConstant: 1
     ConstantValue: 0
@@ -315,7 +316,7 @@ MonoBehaviour:
   Max:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 6d8550cc3c1ec0846b6693bb4b0c2b4c, type: 2}
+    Variable: {fileID: 0}
   Image: {fileID: 114362289468241784}
 --- !u!114 &114811254316122886
 MonoBehaviour:
@@ -365,6 +366,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114981169865836636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1642150835349812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8306272ce501fa343a1a503c076dc53e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
 --- !u!114 &114998236769056288
 MonoBehaviour:
   m_ObjectHideFlags: 1

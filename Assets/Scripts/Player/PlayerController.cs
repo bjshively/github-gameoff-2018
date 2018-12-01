@@ -18,7 +18,6 @@ public class PlayerController : Character
     public IntReference maxHealth;
     public IntVariable health;
     public FloatReference moveSpeed;
-    public FloatVariable enemyHitTime;
     public FloatVariable playerHitTime;
     public TransformVariable playerTransform;
 
@@ -29,14 +28,13 @@ public class PlayerController : Character
     public AK.Wwise.Event GameplayMusic;
     public AK.Wwise.Event GameplayAmbience;
     public AK.Wwise.Event PlayerDamageSound;
-    public AK.Wwise.Event PlayerSwingSound;
+    //public AK.Wwise.Event PlayerSwingSound;
     public AK.Wwise.Event PlayerDeathSound;
 
     // Use this for initialization
     protected override void Start () {
         base.Start();
         playerTransform.Value.position = transform.position;
-        enemyHitTime.Value = -10;
         playerHitTime.Value = -10;
         health.Value = maxHealth.Value;
 
@@ -81,6 +79,11 @@ public class PlayerController : Character
     {
         Melee();
         // TODO: Attack swing sounds for combos 2 and 3
+    }
+
+    protected override void Melee()
+    {
+            anim.SetTrigger("Melee");
     }
 
     private void Move(float h, float v)

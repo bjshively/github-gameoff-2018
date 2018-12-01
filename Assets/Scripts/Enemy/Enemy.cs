@@ -6,7 +6,7 @@ public class Enemy : Character {
 
     public GameObject attackCollider;
     public TransformVariable playerTransform;
-    public FloatReference enemyHitTime;
+    public IntVariable playerHealth;
     float playerDistance;
     public bool isAwake = true;
     string[] attacks = { "Melee", "Combo2", "Combo3" };
@@ -37,13 +37,17 @@ public class Enemy : Character {
 	
 	// Update is called once per frame
 	protected virtual void FixedUpdate () {
-        if (isAwake)
+        if (playerHealth.Value > 0)
         {
-            Move();
-            anim.SetFloat("DistanceToPlayer", playerDistance);
-        } else
-        {
-            anim.SetFloat("MoveSpeed", 0);
+            if (isAwake)
+            {
+                Move();
+                anim.SetFloat("DistanceToPlayer", playerDistance);
+            }
+            else
+            {
+                anim.SetFloat("MoveSpeed", 0);
+            }
         }
     }
 

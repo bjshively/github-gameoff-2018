@@ -32,14 +32,17 @@ public class ShootingEnemy : Enemy
     // Update is called once per frame
     protected override void FixedUpdate()
     {
-        // Only move if enemy is awake and player is within range
-        if (isAwake && canMove && Mathf.Abs(Vector3.Distance(transform.position, playerTransform.Value.position)) < shootDistance.Value)
+        if (playerHealth.Value > 0)
         {
-            Move();
-        }
-        else
-        {
-            anim.SetFloat("MoveSpeed", 0);
+            // Only move if enemy is awake and player is within range
+            if (isAwake && canMove && Mathf.Abs(Vector3.Distance(transform.position, playerTransform.Value.position)) < shootDistance.Value)
+            {
+                Move();
+            }
+            else
+            {
+                anim.SetFloat("MoveSpeed", 0);
+            }
         }
     }
 
