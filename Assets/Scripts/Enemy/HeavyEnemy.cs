@@ -43,11 +43,14 @@ public class HeavyEnemy : Enemy {
 
     void MoveToLocation(Vector3 pos)
     {
-        anim.SetFloat("MoveSpeed", MoveSpeed.Value);
-        // The step size is equal to speed times frame time.
-        float step = MoveSpeed.Value * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, pos, step);
-        transform.LookAt(pos);
+        if (canMove)
+        {
+            anim.SetFloat("MoveSpeed", MoveSpeed.Value);
+            // The step size is equal to speed times frame time.
+            float step = MoveSpeed.Value * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, pos, step);
+            transform.LookAt(pos);
+        }
     }
 
     protected override void Move()
