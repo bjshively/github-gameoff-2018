@@ -23,7 +23,7 @@ public class Character : MonoBehaviour {
         isAlive = true;
     }
 
-    protected void Melee()
+    protected virtual void Melee()
     {
                 if (canMove)
         {

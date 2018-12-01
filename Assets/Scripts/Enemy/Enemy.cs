@@ -9,6 +9,7 @@ public class Enemy : Character {
     public FloatReference enemyHitTime;
     float playerDistance;
     public bool isAwake = true;
+    string[] attacks = { "Melee", "Combo2", "Combo3" };
 
     // when does enemy notice the player
     public FloatReference playerInSight;
@@ -113,6 +114,14 @@ public class Enemy : Character {
     {
         Melee();
         EnemySwingSound.Post(gameObject);
+    }
+
+    protected override void Melee()
+    {
+        if (canMove)
+        {
+            anim.SetTrigger(attacks[Random.Range(0, 3)]);
+        }
     }
 
     void TakeDamage()
