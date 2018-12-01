@@ -1825,7 +1825,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606946142010664}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 5.135266, y: 0.016698837, z: -7.97}
+  m_LocalPosition: {x: 12.3, y: 0.016698837, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512375598262740}
@@ -2089,7 +2089,6 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 33d775391399f6d42963e68202876c57, type: 2}
-  enemyHitTime: {fileID: 11400000, guid: 1400c6b899273c64f898bca69276dc8d, type: 2}
   playerHitTime: {fileID: 11400000, guid: b21645929a6ed0e4ebd1aafa05dd353e, type: 2}
   playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
   GameplayMusic:

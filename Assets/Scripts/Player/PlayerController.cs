@@ -18,7 +18,6 @@ public class PlayerController : Character
     public IntReference maxHealth;
     public IntVariable health;
     public FloatReference moveSpeed;
-    public FloatVariable enemyHitTime;
     public FloatVariable playerHitTime;
     public TransformVariable playerTransform;
 
@@ -36,7 +35,6 @@ public class PlayerController : Character
     protected override void Start () {
         base.Start();
         playerTransform.Value.position = transform.position;
-        enemyHitTime.Value = -10;
         playerHitTime.Value = -10;
         health.Value = maxHealth.Value;
 

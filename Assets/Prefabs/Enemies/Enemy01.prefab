@@ -2031,31 +2031,16 @@ MonoBehaviour:
   FootStepSound:
     valueGuid: 
     WwiseObjectReference: {fileID: 0}
-  GrassSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 0}
-  DirtSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 0}
-  ConcreteSwitch:
-    valueGuid: 
-    groupGuid: 
-    WwiseObjectReference: {fileID: 0}
   attackCollider: {fileID: 1284939514074862}
   playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
-  enemyHitTime:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 1400c6b899273c64f898bca69276dc8d, type: 2}
+  playerHealth: {fileID: 11400000, guid: 93b5cd6092da1455a9f0a2470bd18c02, type: 2}
   playerDistance: 0
   isAwake: 0
   playerInSight:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 332e7340a02d34f3c9e5d991c2021391, type: 2}
-  playerInRange: 3
+  attackRange: 3
   MoveSpeed:
     UseConstant: 0
     ConstantValue: 0
@@ -2069,7 +2054,6 @@ MonoBehaviour:
     valueGuid: 
     WwiseObjectReference: {fileID: 11400000, guid: b7b265fb3145f3647bf73d8d65a207c1,
       type: 2}
-  movementRecalculation: 0
 --- !u!114 &114686261116537830
 MonoBehaviour:
   m_ObjectHideFlags: 1
