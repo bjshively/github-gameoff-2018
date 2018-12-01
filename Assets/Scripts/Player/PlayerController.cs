@@ -143,7 +143,7 @@ public class PlayerController : Character
     {
         if (!isInvincible)
         {
-            health.Value -= 1;
+            health.Value -= 2;
             isInvincible = true;
             anim.SetTrigger("Knockback3");
         }
