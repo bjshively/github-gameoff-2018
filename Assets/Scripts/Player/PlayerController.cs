@@ -81,6 +81,11 @@ public class PlayerController : Character
         // TODO: Attack swing sounds for combos 2 and 3
     }
 
+    protected override void Melee()
+    {
+            anim.SetTrigger("Melee");
+    }
+
     private void Move(float h, float v)
     {
         // If you can't move or player isn't pushing wasd, set velocity to 0
