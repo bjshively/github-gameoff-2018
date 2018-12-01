@@ -26,7 +26,7 @@ public class Menu : MonoBehaviour {
     public void StartGame()
     {
         StartTransition.Post(gameObject);
-        SceneManager.LoadScene("MainLevel");
+        SceneManager.LoadScene("MainLevelEmo");
     }
 
     public void QuitGame()
