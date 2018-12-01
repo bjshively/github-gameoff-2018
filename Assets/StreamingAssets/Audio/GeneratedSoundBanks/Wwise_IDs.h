@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID PLAY_BULLET = 808719710U;
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_GAMEPLAY = 3737014274U;
+        static const AkUniqueID PLAY_GAMEPLAYLOOP = 2467217844U;
         static const AkUniqueID PLAY_TITLESCREEN = 3027900556U;
         static const AkUniqueID PLAY_TITLESCREEN_TRANSITIONOUT = 3210172030U;
         static const AkUniqueID SFX_ENEMYFIREDEATH = 3644618883U;
@@ -36,9 +37,8 @@ namespace AK
 
             namespace STATE
             {
+                static const AkUniqueID ARENA = 680256650U;
                 static const AkUniqueID GAMEPLAY = 89505537U;
-                static const AkUniqueID PLAYERDIED = 1886223524U;
-                static const AkUniqueID TITLESCREEN = 152105657U;
             } // namespace STATE
         } // namespace GAMESTATES
 
