@@ -64,7 +64,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300d26b28052ba34998d5e8445de99cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
   enemies:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  isArena: 0
+  walls: []
+  focalPoint: {fileID: 0}

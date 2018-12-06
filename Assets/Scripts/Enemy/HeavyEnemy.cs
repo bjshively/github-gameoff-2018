@@ -50,7 +50,8 @@ public class HeavyEnemy : Enemy {
             float step = MoveSpeed.Value * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, pos, step);
             transform.LookAt(pos);
-        } else
+        } 
+        else
         {
             anim.SetFloat("MoveSpeed", 0);
         }
@@ -73,16 +74,19 @@ public class HeavyEnemy : Enemy {
             {
                 anim.SetFloat("MoveSpeed", 0);
                 Attack();
-            } else
+            } 
+            else
             {
                 MoveToLocation(target);
             }
-            if(attackTimer <= 0)
+
+            if (attackTimer <= 0)
             {
                 StartRetreat();
             }
 
-        } else if (retreatMode)
+        } 
+        else if (retreatMode)
         {
             attackTimer = 5f;
             anim.SetFloat("Retreating", 1);
@@ -92,7 +96,9 @@ public class HeavyEnemy : Enemy {
             {
                 anim.SetFloat("MoveSpeed", 0);
                 StartSleeping();
-            } else {    
+            } 
+            else
+            {    
                 MoveToLocation(target);
             }
 
@@ -100,12 +106,13 @@ public class HeavyEnemy : Enemy {
         {
             // Switch back to attack mode if time is up
             sleepTime -= Time.deltaTime;
-            if(sleepTime <= 0)
+            if (sleepTime <= 0)
             {
                 attackMode = true;
                 sleepMode = false;
                 target = playerTransform.Value.position;
-            } else
+            }
+            else
             {
                 anim.SetFloat("MoveSpeed", 0);
             }

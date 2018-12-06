@@ -3,7 +3,14 @@ guid: 08e8a040630b146b8a5d8f58ae0b0c4c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - DamagedSFX: {instanceID: 0}
+  - DeathSFX: {fileID: 11400000, guid: 47d2cae18706646e7977765200e51783, type: 2}
+  - FallDownSFX: {fileID: 11400000, guid: 7c5712ac06d024ee4a41950a0cc7be99, type: 2}
+  - FootstepSFX: {fileID: 11400000, guid: 40c60388594574e48b42987077676080, type: 2}
+  - GunshotSFX: {fileID: 11400000, guid: 483b0ff6617c040ec84a48bc8af10757, type: 2}
+  - MeleeSFX: {instanceID: 0}
+  - PlayerDeathSFX: {fileID: 11400000, guid: cfe6ab794c88045b7b28dcacda703d80, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

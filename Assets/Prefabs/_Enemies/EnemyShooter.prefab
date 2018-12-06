@@ -509,6 +509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4589228823622146}
   - component: {fileID: 114807300199631596}
+  - component: {fileID: 114527442023115454}
   - component: {fileID: 95719462733303636}
   - component: {fileID: 136139281924964586}
   - component: {fileID: 54244729241455694}
@@ -1830,6 +1831,24 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &114527442023115454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638986529609240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08e8a040630b146b8a5d8f58ae0b0c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamagedSFX: {fileID: 11400000, guid: ee9dd39a55923478bae5347d1aedd80c, type: 2}
+  DeathSFX: {fileID: 11400000, guid: 47d2cae18706646e7977765200e51783, type: 2}
+  FallDownSFX: {fileID: 11400000, guid: 7c5712ac06d024ee4a41950a0cc7be99, type: 2}
+  FootstepSFX: {fileID: 11400000, guid: 40c60388594574e48b42987077676080, type: 2}
+  GunshotSFX: {fileID: 11400000, guid: 483b0ff6617c040ec84a48bc8af10757, type: 2}
+  MeleeSFX: {fileID: 11400000, guid: 820fe8686b8ca4e8e946934376303e9a, type: 2}
+  PlayerDeathSFX: {fileID: 11400000, guid: cfe6ab794c88045b7b28dcacda703d80, type: 2}
 --- !u!114 &114684976159968726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2593,12 +2612,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove: 1
   isInvincible: 0
-  PlayerSwingSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 0}
-  FootStepSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 0}
   attackCollider: {fileID: 0}
   playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
   playerHealth: {fileID: 11400000, guid: 93b5cd6092da1455a9f0a2470bd18c02, type: 2}
@@ -2613,18 +2626,8 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 4b7ea836a0e83d04f9262b94e8b77ac6, type: 2}
   health: 3
-  EnemyDamagedSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 0}
-  EnemySwingSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 0}
   gunBarrel: {fileID: 1277476473191190}
   shootDistance: {fileID: 11400000, guid: ed81684e91025ce40aeb419e61af90c9, type: 2}
-  BulletSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: d3019bde9b49d9b4eb8d6c62ef9fff7f,
-      type: 2}
 --- !u!136 &136139281924964586
 CapsuleCollider:
   m_ObjectHideFlags: 1

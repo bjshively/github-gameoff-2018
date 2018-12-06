@@ -19,12 +19,6 @@ public class Enemy : Character {
     public FloatReference MoveSpeed;
     public int health;
 
-    //Audio Events
-    public AK.Wwise.Event EnemyDamagedSound;
-    public AK.Wwise.Event EnemySwingSound;
- 
-
-
     // Pick a random number of seconds to wait between recalculating path to player
     float movementRecalculation;
     protected Vector3 playerDirection;
@@ -50,11 +44,6 @@ public class Enemy : Character {
                 anim.SetFloat("MoveSpeed", 0);
             }
         }
-    }
-
-    void PlayFallDownSound()
-    {
-        EnemyDamagedSound.Post(gameObject);
     }
 
     protected virtual void Move()
@@ -118,7 +107,7 @@ public class Enemy : Character {
     protected virtual void Attack()
     {
         Melee();
-        EnemySwingSound.Post(gameObject);
+        //EnemySwingSound.Value.Post(gameObject);
     }
 
     protected override void Melee()
@@ -135,7 +124,7 @@ public class Enemy : Character {
         {
             isInvincible = true;
             health -= 1;
-            EnemyDamagedSound.Post(gameObject);
+            PlayEnemyDamagedSound();
             if (health <= 0)
             {
                 Die("EnemyIsDead");
@@ -166,5 +155,16 @@ public class Enemy : Character {
     {
         isAwake = state;
         //anim.SetBool("Awake", state);
+    }
+
+    // AUDIO
+    void PlayFallDownSound()
+    {
+        //EnemyDamagedSound.Value.Post(gameObject);
+    }
+
+    private void PlayEnemyDamagedSound()
+    {
+        //EnemyDamagedSound.Value.Post(gameObject);
     }
 }

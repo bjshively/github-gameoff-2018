@@ -27279,7 +27279,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0
-    functionName: PlaySwingSound
+    functionName: PlayAudioMelee
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

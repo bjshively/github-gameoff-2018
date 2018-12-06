@@ -24,12 +24,6 @@ public class PlayerController : Character
     string[] attacks = { "Combo1", "Combo2", "Combo3" };
     string[] knockbacks = { "Knockback1", "Knockback2", "Knockback3" };
 
-    // Audio variables
-    public AK.Wwise.Event GameplayMusic;
-    public AK.Wwise.Event GameplayAmbience;
-    public AK.Wwise.Event PlayerDamageSound;
-    //public AK.Wwise.Event PlayerSwingSound;
-    public AK.Wwise.Event PlayerDeathSound;
 
     // Use this for initialization
     protected override void Start () {
@@ -37,10 +31,6 @@ public class PlayerController : Character
         playerTransform.Value.position = transform.position;
         playerHitTime.Value = -10;
         health.Value = maxHealth.Value;
-
-        GameplayMusic.Post(gameObject);
-        GameplayAmbience.Post(gameObject);
-
 	}
 
     // Update is called once per frame
@@ -69,9 +59,6 @@ public class PlayerController : Character
         {
             isAlive = false;
             Die("PlayerIsDead");
-            PlayPlayerDamagedSound();
-            AkSoundEngine.StopAll();
-            PlayerDeathSound.Post(gameObject);
         }
     }
 
@@ -138,7 +125,6 @@ public class PlayerController : Character
             anim.SetTrigger(knockbacks[currentKnockback]);
 
             health.Value -= 1;
-            PlayPlayerDamagedSound();
         }
     }
 
@@ -163,22 +149,5 @@ public class PlayerController : Character
         {
             TakeHeavyDamage();
         }
-    }
-
-    // AUDIO =================================
-    // =======================================
-    private void PlayFallDownSound()
-    {
-        PlayerDamageSound.Post(gameObject);
-    }
-
-    private void PlayPlayerDamagedSound()
-    {
-        PlayerDamageSound.Post(gameObject);
-    }
-
-    void PlaySwingSound()
-    {
-        PlayerSwingSound.Post(gameObject);
     }
 }

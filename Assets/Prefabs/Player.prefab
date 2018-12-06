@@ -572,6 +572,7 @@ GameObject:
   - component: {fileID: 4974850543771216}
   - component: {fileID: 95231444724818710}
   - component: {fileID: 114588211424659440}
+  - component: {fileID: 114625363888560172}
   - component: {fileID: 136857929288688422}
   - component: {fileID: 54402429856545552}
   - component: {fileID: 114697016806240982}
@@ -1825,7 +1826,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606946142010664}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 94.463104, y: 0.11669803, z: -8.532868}
+  m_LocalPosition: {x: 289.8221, y: 0.05888009, z: -1.5808033}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512375598262740}
@@ -2054,7 +2055,7 @@ MonoBehaviour:
   isStaticObject: 0
   m_positionOffsetData:
     KeepMe: 0
-    positionOffset: {x: -15.038301, y: 8.151911, z: 207.93918}
+    positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
 --- !u!114 &114588211424659440
@@ -2070,18 +2071,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove: 1
   isInvincible: 0
-  PlayerSwingSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: 04c28514bfa9c3b4a89a2b1f5a588af5,
-      type: 2}
-  FootStepSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: b169a07123c43f9468a7878c6d8503c7,
-      type: 2}
-  EnemyDeathSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 0}
-  DelayTime: 0
   attackCollider: {fileID: 1946780994868188}
   smashCollider: {fileID: 1716240557852290}
   maxHealth:
@@ -2095,22 +2084,24 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 33d775391399f6d42963e68202876c57, type: 2}
   playerHitTime: {fileID: 11400000, guid: b21645929a6ed0e4ebd1aafa05dd353e, type: 2}
   playerTransform: {fileID: 11400000, guid: 81a2277b21f6c88438d7dbd2f44e7c03, type: 2}
-  GameplayMusic:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: b33367fe739e3354a84a93cd2df9edbf,
-      type: 2}
-  GameplayAmbience:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6be4ca5e6d95b554e9a09e485d6d3aa9,
-      type: 2}
-  PlayerDamageSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: 8082653bb71506f48ab03157a487a2ce,
-      type: 2}
-  PlayerDeathSound:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1a5fa5a084a61a04eb3a72d008ff388d,
-      type: 2}
+--- !u!114 &114625363888560172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606946142010664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08e8a040630b146b8a5d8f58ae0b0c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamagedSFX: {fileID: 11400000, guid: c922dd7487b1844448f5984b312440e9, type: 2}
+  DeathSFX: {fileID: 11400000, guid: cfe6ab794c88045b7b28dcacda703d80, type: 2}
+  FallDownSFX: {fileID: 11400000, guid: 7c5712ac06d024ee4a41950a0cc7be99, type: 2}
+  FootstepSFX: {fileID: 11400000, guid: 40c60388594574e48b42987077676080, type: 2}
+  GunshotSFX: {fileID: 0}
+  MeleeSFX: {fileID: 11400000, guid: b89ce987286b84300bb83eb1fc07b8e6, type: 2}
+  PlayerDeathSFX: {fileID: 11400000, guid: cfe6ab794c88045b7b28dcacda703d80, type: 2}
 --- !u!114 &114697016806240982
 MonoBehaviour:
   m_ObjectHideFlags: 1

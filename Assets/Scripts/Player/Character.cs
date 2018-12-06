@@ -10,13 +10,6 @@ public class Character : MonoBehaviour {
     protected Rigidbody body;
     protected bool isAlive;
 
-    // Audio variables
-    public AK.Wwise.Event PlayerSwingSound;
-    public AK.Wwise.Event FootStepSound;
-    public AK.Wwise.Event EnemyDeathSound;
-
-    public float DelayTime;
- 
     protected virtual void Start()
     {
         body = GetComponent<Rigidbody>();
@@ -26,7 +19,7 @@ public class Character : MonoBehaviour {
 
     protected virtual void Melee()
     {
-                if (canMove)
+        //if (canMove)
         {
             anim.SetTrigger("Melee");
         }
@@ -58,33 +51,9 @@ public class Character : MonoBehaviour {
         }
     }
 
-    //DeathSound Delay
-    IEnumerator ExecuteAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        EnemyDeathSound.Post(gameObject);
-    }
-
     protected void Die(string s)
     {
+        anim.enabled = false;
         anim.SetTrigger(s);
-        StartCoroutine(ExecuteAfterTime(DelayTime));
-        
     }
-
-
-    // AUDIO =================================
-    // =======================================
-    private void PlayFootstepSound()
-    {
-        FootStepSound.Post(gameObject);
-        //AkSoundEngine.PostEvent("SFX_PlayerFootsteps", gameObject);    
-    }
-
-    private void PlaySwingSound()
-    {
-        PlayerSwingSound.Post(gameObject);
-    }
-
 }

@@ -18,8 +18,6 @@ public class ShootingEnemy : Enemy
     float targetDistance;
     bool canAttack = true;
 
-    public AK.Wwise.Event BulletSound;
-
     // Use this for initialization
     protected override void Start()
     {
@@ -125,7 +123,8 @@ public class ShootingEnemy : Enemy
             GameObject bullet = Instantiate(Resources.Load("Bullet") as GameObject);
             bullet.transform.position = barrelPoint;
             anim.SetTrigger("FirePistol");
-            BulletSound.Post(gameObject);
+            //PlayBulletSound();
+
         }
         canAttack = false;
         attackMode = false;

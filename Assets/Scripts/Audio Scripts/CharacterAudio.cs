@@ -4,48 +4,48 @@ using UnityEngine;
 
 public class CharacterAudio : MonoBehaviour {
 
-    public WwiseEventVariable PlayerDamageSound;
-    public WwiseEventVariable PlayerDeathSound;
-    public WwiseEventVariable PlayerSwingSound;
-    public WwiseEventVariable FootStepSound;
-    public WwiseEventVariable EnemyDamagedSound;
-    public WwiseEventVariable EnemySwingSound;
-    public WwiseEventVariable EnemyDeathSound;
-    public WwiseEventVariable BulletSound;
+    public WwiseEventVariable DamagedSFX;
+    public WwiseEventVariable DeathSFX;
+    public WwiseEventVariable FallDownSFX;
+    public WwiseEventVariable FootstepSFX;
+    public WwiseEventVariable GunshotSFX;
+    public WwiseEventVariable MeleeSFX;
+    public WwiseEventVariable PlayerDeathSFX;
 
-    public void PlayFootstepSound()
+    public void PlayAudioFootstep()
     {
-        FootStepSound.Value.Post(gameObject);
+        FootstepSFX.Value.Post(gameObject);
     }
 
-    public void PlaySwingSound()
+    public void PlayAudioMelee()
     {
-        PlayerSwingSound.Value.Post(gameObject);
+        MeleeSFX.Value.Post(gameObject);
     }
 
-    public void PlayDeathSound()
+    public void PlayAudioFallDown()
     {
-        EnemyDeathSound.Value.Post(gameObject);
+        FallDownSFX.Value.Post(gameObject);
     }
 
-    public void PlayFallDownSound()
+    public void PlayAudioDamaged()
     {
-        PlayerDamageSound.Value.Post(gameObject);
+        DamagedSFX.Value.Post(gameObject);
     }
 
-    public void PlayPlayerDamagedSound()
+    public void PlayAudioDeath()
     {
-        PlayerDamageSound.Value.Post(gameObject);
+        DeathSFX.Value.Post(gameObject);
     }
 
-    public void PlayPlayerDeathSound()
+    // Player gets special death audio
+    public void PlayAudioPlayerDeath()
     {
         AkSoundEngine.StopAll();
-        PlayerDeathSound.Value.Post(gameObject);
+        PlayerDeathSFX.Value.Post(gameObject);
     }
 
-    private void PlayBulletSound()
+    private void PlayAudioGunshot()
     {
-        BulletSound.Value.Post(gameObject);
+        GunshotSFX.Value.Post(gameObject);
     }
 }
