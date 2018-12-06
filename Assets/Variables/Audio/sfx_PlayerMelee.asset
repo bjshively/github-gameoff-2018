@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a845b434f575a496d8212e5efb2989c0, type: 3}
-  m_Name: srx_EnemyHeavySwingSound
+  m_Name: sfx_PlayerMelee
   m_EditorClassIdentifier: 
   Value:
     valueGuid: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 04c28514bfa9c3b4a89a2b1f5a588af5, type: 2}

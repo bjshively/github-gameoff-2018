@@ -8,8 +8,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f53bf0d6342f40c9886b0bf57d780d3, type: 3}
-  m_Name: i_PlayerMaxHealth
+  m_Script: {fileID: 11500000, guid: a845b434f575a496d8212e5efb2989c0, type: 3}
+  m_Name: sfx_PlayerDeath
   m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Value: 20
+  Value:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1a5fa5a084a61a04eb3a72d008ff388d,
+      type: 2}
