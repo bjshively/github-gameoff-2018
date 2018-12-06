@@ -124,7 +124,7 @@ public class Enemy : Character {
         {
             isInvincible = true;
             health -= 1;
-            PlayEnemyDamagedSound();
+
             if (health <= 0)
             {
                 Die("EnemyIsDead");
@@ -155,16 +155,5 @@ public class Enemy : Character {
     {
         isAwake = state;
         //anim.SetBool("Awake", state);
-    }
-
-    // AUDIO
-    void PlayFallDownSound()
-    {
-        //EnemyDamagedSound.Value.Post(gameObject);
-    }
-
-    private void PlayEnemyDamagedSound()
-    {
-        //EnemyDamagedSound.Value.Post(gameObject);
     }
 }

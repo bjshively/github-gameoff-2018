@@ -12,29 +12,34 @@ public class CharacterAudio : MonoBehaviour {
     public WwiseEventVariable MeleeSFX;
     public WwiseEventVariable PlayerDeathSFX;
 
+    public void PlayAudioDamaged()
+    {
+        DamagedSFX.Value.Post(gameObject);
+    }
+    
+    public void PlayAudioDeath()
+    {
+        DeathSFX.Value.Post(gameObject);
+    }
+    
+    public void PlayAudioFallDown()
+    {
+        FallDownSFX.Value.Post(gameObject);
+    }
+    
     public void PlayAudioFootstep()
     {
         FootstepSFX.Value.Post(gameObject);
     }
 
+    private void PlayAudioGunshot()
+    {
+        GunshotSFX.Value.Post(gameObject);
+    }
+
     public void PlayAudioMelee()
     {
         MeleeSFX.Value.Post(gameObject);
-    }
-
-    public void PlayAudioFallDown()
-    {
-        FallDownSFX.Value.Post(gameObject);
-    }
-
-    public void PlayAudioDamaged()
-    {
-        DamagedSFX.Value.Post(gameObject);
-    }
-
-    public void PlayAudioDeath()
-    {
-        DeathSFX.Value.Post(gameObject);
     }
 
     // Player gets special death audio
@@ -44,8 +49,4 @@ public class CharacterAudio : MonoBehaviour {
         PlayerDeathSFX.Value.Post(gameObject);
     }
 
-    private void PlayAudioGunshot()
-    {
-        GunshotSFX.Value.Post(gameObject);
-    }
 }

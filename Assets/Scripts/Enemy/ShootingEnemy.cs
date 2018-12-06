@@ -123,7 +123,6 @@ public class ShootingEnemy : Enemy
             GameObject bullet = Instantiate(Resources.Load("Bullet") as GameObject);
             bullet.transform.position = barrelPoint;
             anim.SetTrigger("FirePistol");
-            //PlayBulletSound();
 
         }
         canAttack = false;
