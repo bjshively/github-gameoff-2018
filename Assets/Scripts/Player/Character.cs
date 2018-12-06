@@ -53,7 +53,6 @@ public class Character : MonoBehaviour {
 
     protected void Die(string s)
     {
-        anim.enabled = false;
         anim.SetTrigger(s);
     }
 }
