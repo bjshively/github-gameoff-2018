@@ -1826,7 +1826,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1606946142010664}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 289.8221, y: 0.05888009, z: -1.5808033}
+  m_LocalPosition: {x: 43.05863, y: 0.07761288, z: -19.132504}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512375598262740}
@@ -2099,7 +2099,7 @@ MonoBehaviour:
   DeathSFX: {fileID: 11400000, guid: cfe6ab794c88045b7b28dcacda703d80, type: 2}
   FallDownSFX: {fileID: 11400000, guid: 7c5712ac06d024ee4a41950a0cc7be99, type: 2}
   FootstepSFX: {fileID: 11400000, guid: 40c60388594574e48b42987077676080, type: 2}
-  GunshotSFX: {fileID: 0}
+  GunshotSFX: {fileID: 11400000, guid: 483b0ff6617c040ec84a48bc8af10757, type: 2}
   MeleeSFX: {fileID: 11400000, guid: b89ce987286b84300bb83eb1fc07b8e6, type: 2}
   PlayerDeathSFX: {fileID: 11400000, guid: cfe6ab794c88045b7b28dcacda703d80, type: 2}
 --- !u!114 &114697016806240982

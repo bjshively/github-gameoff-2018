@@ -1836,7 +1836,7 @@ MonoBehaviour:
   DamagedSFX: {fileID: 11400000, guid: 1a9d0342fbe1a419fbcea1cb8cdbbedf, type: 2}
   DeathSFX: {fileID: 11400000, guid: 47d2cae18706646e7977765200e51783, type: 2}
   FallDownSFX: {fileID: 11400000, guid: 7c5712ac06d024ee4a41950a0cc7be99, type: 2}
-  FootstepSFX: {fileID: 11400000, guid: 40c60388594574e48b42987077676080, type: 2}
+  FootstepSFX: {fileID: 0}
   GunshotSFX: {fileID: 11400000, guid: 483b0ff6617c040ec84a48bc8af10757, type: 2}
   MeleeSFX: {fileID: 11400000, guid: 5c2661a1c0de0456aab340b34300b485, type: 2}
   PlayerDeathSFX: {fileID: 11400000, guid: cfe6ab794c88045b7b28dcacda703d80, type: 2}
