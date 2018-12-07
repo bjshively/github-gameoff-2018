@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Value:
     valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1a5fa5a084a61a04eb3a72d008ff388d,
+    WwiseObjectReference: {fileID: 11400000, guid: 65158d7c74b2a204e8f5fb8f91103414,
       type: 2}

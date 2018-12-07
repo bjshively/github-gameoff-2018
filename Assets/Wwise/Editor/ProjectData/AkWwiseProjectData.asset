@@ -53,7 +53,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8119b29db91540468c7bdc1a7e521c73
-    m_lastTime: -8586579327242925391
+    m_lastTime: -8586579243854643114
     List:
     - name: AMB_BirdCalls
       guid: f59fdcd225276942a5399795c0e72cf9
@@ -66,7 +66,7 @@ MonoBehaviour:
       - ElementName: AMB_BirdCalls
         ObjectType: 3
       Path: Default Work Unit\Ambience\AMB_BirdCalls
-      maxAttenuation: 0
+      maxAttenuation: 120
       maxDuration: 0
       minDuration: 0
     - name: AMB_FountainLoop
@@ -80,7 +80,7 @@ MonoBehaviour:
       - ElementName: AMB_FountainLoop
         ObjectType: 3
       Path: Default Work Unit\Ambience\AMB_FountainLoop
-      maxAttenuation: 0
+      maxAttenuation: 60
       maxDuration: 0
       minDuration: 0
     - name: Play_Ambience
@@ -111,6 +111,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Credits
+      guid: ebae90caf9b4cd499ebf6da4cc2859cc
+      id: 2970769112
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Play_Credits
+        ObjectType: 3
+      Path: Default Work Unit\Music\Play_Credits
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Death
       guid: cbcbb1cb76dd924d807443945cdc77e5
       id: 1172822028
@@ -136,6 +150,20 @@ MonoBehaviour:
       - ElementName: Play_Gameplay
         ObjectType: 3
       Path: Default Work Unit\Music\Play_Gameplay
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_GameplayLoop
+      guid: 81852d85b2da9440a892da6cda63af70
+      id: 2467217844
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Play_GameplayLoop
+        ObjectType: 3
+      Path: Default Work Unit\Music\Play_GameplayLoop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -173,9 +201,11 @@ MonoBehaviour:
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: CharacterSFX
+        ObjectType: 4
       - ElementName: SFX_EnemyFireDeath
         ObjectType: 3
-      Path: Default Work Unit\SFX_EnemyFireDeath
+      Path: Default Work Unit\CharacterSFX\SFX_EnemyFireDeath
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -254,7 +284,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d74f1a538c60de44bdf67b2ffda7b4e7
-    m_lastTime: -8586580153893434908
+    m_lastTime: -8586579252351902084
     List:
     - name: GameStates
       guid: 5020adb0e4fb38459a77db9ca1bed6ca
@@ -266,6 +296,12 @@ MonoBehaviour:
         ObjectType: 9
       Path: Default Work Unit\GameStates
       values:
+      - name: Arena
+        guid: f589981a79839348af6235596ed1af39
+        id: 680256650
+        PathAndIcons:
+        - ElementName: Arena
+          ObjectType: 8
       - name: Gameplay
         guid: 7ea501d51f49c74bbd0551f1dabf47a5
         id: 89505537
@@ -277,18 +313,6 @@ MonoBehaviour:
         id: 748895195
         PathAndIcons:
         - ElementName: None
-          ObjectType: 8
-      - name: PlayerDied
-        guid: 2e9653c0c6246b4594931c9324592085
-        id: 1886223524
-        PathAndIcons:
-        - ElementName: PlayerDied
-          ObjectType: 8
-      - name: TitleScreen
-        guid: 1540d358f2ea4643b7227827f77ae324
-        id: 152105657
-        PathAndIcons:
-        - ElementName: TitleScreen
           ObjectType: 8
     - name: Location
       guid: 7d4ebd2a6aa31e4290a33d5e5c16810c
@@ -369,8 +393,5 @@ MonoBehaviour:
       Path: Default Work Unit\PlayerDied
   ExpandedItems:
   - /GitHubGameOff2018_Wwise
-  - /GitHubGameOff2018_Wwise/Events
-  - /GitHubGameOff2018_Wwise/Events/Default Work Unit
-  - /GitHubGameOff2018_Wwise/Events/Default Work Unit/Ambience
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

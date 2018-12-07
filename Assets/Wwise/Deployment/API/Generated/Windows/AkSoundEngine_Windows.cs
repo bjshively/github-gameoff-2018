@@ -669,7 +669,7 @@ public partial class AkSoundEngine {
 			size += s.Length + 1;
 				
 		int sizeofChar = 2;	//Unicode
-		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar);
+		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar + 2);
 		
 		//Write the length of array
 		global::System.Runtime.InteropServices.Marshal.WriteInt16(pMem, (short)in_ppszString.Length);
@@ -699,7 +699,7 @@ public partial class AkSoundEngine {
 			size += s.Length + 1;
 				
 		int sizeofChar = 2;	//Unicode
-		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar);
+		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar + 2);
 		
 		//Write the length of array
 		global::System.Runtime.InteropServices.Marshal.WriteInt16(pMem, (short)in_ppszString.Length);
@@ -737,7 +737,7 @@ public partial class AkSoundEngine {
 			size += s.Length + 1;
 				
 		int sizeofChar = 2;	//Unicode
-		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar);
+		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar + 2);
 		
 		//Write the length of array
 		global::System.Runtime.InteropServices.Marshal.WriteInt16(pMem, (short)in_ppszGameSyncName.Length);
@@ -767,7 +767,7 @@ public partial class AkSoundEngine {
 			size += s.Length + 1;
 				
 		int sizeofChar = 2;	//Unicode
-		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar);
+		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar + 2);
 		
 		//Write the length of array
 		global::System.Runtime.InteropServices.Marshal.WriteInt16(pMem, (short)in_ppszGameSyncName.Length);
@@ -1885,6 +1885,6 @@ public partial class AkSoundEngine {
   public const double AK_DEFAULT_DIFFR_SHADOW_DEGREES = (30.0);
   public const double AK_DEFAULT_DIFFR_SHADOW_ATTEN = (2.0);
   public const double AK_SA_EPSILON = (0.001);
-  public const double AK_SA_PLANARITY_EPSILON = (0.01);
+  public const double AK_SA_PLANE_THICKNESS_RATIO = (0.005);
 }
 #endif // #if (UNITY_STANDALONE_WIN && !UNITY_EDITOR) || UNITY_EDITOR_WIN

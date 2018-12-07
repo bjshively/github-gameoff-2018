@@ -14,5 +14,5 @@ MonoBehaviour:
   objectName: Bridge
   id: 2068062714
   guid: E822395E-9720-4029-A0C6-DB68A5777EF3
-  WwiseStateGroupReference: {fileID: 11400000, guid: ddea16e7458c1b0498c8145f83dd7d9c,
+  WwiseStateGroupReference: {fileID: 11400000, guid: 35e5f738b6dd8ba4ebeae4682c9ea092,
     type: 2}

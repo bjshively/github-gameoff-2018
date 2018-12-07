@@ -198,8 +198,13 @@ public class AkCommonOutputSettings
 	}
 }
 
+public class AkSettingsValidationHandler
+{
+	public virtual void Validate() { }
+}
+
 [System.Serializable]
-public class AkCommonUserSettings
+public class AkCommonUserSettings : AkSettingsValidationHandler
 {
 	[UnityEngine.Tooltip("Path for the soundbanks. This must contain one sub folder per platform, with the same as in the Wwise project.")]
 	public string m_BasePath = AkBasePathGetter.DefaultBasePath;
@@ -207,7 +212,7 @@ public class AkCommonUserSettings
 	[UnityEngine.Tooltip("Language sub-folder used at startup.")]
 	public string m_StartupLanguage = "English(US)";
 
-	[UnityEngine.Tooltip("Prepare Pool size. This contains the banks loaded using PrepareBank (Banks decoded on load use this). Default size is 0 MB, but you should adjust for your needs.")]
+	[UnityEngine.Tooltip("Prepare Pool size. This contains the banks loaded using PrepareBank (Banks decoded on load use this). Default size is 0 MB (will not allocate a Prepare Pool), and minimal size if 8096 bytes. This should be adjusted for your needs.")]
 	public uint m_PreparePoolSize = 0;
 
 	[UnityEngine.Tooltip("CallbackManager buffer size. The size of the buffer used per-frame to transfer callback data. Default size is 4 KB, but you should increase this, if required.")]
@@ -335,10 +340,18 @@ public class AkCommonUserSettings
 		settings.uMaxSoundPropagationDepth = m_SpatialAudioSettings.m_MaxSoundPropagationDepth;
 		settings.uDiffractionFlags = (uint)m_SpatialAudioSettings.m_DiffractionFlags;
 	}
+
+	public override void Validate()
+	{
+		if (m_PreparePoolSize > 0 && m_PreparePoolSize < 8096)
+		{
+			m_PreparePoolSize = 8096;
+		}
+	}
 }
 
 [System.Serializable]
-public class AkCommonAdvancedSettings
+public class AkCommonAdvancedSettings : AkSettingsValidationHandler
 {
 	[UnityEngine.Tooltip("Size of memory pool for I/O (for automatic streams). It is passed directly to AK::MemoryMgr::CreatePool(), after having been rounded down to a multiple of uGranularity.")]
 	public uint m_IOMemorySize = 2 * 1024 * 1024;
@@ -409,7 +422,7 @@ public class AkCommonAdvancedSettings
 }
 
 [System.Serializable]
-public class AkCommonCommSettings
+public class AkCommonCommSettings : AkSettingsValidationHandler
 {
 	[UnityEngine.Tooltip("Size of the communication pool.")]
 	public uint m_PoolSize = 256 * 1024;
@@ -527,5 +540,16 @@ public abstract class AkCommonPlatformSettings : AkBasePlatformSettings
 			return settings;
 		}
 	}
+
+	#region parameter validation
+#if UNITY_EDITOR
+	void OnValidate()
+	{
+		GetUserSettings().Validate();
+		GetAdvancedSettings().Validate();
+		GetCommsSettings().Validate();
+	}
+#endif
+	#endregion
 }
 
