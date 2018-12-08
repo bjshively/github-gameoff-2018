@@ -11540,16 +11540,16 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.5
-    functionName: AnimEnableAnObject
-    data: DeathParticles
+  - time: 0.21666667
+    functionName: PlayAudioDeath
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.5
-    functionName: PlayAudioDeath
-    data: 
+    functionName: AnimEnableAnObject
+    data: DeathParticles
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
