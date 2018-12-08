@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : Character
@@ -17,6 +18,8 @@ public class PlayerController : Character
 
     public IntReference maxHealth;
     public IntVariable health;
+    public UnityEvent damageEvent;
+    public UnityEvent deathEvent;
     public FloatReference moveSpeed;
     public FloatVariable playerHitTime;
     public TransformVariable playerTransform;
@@ -26,12 +29,13 @@ public class PlayerController : Character
 
 
     // Use this for initialization
-    protected override void Start () {
+    protected override void Start()
+    {
         base.Start();
         playerTransform.Value.position = transform.position;
         playerHitTime.Value = -10;
         health.Value = maxHealth.Value;
-	}
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -58,6 +62,7 @@ public class PlayerController : Character
         if ((health.Value <= 0 || transform.position.y < -100) && isAlive)
         {
             isAlive = false;
+            deathEvent.Invoke();
             Die("PlayerIsDead");
         }
     }
@@ -124,7 +129,7 @@ public class PlayerController : Character
             // Trigger the knockback
             anim.SetTrigger(knockbacks[currentKnockback]);
 
-            health.Value -= 1;
+            damageEvent.Invoke();
         }
     }
 
@@ -145,7 +150,7 @@ public class PlayerController : Character
             TakeDamage();
         }
 
-        else if (other.name == "CoffinBody" || other.name == "Bullet(Clone)" ||  other.name == "SmashCollider")
+        else if (other.name == "CoffinBody" || other.name == "Bullet(Clone)" || other.name == "SmashCollider")
         {
             TakeHeavyDamage();
         }
