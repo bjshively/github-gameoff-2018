@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class AnimationListener : MonoBehaviour {
+public class AnimationListener : MonoBehaviour
+{
     // this is brittle and sucks
     private void AnimEnableAnObject(string o)
     {
@@ -19,4 +19,8 @@ public class AnimationListener : MonoBehaviour {
         t.gameObject.SetActive(false);
     }
 
+    private void AnimReloadCurrentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
