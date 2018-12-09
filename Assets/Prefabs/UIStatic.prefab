@@ -864,7 +864,7 @@ MonoBehaviour:
   m_text: YOU DIED
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ef598c850de5475c9c7a9761624770c, type: 2}
-  m_sharedMaterial: {fileID: 21183552613299836, guid: e7edf80b4338046e881fcf79dec4a092,
+  m_sharedMaterial: {fileID: 21082219630955784, guid: 4ef598c850de5475c9c7a9761624770c,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -942,9 +942,9 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
