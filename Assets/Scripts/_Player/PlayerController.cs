@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : Character
 {
@@ -27,7 +24,6 @@ public class PlayerController : Character
     string[] attacks = { "Combo1", "Combo2", "Combo3" };
     string[] knockbacks = { "Knockback1", "Knockback2", "Knockback3" };
 
-
     // Use this for initialization
     protected override void Start()
     {
@@ -44,8 +40,7 @@ public class PlayerController : Character
         playerTransform.Value.position = transform.position;
 
         // tell animator the time for combos and knockback
-        // TODO: Change this back to 1f
-        anim.SetFloat("StateTime", Mathf.Repeat(anim.GetCurrentAnimatorStateInfo(0).normalizedTime, 2f));
+        anim.SetFloat("StateTime", Mathf.Repeat(anim.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
         anim.ResetTrigger("Melee");
 
         //DepleteHealth();
@@ -56,7 +51,7 @@ public class PlayerController : Character
 
         if (Input.GetButtonDown("Fire1"))
         {
-            Attack();
+            Melee();
         }
 
         if ((health.Value <= 0 || transform.position.y < -100) && isAlive)
@@ -67,15 +62,9 @@ public class PlayerController : Character
         }
     }
 
-    private void Attack()
-    {
-        Melee();
-        // TODO: Attack swing sounds for combos 2 and 3
-    }
-
     protected override void Melee()
-    {
-            anim.SetTrigger("Melee");
+    { 
+        anim.SetTrigger("Melee");
     }
 
     private void Move(float h, float v)
@@ -126,9 +115,10 @@ public class PlayerController : Character
             }
 
             playerHitTime.Value = Time.time;
+
             // Trigger the knockback
             anim.SetTrigger(knockbacks[currentKnockback]);
-
+            health.Value -= 1;
             damageEvent.Invoke();
         }
     }
@@ -140,6 +130,7 @@ public class PlayerController : Character
             health.Value -= 2;
             isInvincible = true;
             anim.SetTrigger("Knockback3");
+            damageEvent.Invoke();
         }
     }
 
