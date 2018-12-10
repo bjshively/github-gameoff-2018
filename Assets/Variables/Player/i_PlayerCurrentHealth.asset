@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: i_PlayerCurrentHealth
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  Value: 10
+  Value: 20

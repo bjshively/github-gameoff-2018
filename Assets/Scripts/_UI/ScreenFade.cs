@@ -13,7 +13,7 @@ public class ScreenFade : MonoBehaviour
     IEnumerator BeginImageFade(Image i)
     {
         float timestamp = Time.time;
-        float waitTime = 3;
+        float waitTime = 4;
 
         while ((i.color.a < 0.54f) && (timestamp + Time.deltaTime < timestamp + waitTime))
         {
@@ -34,7 +34,7 @@ public class ScreenFade : MonoBehaviour
     IEnumerator BeginTextFade(TMP_Text t)
     {
         float timestamp = Time.time;
-        float waitTime = 3.5f;
+        float waitTime = 4.5f;
 
         while ((t.color.a < .87) && (timestamp + Time.deltaTime < timestamp + waitTime))
         {
