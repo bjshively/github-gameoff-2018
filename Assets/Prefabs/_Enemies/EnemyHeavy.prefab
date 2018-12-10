@@ -1817,7 +1817,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 1c8dea4944de886488046b91ee8a983a, type: 2}
-  health: 10
+  health: 6
   smashCollider: {fileID: 1912585981944456}
   attackMode: 0
   retreatMode: 1

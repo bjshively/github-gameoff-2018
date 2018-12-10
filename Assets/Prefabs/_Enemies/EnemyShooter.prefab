@@ -2625,7 +2625,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 4b7ea836a0e83d04f9262b94e8b77ac6, type: 2}
-  health: 3
+  health: 2
   gunBarrel: {fileID: 1277476473191190}
   shootDistance: {fileID: 11400000, guid: ed81684e91025ce40aeb419e61af90c9, type: 2}
 --- !u!136 &136139281924964586
