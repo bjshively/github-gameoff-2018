@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118716643212774}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000009804963}
-  m_LocalPosition: {x: 19.412561, y: -12.191752, z: -20.259094}
+  m_LocalPosition: {x: -2.5999756, y: -7.6, z: -35.6}
   m_LocalScale: {x: 3.6299999, y: 3.6299999, z: 8.469999}
   m_Children:
   - {fileID: 4719827201151042}
@@ -3081,7 +3081,7 @@ MonoBehaviour:
   data:
     valueGuid: 
     groupGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: d53d59f460e57bb44b7f9170efb9dbb7,
+    WwiseObjectReference: {fileID: 11400000, guid: 5fff40e39b8070e428eeca6c84725393,
       type: 2}
   valueGuid: 
   groupGuid: 

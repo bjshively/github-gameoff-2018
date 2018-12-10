@@ -393,5 +393,8 @@ MonoBehaviour:
       Path: Default Work Unit\PlayerDied
   ExpandedItems:
   - /GitHubGameOff2018_Wwise
+  - /GitHubGameOff2018_Wwise/States
+  - /GitHubGameOff2018_Wwise/States/Default Work Unit
+  - /GitHubGameOff2018_Wwise/States/Default Work Unit/GameStates
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
