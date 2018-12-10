@@ -22,8 +22,10 @@ GameObject:
   - component: {fileID: 65154215830075982}
   - component: {fileID: 114165728890629182}
   - component: {fileID: 114734531628285108}
+  - component: {fileID: 114377610654008984}
   - component: {fileID: 114922552216264280}
   - component: {fileID: 114029261491389758}
+  - component: {fileID: 114668940305957184}
   m_Layer: 0
   m_Name: ArenaTrigger
   m_TagString: Untagged
@@ -313,6 +315,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerObject: {fileID: 1606946142010664, guid: 6e55859a0a8f84b4bafde1f7edcd3881,
     type: 2}
+--- !u!114 &114377610654008984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1258703707076424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199266c9599b4be4088ed56eece7a3b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: cd2be4c0
+  useOtherObject: 1
+  data:
+    valueGuid: 
+    groupGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8b907122b0813704f8947802cd7a930c,
+      type: 2}
+  valueGuid: 
+  groupGuid: 
 --- !u!114 &114574823544643546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -333,6 +355,19 @@ MonoBehaviour:
       type: 2}
   valueGuid: 
   groupGuid: 
+--- !u!114 &114668940305957184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1258703707076424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757f91b8ea362cc4dae6581151c2fce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerObject: {fileID: 1606946142010664, guid: 6e55859a0a8f84b4bafde1f7edcd3881,
+    type: 2}
 --- !u!114 &114734531628285108
 MonoBehaviour:
   m_ObjectHideFlags: 1
