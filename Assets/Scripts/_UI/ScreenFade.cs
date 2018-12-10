@@ -1,52 +1,49 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using TMPro;
 
-public class ScreenFade : MonoBehaviour {
-    Material black;
-    Color color;
-    public Text youDied;
-    public IntVariable playerHealth;
-    bool activated = false;
-
-    // Use this for initialization
-    void Start()
+public class ScreenFade : MonoBehaviour
+{
+    public void DeathScreenFade(Image i)
     {
-        black = GetComponent<RawImage>().material;
-        GetComponent<RawImage>().material = null;
-
+        StartCoroutine(BeginImageFade(i));
     }
-    // Update is called once per frame
-    void Update()
+
+    IEnumerator BeginImageFade(Image i)
     {
-        if (playerHealth.Value <= 0 && !activated)
+        float timestamp = Time.time;
+        float waitTime = 3;
+
+        while ((i.color.a < 0.54f) && (timestamp + Time.deltaTime < timestamp + waitTime))
         {
-            activated = true;
-            StartCoroutine(BeginRestart());
+            Color newAlpha = i.color;
+            newAlpha.a += Time.deltaTime / waitTime;
+            i.color = newAlpha;
+            yield return null;
         }
+
+        yield return null;
     }
 
-    // Turn screen black and show you died text
-    public void TurnScreenBlack()
+    public void DeathTextFade(TMP_Text t)
     {
-        GetComponent<RawImage>().material = black;
-        youDied.gameObject.SetActive(true);
-        StartCoroutine(RestartScene());
+        StartCoroutine(BeginTextFade(t));
     }
 
-    // Restart scene after 3 seconds 
-    IEnumerator RestartScene()
+    IEnumerator BeginTextFade(TMP_Text t)
     {
-        yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+        float timestamp = Time.time;
+        float waitTime = 3.5f;
 
-    // Need this to delay slightly between player death and restart beginning
-    IEnumerator BeginRestart()
-    {
-        yield return new WaitForSeconds(2);
-        TurnScreenBlack();
+        while ((t.color.a < .87) && (timestamp + Time.deltaTime < timestamp + waitTime))
+        {
+            Color newAlpha = t.color;
+            newAlpha.a += Time.deltaTime / waitTime;
+            t.color = newAlpha;
+            yield return null;
+        }
+
+        yield return null;
     }
 }
